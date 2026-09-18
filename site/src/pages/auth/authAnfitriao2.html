@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Anfitrião</title>
+  </head>
+  <body>
+    <header>
+      <a><img src="#Voltar" alt="Voltar" /> Voltar para o início</a>
+      <img src="#Logo_Header" alt="Logo" />
+      <a>Ajuda</a>
+      <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+    </header>
+    <img src="Logo_branco" alt="Logo Branco" />
+    <p>Anfitriôes constroem<br />novas possibilidades.</p>
+    <hr />
+    <img src="#Processo_seguro" alt="Processo seguro" />
+    <h3>Processo seguro</h3>
+    <p>Seus dados são protegidos.</p>
+    <img src="#Mais_renda" alt="Mais renda" />
+    <h3>Mais renda</h3>
+    <p>Seu espaço pode gera<br />novas oportunidades.</p>
+    <img src="#Voce_no_controle" alt="Você no controle" />
+    <h3>Você no controle</h3>
+    <p>Defina regras, preços<br />e disponibilidade.</p>
+    <hr />
+    <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
+    <!-- form do cadastro do anfitrião, agora passo 2 (Espaço) -->
+    <form>
+      <h4>CADASTRO DE ANFITRIÃO</h4>
+      <h2>Vamos descobrir o que o seu <span>Parkly</span> tem a oferecer!</h2>
+      <p>
+        Informe os detalhes do espaço que você deseja disponibilizar no
+        BasicParkly.
+      </p>
+      <!-- Linha do tempo do cadastro, agora passo 2 -->
+      <div>
+        <img src="#icon_localizacao" alt="Icone Localização" />
+        <h5>Localização do Parkly</h5>
+        <p>
+          Onde está o seu espaço? Essas informações ajudam as pessoas a
+          encontrarem o seu Parkly.
+        </p>
+        <label for="cep">CEP<span>*</span></label>
+        <img src="#icon_localizacao" alt="Icone Localização" />
+        <input type="text" id="cep" name="cep" />
+        <p>Exemplo: 08020-000</p>
+        <label for="cidade">Cidade<span>*</span></label>
+        <img src="#icon_cidade" alt="Icone Cidade" />
+        <input type="text" id="Cidade" name="Cidade" />
+        <label for="bairro">Bairro<span>*</span></label>
+        <img src="#icon_localizacao" alt="Icone Localização" />
+        <input type="text" id="Bairro" name="Bairro" />
+        <p>Exemplo: São Paulo</p>
+        <label for="rua/Avenida">Rua/Avenida<span>*</span></label>
+        <img src="#icon_rua" alt="Icone Rua" />
+        <input type="text" id="rua/Avenida" name="rua/Avenida" />
+        <p>Exemplo: Av. Conselheiro Carrão</p>
+        <label for="numero">Número<span>*</span></label>
+        <img src="#icon_hashtag" alt="Icone Hashtag" />
+        <input type="text" id="numero" name="numero" />
+        <p>Exemplo: 123</p>
+        <label for="complemento">Complemento</label>
+        <img src="#icon_complemento" alt="Icone Complemento" />
+        <input type="text" id="complemento" name="complemento" />
+        <p>Exemplo: Apto 12, Bloco B</p>
+      </div>
+      <div>
+        <img src="#icon_carro" alt="Icone Carro" />
+        <h5>Quantidade de vagas</h5>
+        <p>Quantas vagas o seu Parkly possui?</p>
+        <img src="#icon_carro" alt="Icone Carro" />
+        <input type="number" id="quantidade_vagas" name="quantidade_vagas" />
+        <p>Exemplo: 1</p>
+      </div>
+      <div>
+        <img src="#icon_portao" alt="Icone Portão" />
+        <h5>Tipo de acesso</h5>
+        <p>Como as pessoas terão acesso ao seu Parkly?</p>
+        <button>
+          <img src="#icon_portao_manual" alt="Portão Manual" />Portão manual
+        </button>
+        <button>
+          <img src="#icon_portao_automatico" alt="Portão Automático" />Portão
+          automático
+        </button>
+        <button>
+          <img src="#icon_controle_remoto" alt="Controle Remoto" />Controle
+          remoto
+        </button>
+        <button><img src="#icon_reticencias" alt="Reticências" />Outro</button>
+      </div>
+      <div>
+        <img src="#icon_lista" alt="Icone Lista" />
+        <h5>Características do Parkly</h5>
+        <p>Selecione as características que o seu espaço oferece.</p>
+        <label>
+          <input type="checkbox" name="caracteristicas" value="coberta" />
+          <img src="#icon_coberta" alt="Ícone Coberta" />
+          <strong>Coberta</strong>
+        </label>
+        <label>
+          <input type="checkbox" name="caracteristicas" value="iluminada" />
+          <img src="#icon_iluminada" alt="Ícone Iluminada" />
+          <strong>Iluminada</strong>
+        </label>
+        <label>
+          <input type="checkbox" name="caracteristicas" value="monitorada" />
+          <img src="#icon_monitorada" alt="Ícone Monitorada" />
+          <strong>Monitorada</strong>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="caracteristicas"
+            value="acessibilidade"
+          />
+          <img src="#icon_acessibilidade" alt="Ícone Acessibilidade" />
+          <strong>Acessibilidade</strong>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="caracteristicas"
+            value="carregamento_eletrico"
+          />
+          <img src="#icon_tomada" alt="Ícone Tomada" />
+          <strong>
+            Tomada e estrutura<br />para carregamento elétrico<br />disponível
+          </strong>
+        </label>
+      </div>
+      <button><img src="#icon_anterior" alt="Anterior" />Anterior</button>
+      <button>Cancelar</button>
+      <button>Próximo<img src="#icon_proximo" alt="Ícone Próximo" /></button>
+    </form>
+    <footer>
+      <p>BasicParkl 2026. Todos os direitos reservados.</p>
+      <a>Termos de Uso</a>
+      <a>Política de Privacidade</a>
+      <a>Contato</a>
+    </footer>
+  </body>
+</html>
