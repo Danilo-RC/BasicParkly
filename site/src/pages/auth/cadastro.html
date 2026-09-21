@@ -4,85 +4,135 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
+    <!-- Substituição dos CSS -->
+    <link rel="stylesheet" href="/site/src/css/global.css" />
+    <link rel="stylesheet" href="/site/src/css/layouts.css" />
+    <link rel="stylesheet" href="/site/src/css/components.css" />
   </head>
-  <body>
-    <header>
+  <body class="layout-split">
+    <!-- Header padronizado -->
+    <header class="main-header">
       <a href="index.html">Início</a>
       <img src="#Logo_Header" alt="Logo" />
-      <p>Já tem uma conta? <a href="auth.html">Fazer login</a></p>
-      <a href="#Ajuda">Ajuda</a>
+      <div class="header-links">
+         <p>Já tem uma conta? <a href="auth.html" class="link-highlight">Fazer login</a></p>
+         <a href="#Ajuda">Ajuda</a>
+      </div>
     </header>
-    <div>
-      <h1>
-        Mais que<br /><strong>estacionamento,</strong><br />liberdade para<br />chegar
-        mais longe.
-      </h1>
-      <p>
-        Conectando pessoas a vagas reais,de forma simples,<br />segura e
-        acessível.
-      </p>
-    </div>
-    <div>
-      <img src="#Seguro" alt="Seguro" />
-      <h2>Seguro</h2>
-      <p>Anfitriões verificados</p>
-      <img src="#Prático" alt="Prático" />
-      <h2>Prático</h2>
-      <p>Vagas perto de você</p>
-      <img src="#Moderno" alt="Moderno" />
-      <h2>Moderno</h2>
-      <p>Com pontos de recarga</p>
-    </div>
-    <div>
-      <hr />
-      <p>Mobilidade inteligente<br />para um futuro melhor.</p>
-    </div>
-    <div>
-      <form>
-        <img src="#Logo_Form" alt="Logo do Formulário" />
-        <h2>Crie sua conta no BasicParkly</h2>
+
+    <!-- Conteúdo da Esquerda: Hero Area -->
+    <div class="split-hero">
+      <div class="hero-text">
+        <h1>
+          Mais que<br /><strong>estacionamento,</strong><br />liberdade para<br />chegar
+          mais longe.
+        </h1>
         <p>
+          Conectando pessoas a vagas reais, de forma simples,<br />segura e
+          acessível.
+        </p>
+      </div>
+
+      <div class="hero-features">
+        <div class="feature-item">
+          <img src="#Seguro" alt="Seguro" />
+          <h2>Seguro</h2>
+          <p>Anfitriões verificados</p>
+        </div>
+        <div class="feature-item">
+          <img src="#Prático" alt="Prático" />
+          <h2>Prático</h2>
+          <p>Vagas perto de você</p>
+        </div>
+        <div class="feature-item">
+          <img src="#Moderno" alt="Moderno" />
+          <h2>Moderno</h2>
+          <p>Com pontos de recarga</p>
+        </div>
+      </div>
+
+      <div class="hero-footer">
+        <hr />
+        <p>Mobilidade inteligente<br />para um futuro melhor.</p>
+      </div>
+    </div>
+
+    <!-- Conteúdo da Direita: Formulário de Cadastro -->
+    <div class="split-form-area">
+      <!-- Classes utilitárias -->
+      <form class="card auth-form">
+        <img src="#Logo_Form" alt="Logo do Formulário" class="form-logo" />
+        <h2 class="form-title">Crie sua conta no BasicParkly</h2>
+        <p class="form-subtitle">
           É rápido e fácil. Comece agora e aproveite todas as possibilidades.
         </p>
 
-        <label for="nome">Nome Completo</label>
-        <br />
-        <img src="#Icon_user" />
-        <input type="text" />
-        <br />
-        <label for="email">E-mail</label>
-        <br />
-        <img src="#icon_email" /><input type="email" />
-        <br />
-        <label for="senha">Senha</label>
-        <br />
-        <img src="#icon_senha" />
-        <input type="password" />
-        <img src="#icon_olho" />
-        <br />
-        <label for="confirmar_senha">Confirmar Senha</label>
-        <br />
-        <img src="#icon_senha" />
-        <input type="password" />
-        <img src="#icon_olho" />
-        <br />
-        <input type="checkbox" />Li e aceito os <a>Termos de Uso</a> e a
-        <a>Política de Privacidade</a>.
-        <br />
-        <input type="submit" value="criar_conta" />
-        <p>ou cadastre-se com</p>
-        <button>
-          <img src="#Logo_Google" alt="Logo do Google" />Continuar com Google
-        </button>
-        <button>
-          <img src="#Logo_Apple" alt="Logo da Apple" />Continuar com Apple
-        </button>
-        <p>Já tem uma conta? <a href="auth.html">Fazer login</a></p>
+        <div class="field-group">
+          <label for="nome">Nome Completo</label>
+          <div class="input-wrapper">
+             <img src="#Icon_user" class="input-icon" />
+             <input type="text" id="nome" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="email">E-mail</label>
+          <div class="input-wrapper">
+             <img src="#icon_email" class="input-icon" />
+             <input type="email" id="email" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="senha">Senha</label>
+          <div class="input-wrapper">
+             <img src="#icon_senha" class="input-icon" />
+             <input type="password" id="senha" />
+             <img src="#icon_olho" class="input-icon-right toggle-password" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="confirmar_senha">Confirmar Senha</label>
+          <div class="input-wrapper">
+             <img src="#icon_senha" class="input-icon" />
+             <input type="password" id="confirmar_senha" />
+             <img src="#icon_olho" class="input-icon-right toggle-password" />
+          </div>
+        </div>
+
+        <div class="form-options terms">
+          <label class="checkbox-label">
+             <input type="checkbox" /> Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.
+          </label>
+        </div>
+
+        <!-- Classe btn-primary -->
+        <input type="submit" class="btn-primary w-100 mt-3" value="Criar conta" />
+        
+        <p class="divider-text">ou cadastre-se com</p>
+        
+        <div class="social-login-grid">
+           <button type="button" class="btn-social">
+            <img src="#Logo_Google" alt="Logo do Google" />Continuar com Google
+          </button>
+          <button type="button" class="btn-social">
+            <img src="#Logo_Apple" alt="Logo da Apple" />Continuar com Apple
+          </button>
+        </div>
+
+        <p class="auth-footer-text">Já tem uma conta? <a href="auth.html">Fazer login</a></p>
       </form>
     </div>
-    <footer>
-      <p>BasicParkly 2026. Todos os direitos reservado.</p>
-      <a>Termos de Uso</a> <a>Política de Privacidade</a> <a>Contato</a>
+    
+    <!-- Footer padronizado -->
+    <footer class="main-footer">
+      <p>BasicParkly 2026. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#Termos_de_Uso">Termos de Uso</a>
+        <a href="#Política_de_Privacidade">Política de Privacidade</a>
+        <a href="#Contato">Contato</a>
+      </div>
     </footer>
   </body>
 </html>

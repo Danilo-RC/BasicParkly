@@ -3,151 +3,270 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro Anfitrião</title>
+    <title>Cadastro Anfitrião - Passo 2</title>
+    <!-- Substituição dos CSS -->
+    <link rel="stylesheet" href="/site/src/css/global.css" />
+    <link rel="stylesheet" href="/site/src/css/layouts.css" />
+    <link rel="stylesheet" href="/site/src/css/components.css" />
   </head>
-  <body>
-    <header>
+  <body class="layout-dashboard">
+    <!-- Header Upper Nav -->
+    <header class="main-header">
       <a href="../index.html">
-        <img src="#Voltar" alt="Voltar" />Voltar para o início
+        <img src="#Voltar" alt="Voltar" /> Voltar para o início
       </a>
       <img src="#Logo_Header" alt="Logo" />
-      <a href="#Ajuda">Ajuda</a>
-      <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+      <div class="header-user">
+        <a href="#Ajuda">Ajuda</a>
+        <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+      </div>
     </header>
-    <img src="Logo_branco" alt="Logo Branco" />
-    <p>Anfitriôes constroem<br />novas possibilidades.</p>
-    <hr />
-    <img src="#Processo_seguro" alt="Processo seguro" />
-    <h3>Processo seguro</h3>
-    <p>Seus dados são protegidos.</p>
-    <img src="#Mais_renda" alt="Mais renda" />
-    <h3>Mais renda</h3>
-    <p>Seu espaço pode gera<br />novas oportunidades.</p>
-    <img src="#Voce_no_controle" alt="Você no controle" />
-    <h3>Você no controle</h3>
-    <p>Defina regras, preços<br />e disponibilidade.</p>
-    <hr />
-    <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
-    <!-- form do cadastro do anfitrião, agora passo 2 (Espaço) -->
-    <form>
-      <h4>CADASTRO DE ANFITRIÃO</h4>
-      <h2>Vamos descobrir o que o seu <span>Parkly</span> tem a oferecer!</h2>
-      <p>
-        Informe os detalhes do espaço que você deseja disponibilizar no
-        BasicParkly.
-      </p>
-      <!-- Linha do tempo do cadastro, agora passo 2 -->
-      <div>
-        <img src="#icon_localizacao" alt="Icone Localização" />
-        <h5>Localização do Parkly</h5>
-        <p>
-          Onde está o seu espaço? Essas informações ajudam as pessoas a
-          encontrarem o seu Parkly.
-        </p>
-        <label for="cep">CEP<span>*</span></label>
-        <img src="#icon_localizacao" alt="Icone Localização" />
-        <input type="text" id="cep" name="cep" />
-        <p>Exemplo: 08020-000</p>
-        <label for="cidade">Cidade<span>*</span></label>
-        <img src="#icon_cidade" alt="Icone Cidade" />
-        <input type="text" id="Cidade" name="Cidade" />
-        <label for="bairro">Bairro<span>*</span></label>
-        <img src="#icon_localizacao" alt="Icone Localização" />
-        <input type="text" id="Bairro" name="Bairro" />
-        <p>Exemplo: São Paulo</p>
-        <label for="rua/Avenida">Rua/Avenida<span>*</span></label>
-        <img src="#icon_rua" alt="Icone Rua" />
-        <input type="text" id="rua/Avenida" name="rua/Avenida" />
-        <p>Exemplo: Av. Conselheiro Carrão</p>
-        <label for="numero">Número<span>*</span></label>
-        <img src="#icon_hashtag" alt="Icone Hashtag" />
-        <input type="text" id="numero" name="numero" />
-        <p>Exemplo: 123</p>
-        <label for="complemento">Complemento</label>
-        <img src="#icon_complemento" alt="Icone Complemento" />
-        <input type="text" id="complemento" name="complemento" />
-        <p>Exemplo: Apto 12, Bloco B</p>
+
+    <!-- Layout Container -->
+    <div class="container dashboard-container">
+      <!-- Sidebar Esquerda -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <img src="Logo_branco" alt="Logo Branco" />
+          <p>Anfitriões constroem<br />novas possibilidades.</p>
+        </div>
+
+        <div class="sidebar-features">
+          <div class="sidebar-item">
+            <img src="#Processo_seguro" alt="Processo seguro" />
+            <div>
+              <h3>Processo seguro</h3>
+              <p>Seus dados são protegidos.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="#Mais_renda" alt="Mais renda" />
+            <div>
+              <h3>Mais renda</h3>
+              <p>Seu espaço pode gerar<br />novas oportunidades.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="#Voce_no_controle" alt="Você no controle" />
+            <div>
+              <h3>Defina regras, preços<br />e disponibilidade.</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">
+          <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
+        </div>
+      </aside>
+
+      <!-- Conteúdo do Formulário -->
+      <main class="dashboard-main">
+        <form>
+          <!-- Cabeçalho do Formulário com Stepper -->
+          <div class="form-header">
+            <span class="form-header-title">CADASTRO DE ANFITRIÃO</span>
+            <div class="form-top-bar">
+              <div class="form-title-area">
+                <h2>Vamos descobrir o que o seu <span class="text-primary">Parkly</span> tem a oferecer!</h2>
+                <p class="form-subtitle">Informe os detalhes do espaço que você deseja disponibilizar no BasicParkly.</p>
+              </div>
+
+              <!-- Stepper / Passos do Cadastro -->
+              <div class="stepper">
+                <div class="step-item completed">
+                  <div class="step-number">✓</div>
+                  <span>Dados pessoais</span>
+                </div>
+                <div class="step-item active">
+                  <div class="step-number">2</div>
+                  <span>Espaço</span>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">3</div>
+                  <span>Documentos</span>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">4</div>
+                  <span>Análise</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1: Localização -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon"><img src="#icon_localizacao" alt="Localização" /></div>
+              <h5>Localização do Parkly</h5>
+            </div>
+            <p class="card-description">Onde está o seu espaço? Essas informações ajudam as pessoas a encontrarem o seu Parkly.</p>
+
+            <div class="form-grid-2col">
+              <div class="field-group">
+                <label for="cep">CEP <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <img src="#icon_localizacao" class="input-icon" alt="" />
+                  <input type="text" id="cep" name="cep" placeholder="Digite o CEP" />
+                </div>
+                <span class="helper-text">Exemplo: 08020-000</span>
+              </div>
+
+              <div class="field-group">
+                <label for="cidade">Cidade <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <img src="#icon_cidade" class="input-icon" alt="" />
+                  <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" />
+                </div>
+                <span class="helper-text">Exemplo: São Paulo</span>
+              </div>
+
+              <div class="field-group">
+                <label for="bairro">Bairro <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <img src="#icon_localizacao" class="input-icon" alt="" />
+                  <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" />
+                </div>
+                <span class="helper-text">Exemplo: Tatuapé</span>
+              </div>
+
+              <div class="field-group">
+                <label for="rua">Rua/Avenida <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <img src="#icon_rua" class="input-icon" alt="" />
+                  <input type="text" id="rua" name="rua" placeholder="Digite a rua ou avenida" />
+                </div>
+                <span class="helper-text">Exemplo: Av. Conselheiro Carrão</span>
+              </div>
+
+              <div class="field-group">
+                <label for="numero">Número <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <img src="#icon_hashtag" class="input-icon" alt="" />
+                  <input type="text" id="numero" name="numero" placeholder="Digite o número" />
+                </div>
+                <span class="helper-text">Exemplo: 123</span>
+              </div>
+
+              <div class="field-group">
+                <label for="complemento">Complemento</label>
+                <div class="input-wrapper">
+                  <img src="#icon_complemento" class="input-icon" alt="" />
+                  <input type="text" id="complemento" name="complemento" placeholder="Apto, bloco, referência, etc. (opcional)" />
+                </div>
+                <span class="helper-text">Exemplo: Apto 12, Bloco B</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Linha do Meio (Quantidade de Vagas + Tipo de Acesso) -->
+          <div class="middle-row-grid">
+            <!-- Card 2: Quantidade de vagas -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon"><img src="#icon_carro" alt="Vagas" /></div>
+                <h5>Quantidade de vagas</h5>
+              </div>
+              <p class="card-description">Quantas vagas o seu Parkly possui?</p>
+
+              <div class="field-group">
+                <div class="input-wrapper">
+                  <img src="#icon_carro" class="input-icon" alt="" />
+                  <input type="number" id="quantidade_vagas" name="quantidade_vagas" placeholder="Digite a quantidade" />
+                </div>
+                <span class="helper-text">Exemplo: 1</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Tipo de acesso -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon"><img src="#icon_portao" alt="Acesso" /></div>
+                <h5>Tipo de acesso</h5>
+              </div>
+              <p class="card-description">Como as pessoas terão acesso ao seu Parkly?</p>
+
+              <div class="access-buttons-grid">
+                <button type="button" class="btn-option">
+                  <img src="#icon_portao_manual" alt="" /> Portão manual
+                </button>
+                <button type="button" class="btn-option">
+                  <img src="#icon_portao_automatico" alt="" /> Portão automático
+                </button>
+                <button type="button" class="btn-option">
+                  <img src="#icon_controle_remoto" alt="" /> Controle remoto
+                </button>
+                <button type="button" class="btn-option">
+                  <img src="#icon_reticencias" alt="" /> Outro
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Características -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon"><img src="#icon_lista" alt="Características" /></div>
+              <h5>Características do Parkly</h5>
+            </div>
+            <p class="card-description">Selecione as características que o seu espaço oferece.</p>
+
+            <div class="features-grid">
+              <label class="feature-card">
+                <input type="checkbox" name="caracteristicas" value="coberta" />
+                <img src="#icon_coberta" alt="" />
+                <strong>Coberta</strong>
+              </label>
+
+              <label class="feature-card">
+                <input type="checkbox" name="caracteristicas" value="iluminada" />
+                <img src="#icon_iluminada" alt="" />
+                <strong>Iluminada</strong>
+              </label>
+
+              <label class="feature-card">
+                <input type="checkbox" name="caracteristicas" value="monitorada" />
+                <img src="#icon_monitorada" alt="" />
+                <strong>Monitorada</strong>
+              </label>
+
+              <label class="feature-card">
+                <input type="checkbox" name="caracteristicas" value="acessibilidade" />
+                <img src="#icon_acessibilidade" alt="" />
+                <strong>Acessibilidade</strong>
+              </label>
+
+              <label class="feature-card">
+                <input type="checkbox" name="caracteristicas" value="carregamento_eletrico" />
+                <img src="#icon_tomada" alt="" />
+                <strong>Tomada e estrutura para carregamento elétrico disponível</strong>
+              </label>
+            </div>
+          </div>
+
+          <!-- Botões de Ação do Rodapé -->
+          <div class="form-actions-bar mt-4">
+            <a href="authAnfitriao1.html" class="btn-action btn-back">
+              ← Anterior
+            </a>
+            <div class="btn-group-right">
+              <button type="button" class="btn-action btn-cancel" onclick="location.href='../index.html'">Cancelar</button>
+              <button type="submit" class="btn-action btn-primary" onclick="location.href='authAnfitriao3.html'">Próximo →</button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <!-- Footer Geral -->
+    <footer class="main-footer">
+      <p>BasicParkly © 2026. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#Termos_de_Uso">Termos de Uso</a>
+        <a href="#Política_de_Privacidade">Política de Privacidade</a>
+        <a href="#Contato">Contato</a>
       </div>
-      <div>
-        <img src="#icon_carro" alt="Icone Carro" />
-        <h5>Quantidade de vagas</h5>
-        <p>Quantas vagas o seu Parkly possui?</p>
-        <img src="#icon_carro" alt="Icone Carro" />
-        <input type="number" id="quantidade_vagas" name="quantidade_vagas" />
-        <p>Exemplo: 1</p>
-      </div>
-      <div>
-        <img src="#icon_portao" alt="Icone Portão" />
-        <h5>Tipo de acesso</h5>
-        <p>Como as pessoas terão acesso ao seu Parkly?</p>
-        <button>
-          <img src="#icon_portao_manual" alt="Portão Manual" />Portão manual
-        </button>
-        <button>
-          <img src="#icon_portao_automatico" alt="Portão Automático" />Portão
-          automático
-        </button>
-        <button>
-          <img src="#icon_controle_remoto" alt="Controle Remoto" />Controle
-          remoto
-        </button>
-        <button><img src="#icon_reticencias" alt="Reticências" />Outro</button>
-      </div>
-      <div>
-        <img src="#icon_lista" alt="Icone Lista" />
-        <h5>Características do Parkly</h5>
-        <p>Selecione as características que o seu espaço oferece.</p>
-        <label>
-          <input type="checkbox" name="caracteristicas" value="coberta" />
-          <img src="#icon_coberta" alt="Ícone Coberta" />
-          <strong>Coberta</strong>
-        </label>
-        <label>
-          <input type="checkbox" name="caracteristicas" value="iluminada" />
-          <img src="#icon_iluminada" alt="Ícone Iluminada" />
-          <strong>Iluminada</strong>
-        </label>
-        <label>
-          <input type="checkbox" name="caracteristicas" value="monitorada" />
-          <img src="#icon_monitorada" alt="Ícone Monitorada" />
-          <strong>Monitorada</strong>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="caracteristicas"
-            value="acessibilidade"
-          />
-          <img src="#icon_acessibilidade" alt="Ícone Acessibilidade" />
-          <strong>Acessibilidade</strong>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="caracteristicas"
-            value="carregamento_eletrico"
-          />
-          <img src="#icon_tomada" alt="Ícone Tomada" />
-          <strong>
-            Tomada e estrutura<br />para carregamento elétrico<br />disponível
-          </strong>
-        </label>
-      </div>
-      <button>
-        <a href="authAnfitriao1.html"
-          ><img src="#icon_anterior" alt="Anterior" />Anterior</a
-        >
-      </button>
-      <button href="../index.html">Cancelar</button>
-      <button href="authAnfitriao3.html">
-        Próximo<img src="#icon_proximo" alt="Ícone Próximo"/>
-      </button>
-    </form>
-    <footer>
-      <p>BasicParkl 2026. Todos os direitos reservados.</p>
-      <a href="#Termos_de_Uso">Termos de Uso</a>
-      <a href="#Política_de_Privacidade">Política de Privacidade</a>
-      <a href="#Contato">Contato</a>
     </footer>
   </body>
 </html>

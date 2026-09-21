@@ -3,110 +3,228 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro Anfitrião</title>
+    <title>Cadastro Anfitrião - Passo 3</title>
+    <!-- Substituição dos CSS -->
+    <link rel="stylesheet" href="/site/src/css/global.css" />
+    <link rel="stylesheet" href="/site/src/css/layouts.css" />
+    <link rel="stylesheet" href="/site/src/css/components.css" />
   </head>
-  <body>
-    <header>
+  <body class="layout-dashboard">
+    <!-- Header -->
+    <header class="main-header">
       <a href="../index.html">
         <img src="#Voltar" alt="Voltar" /> Voltar para o início
       </a>
       <img src="#Logo_Header" alt="Logo" />
-      <a href="#Ajuda">Ajuda</a>
-      <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+      <div class="header-user">
+        <a href="#Ajuda">Ajuda</a>
+        <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+      </div>
     </header>
-    <img src="Logo_branco" alt="Logo Branco" />
-    <p>Anfitriôes constroem<br />novas possibilidades.</p>
-    <hr />
-    <img src="#Processo_seguro" alt="Processo seguro" />
-    <h3>Processo seguro</h3>
-    <p>Seus dados são protegidos.</p>
-    <img src="#Mais_renda" alt="Mais renda" />
-    <h3>Mais renda</h3>
-    <p>Seu espaço pode gera<br />novas oportunidades.</p>
-    <img src="#Voce_no_controle" alt="Você no controle" />
-    <h3>Você no controle</h3>
-    <p>Defina regras, preços<br />e disponibilidade.</p>
-    <hr />
-    <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
-    <!-- form do cadastro do anfitrião, agora passo 3 (Documentos) -->
-    <form>
-      <h4>CADASTRO DE ANFITRIÃO</h4>
-      <h2>
-        Vamos verificar algumas informações para torná-lo um
-        <span>Anfitrião-Parkly</span>!
-      </h2>
-      <p>
-        Envie os documentos necessários para que seu perfil possa ser analisado.
-      </p>
-      <!-- Linha do tempo do cadastro, agora passo 3 -->
-      <div>
-        <img
-          src="#icon_documentos_necessarios"
-          alt="Icone Documentos Necessários"
-        />
-        <h5>Documentos Necessários</h5>
-        <p>Envie os documentos solicitados para validarmos seu perfil.</p>
-        <img
-          src="#icon_documento_identificacao"
-          alt="Icone Documento Identificação"
-        />
-        <h6>Documento de identificação</h6>
-        <p>CPF ou documento oficial com foto<br />(RG, CNH, etc).</p>
-        <button>
-          <img src="#icon_upload" alt="Icone Upload" />Adicionar Documento
-        </button>
-        <p>Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10MB.</p>
-        <img src="#icon_casa" alt="Icone Comprovante de endereço" />
-        <h6>Comprovante de endereço</h6>
-        <p>Conta de água, luz, internet ou<br />outro documento oficial.</p>
-        <button>
-          <img src="#icon_upload" alt="Icone Upload" />Adicionar Documento
-        </button>
-        <p>Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10MB.</p>
-        <img
-          src="#icon_documento_comprovacao"
-          alt="Icone Documento Comprovação"
-        />
-        <h6>Comprovação/autorização<br />para disponibilização do espaço</h6>
-        <p>
-          Documento que comprove sua<br />propriedade ou autorização de uso<br />do
-          espaço.
-        </p>
-        <button>
-          <img src="#icon_upload" alt="Icone Upload" />Adicionar Documento
-        </button>
-        <p>Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10MB.</p>
+
+    <!-- Layout Principal -->
+    <div class="container dashboard-container">
+      <!-- Sidebar Esquerda -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <img src="Logo_branco" alt="Logo Branco" />
+          <p>Anfitriões constroem<br />novas possibilidades.</p>
+        </div>
+
+        <div class="sidebar-features">
+          <div class="sidebar-item">
+            <img src="#Processo_seguro" alt="Processo seguro" />
+            <div>
+              <h3>Processo seguro</h3>
+              <p>Seus dados são protegidos.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="#Mais_renda" alt="Mais renda" />
+            <div>
+              <h3>Mais renda</h3>
+              <p>Seu espaço pode gerar<br />novas oportunidades.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="#Voce_no_controle" alt="Você no controle" />
+            <div>
+              <h3>Você no controle</h3>
+              <p>Defina regras, preços<br />e disponibilidade.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">
+          <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
+        </div>
+      </aside>
+
+      <!-- Conteúdo Principal -->
+      <main class="dashboard-main">
+        <form>
+          <!-- Cabeçalho & Stepper -->
+          <div class="form-header">
+            <span class="form-header-title">CADASTRO DE ANFITRIÃO</span>
+            <div class="form-top-bar">
+              <div class="form-title-area">
+                <h2>Vamos verificar algumas informações para torná-lo um <span class="text-primary">Anfitrião-Parkly</span>!</h2>
+                <p class="form-subtitle">Envie os documentos necessários para que seu perfil possa ser analisado.</p>
+              </div>
+
+              <!-- Stepper -->
+              <div class="stepper">
+                <div class="step-item completed">
+                  <div class="step-number">✓</div>
+                  <span>Dados pessoais</span>
+                </div>
+                <div class="step-item completed">
+                  <div class="step-number">✓</div>
+                  <span>Espaço</span>
+                </div>
+                <div class="step-item active">
+                  <div class="step-number">3</div>
+                  <span>Documentos</span>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">4</div>
+                  <span>Análise</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1: Documentos Necessários -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon"><img src="#icon_documentos_necessarios" alt="Documentos" /></div>
+              <h5>Documentos necessários</h5>
+            </div>
+            <p class="card-description">Envie os documentos solicitados para validarmos seu perfil.</p>
+
+            <div class="docs-grid">
+              <!-- Doc 1 -->
+              <div class="doc-box">
+                <div>
+                  <div class="doc-head">
+                    <div class="doc-head-icon">
+                      <img src="#icon_documento_identificacao" alt="" />
+                    </div>
+                    <h6>Documento de identificação</h6>
+                  </div>
+                  <p class="doc-desc">CPF ou documento oficial com foto (RG, CNH, etc).</p>
+                </div>
+
+                <div>
+                  <label class="upload-btn-area">
+                    <input type="file" style="display: none;" />
+                    <img src="#icon_upload" alt="" /> Adicionar documento
+                  </label>
+                  <p class="doc-info">Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10 MB.</p>
+                </div>
+              </div>
+
+              <!-- Doc 2 -->
+              <div class="doc-box">
+                <div>
+                  <div class="doc-head">
+                    <div class="doc-head-icon">
+                      <img src="#icon_casa" alt="" />
+                    </div>
+                    <h6>Comprovante de endereço</h6>
+                  </div>
+                  <p class="doc-desc">Conta de água, luz, internet ou outro documento oficial.</p>
+                </div>
+
+                <div>
+                  <label class="upload-btn-area">
+                    <input type="file" style="display: none;" />
+                    <img src="#icon_upload" alt="" /> Adicionar documento
+                  </label>
+                  <p class="doc-info">Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10 MB.</p>
+                </div>
+              </div>
+
+              <!-- Doc 3 -->
+              <div class="doc-box">
+                <div>
+                  <div class="doc-head">
+                    <div class="doc-head-icon">
+                      <img src="#icon_documento_comprovacao" alt="" />
+                    </div>
+                    <h6>Comprovação/autorização para disponibilização do espaço</h6>
+                  </div>
+                  <p class="doc-desc">Documento que comprove sua propriedade ou autorização de uso do espaço.</p>
+                </div>
+
+                <div>
+                  <label class="upload-btn-area">
+                    <input type="file" style="display: none;" />
+                    <img src="#icon_upload" alt="" /> Adicionar documento
+                  </label>
+                  <p class="doc-info">Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10 MB.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Confirmações -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon"><img src="#icon_documento" alt="Confirmações" /></div>
+              <h5>Confirmações</h5>
+            </div>
+            <p class="card-description">Leia e confirme as informações abaixo.</p>
+
+            <div class="checkbox-list">
+              <label class="checkbox-item">
+                <input type="checkbox" name="confirmacoes" value="info_verdade" />
+                Declaro que as informações fornecidas são verdadeiras.
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="confirmacoes" value="autorizacao" />
+                Declaro que possuo autorização para disponibilizar o espaço informado.
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="confirmacoes" value="termos_uso" />
+                <span>Li e aceito os <a>Termos de Uso</a> e a <a>Política de Privacidade</a>.</span>
+              </label>
+            </div>
+
+            <!-- Banner Alerta "Importante" -->
+            <div class="alert-box">
+              <div class="alert-icon">i</div>
+              <div class="alert-content">
+                <p><strong>Importante</strong> Após o envio, seu perfil ficará em análise. Você poderá acompanhar o status do cadastro posteriormente.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botões do Rodapé do Formulário -->
+          <div class="form-actions-bar mt-4">
+            <a href="authAnfitriao2.html" class="btn-action btn-back">
+              ← Voltar
+            </a>
+            <button type="submit" class="btn-action btn-primary" onclick="location.href='authAnfitriao4.html'">
+              Enviar para análise →
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <!-- Footer Geral -->
+    <footer class="main-footer">
+      <p>BasicParkly © 2026. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#Termos_de_Uso">Termos de Uso</a>
+        <a href="#Política_de_Privacidade">Política de Privacidade</a>
+        <a href="#Contato">Contato</a>
       </div>
-      <div>
-        <img src="#icon_documento" alt="Icone Documento" />
-        <h5>Confirmações</h5>
-        <p>Leia e confirme as informações abaixo.</p>
-        <label>
-          <input type="checkbox" name="confirmacoes" value="info_verdade" />
-          Declaro que as informações fornecidas são verdadeiras.
-          <input type="checkbox" name="confirmacoes" value="autorizacao" />
-          Declaro que possuo autorização para disponibilizar o espaço informado.
-          <input type="checkbox" name="confirmacoes" value="termos_uso" />
-          Li e aceto os <a>Termos de Uso</a> e a <a>Política de Privacidade</a>.
-        </label>
-        <img src="#icon_alerta" alt="Icone Alerta" />
-        <p>
-          Após o envio, seu perfil ficará em análise, Você poderá acompanhar o
-          status do cadastro posteriormente.
-        </p>
-      </div>
-      <button href="authAnfitriao2.html">
-        <img src="#icon_anterior" alt="Anterior" />Voltar
-      </button>
-      <button href="authAnfitriao4.html">
-        Enviar para análise<img src="#icon_proximo" alt="Ícone Próximo" />
-      </button>
-    </form>
-    <footer>
-      <p>BasicParkl 2026. Todos os direitos reservados.</p>
-      <a href="#Termos_de_Uso">Termos de Uso</a>
-      <a href="#Política_de_Privacidade">Política de Privacidade</a>
-      <a href="#Contato">Contato</a>
     </footer>
   </body>
 </html>

@@ -4,105 +4,175 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro Anfitrião</title>
+    <!-- Substituição dos CSS -->
+    <link rel="stylesheet" href="/site/src/css/global.css" />
+    <link rel="stylesheet" href="/site/src/css/layouts.css" />
+    <link rel="stylesheet" href="/site/src/css/components.css" />
   </head>
-  <body>
-    <header>
+  <body class="layout-dashboard">
+    <!-- Header Superior -->
+    <header class="main-header">
       <a href="../index.html">
-        <img src="#Voltar" alt="Voltar" />Voltar para o início
+        <img src="#Voltar" alt="Voltar" /> Voltar para o início
       </a>
       <img src="#Logo_Header" alt="Logo" />
-      <a href="#Ajuda">Ajuda</a>
-      <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+      <div class="header-user">
+        <a href="#Ajuda">Ajuda</a>
+        <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+      </div>
     </header>
-    <img src="Logo_branco" alt="Logo Branco" />
-    <p>Anfitriôes constroem<br />novas possibilidades.</p>
-    <hr />
-    <img src="#Processo_seguro" alt="Processo seguro" />
-    <h3>Processo seguro</h3>
-    <p>Seus dados são protegidos.</p>
-    <img src="#Mais_renda" alt="Mais renda" />
-    <h3>Mais renda</h3>
-    <p>Seu espaço pode gera<br />novas oportunidades.</p>
-    <img src="#Voce_no_controle" alt="Você no controle" />
-    <h3>Você no controle</h3>
-    <p>Defina regras, preços<br />e disponibilidade.</p>
-    <hr />
-    <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
-    <form>
-      <h4>CADASTRO DE ANFITRIÃO</h4>
-      <h2>Olá, <span>Nome do Anfitrião</span>!</h2>
-      <p>
-        Conte um pouco sobre você e sobre o espaço que deseja<br />disponibilizar
-        no BasicParkly.
-      </p>
-      <!-- Linha do tempo do cadastro -->
-      <div>
-        <img src="#icon_avatar" alt="Icone Avatar" />
-        <h5>Dados pessoais</h5>
-        <p>
-          Essas informações são necessárias para identificar o responsável pelo
-          espaço.
-        </p>
-        <label for="cpf">CPF<span>*</span></label>
-        <input type="text" id="cpf" name="cpf" />
-        <p>Exemplo: 123.456.789-00</p>
-        <label for="Data de nascimento">Data de nascimento<span>*</span></label>
-        <input type="date" id="Data de nascimento" name="Data de nascimento" />
+
+    <!-- Layout Principal -->
+    <div class="container dashboard-container">
+      <!-- Sidebar Esquerda -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <img src="Logo_branco" alt="Logo Branco" />
+          <p>Anfitriões constroem<br />novas possibilidades.</p>
+        </div>
+
+        <div class="sidebar-features">
+          <div class="sidebar-item">
+            <img src="#Processo_seguro" alt="Processo seguro" />
+            <div>
+              <h3>Processo seguro</h3>
+              <p>Seus dados são protegidos.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="#Mais_renda" alt="Mais renda" />
+            <div>
+              <h3>Mais renda</h3>
+              <p>Seu espaço pode gerar<br />novas oportunidades.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="#Voce_no_controle" alt="Você no controle" />
+            <div>
+              <h3>Você no controle</h3>
+              <p>Defina regras, preços<br />e disponibilidade.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">
+          <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
+        </div>
+      </aside>
+
+      <!-- Área de Conteúdo/Formulário -->
+      <main class="dashboard-main">
+        <form>
+          <div class="form-header">
+            <span class="form-header-title">CADASTRO DE ANFITRIÃO</span>
+            <div class="form-title-area">
+              <div>
+                <h2>Olá, <span class="text-primary">Nome do Anfitrião</span>!</h2>
+                <p class="form-subtitle">
+                  Conte um pouco sobre você e sobre o espaço que deseja disponibilizar no BasicParkly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1: Dados pessoais -->
+          <div class="card">
+            <div class="card-header">
+              <img src="#icon_avatar" alt="Icone Avatar" />
+              <h5>Dados pessoais</h5>
+            </div>
+            <p class="card-description">
+              Essas informações são necessárias para identificar o responsável pelo espaço.
+            </p>
+
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="cpf">CPF <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <img src="#icon_cpf" alt="" class="input-icon" />
+                  <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" />
+                </div>
+                <span class="helper-text">Exemplo: 123.456.789-00</span>
+              </div>
+
+              <div class="field-group">
+                <label for="nascimento">Data de nascimento <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <img src="#icon_calendar" alt="" class="input-icon" />
+                  <input type="date" id="nascimento" name="nascimento" />
+                </div>
+                <span class="helper-text">Exemplo: 28/04/2006</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Informações do espaço -->
+          <div class="card">
+            <div class="card-header">
+              <img src="#icon_espaço" alt="Icone Espaço" />
+              <h5>Informações do espaço</h5>
+            </div>
+            <p class="card-description">Selecione o tipo de espaço que você deseja disponibilizar.</p>
+
+            <div class="field-group">
+              <label>Tipo de espaço <span class="text-danger">*</span></label>
+              <div class="options-grid">
+                <label class="option-card">
+                  <input type="checkbox" name="tipo_espaco" value="garagem" />
+                  <img src="#icon_garagem" alt="Ícone de garagem" />
+                  <strong>Garagem</strong>
+                  <p>Garagem coberta em residência ou imóvel.</p>
+                </label>
+
+                <label class="option-card">
+                  <input type="checkbox" name="tipo_espaco" value="vagas_residenciais" />
+                  <img src="#icon_vagas_residenciais" alt="Ícone de vagas residenciais" />
+                  <strong>Vagas residenciais</strong>
+                  <p>Vagas em frente ou dentro de residência.</p>
+                </label>
+
+                <label class="option-card">
+                  <input type="checkbox" name="tipo_espaco" value="estacionamento_particular" />
+                  <img src="#icon_estacionamento_particular" alt="Ícone de estacionamento" />
+                  <strong>Estacionamento particular</strong>
+                  <p>Estacionamento em imóvel comercial ou privado.</p>
+                </label>
+
+                <label class="option-card">
+                  <input type="checkbox" name="tipo_espaco" value="outro" />
+                  <img src="#icon_outro" alt="Ícone de outro espaço" />
+                  <strong>Outro</strong>
+                  <p>Outro tipo de espaço. (Especifique depois)</p>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botões -->
+          <div class="form-actions-bar mt-4 justify-end">
+            <div class="btn-group-right">
+                <button type="button" class="btn-cancel" onclick="location.href='../index.html'">
+                Cancelar
+                </button>
+                <button type="submit" class="btn-primary" onclick="location.href='authAnfitriao2.html'">
+                Próximo <img src="#icon_proximo" alt="Ícone Próximo" />
+                </button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <!-- Footer Rodapé -->
+    <footer class="main-footer">
+      <p>BasicParkly © 2026. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#Termos_de_Uso">Termos de Uso</a>
+        <a href="#Política_de_Privacidade">Política de Privacidade</a>
+        <a href="#Contato">Contato</a>
       </div>
-      <div>
-        <img src="#icon_espaço" alt="Icone Espaço" />
-        <h5>Informações do espaço</h5>
-        <p>Selecione o tipo de espaço que você deseja disponibilizar.</p>
-        <p>Tipo de espaço<span>*</span></p>
-        <label>
-          <input type="checkbox" name="tipo_espaco" value="garagem" />
-          <img src="#icon_garagem" alt="Ícone de garagem" />
-          <strong>Garagem</strong>
-          <p>Garagem coberta<br />em residência ou<br />imóvel.</p>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="tipo_espaco"
-            value="vagas_residenciais"
-          />
-          <img
-            src="#icon_vagas_residenciais"
-            alt="Ícone de vagas residenciais"
-          />
-          <strong>Vagas residenciais</strong>
-          <p>Vagas em frente ou<br />dentro de residência.</p>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="tipo_espaco"
-            value="estacionamento_particular"
-          />
-          <img
-            src="#icon_estacionamento_particular"
-            alt="Ícone de estacionamento particular"
-          />
-          <strong>Estacionamento particular</strong>
-          <p>Estacionamento em<br />imóvel comercial ou<br />privado.</p>
-        </label>
-        <label>
-          <input type="checkbox" name="tipo_espaco" value="outro" />
-          <img src="#icon_outro" alt="Ícone de outro espaço" />
-          <strong>Outro</strong>
-          <p>Outro tipo de espaço.<br />(Especifique depois)</p>
-        </label>
-      </div>
-      <button href="../index.html">Cancelar</button>
-      <button href="authAnfitriao2.html">
-        Próximo<img src="#icon_proximo" alt="Ícone Próximo" />
-      </button>
-    </form>
-    <footer>
-      <p>BasicParkl 2026. Todos os direitos reservados.</p>
-      <a href="#Termos_de_Uso">Termos de Uso</a>
-      <a href="#Política_de_Privacidade">Política de Privacidade</a>
-      <a href="#Contato">Contato</a>
     </footer>
   </body>
 </html>

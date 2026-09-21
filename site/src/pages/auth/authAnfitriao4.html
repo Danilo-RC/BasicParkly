@@ -3,85 +3,208 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro Anfitrião</title>
+    <title>Cadastro Anfitrião - Análise</title>
+    <!-- Substituição dos CSS -->
+    <link rel="stylesheet" href="/site/src/css/global.css" />
+    <link rel="stylesheet" href="/site/src/css/layouts.css" />
+    <link rel="stylesheet" href="/site/src/css/components.css" />
   </head>
-  <body>
-    <header>
-      <a><img src="#Voltar" alt="Voltar" /> Voltar para o início</a>
+  <body class="layout-dashboard">
+    <!-- Header Superior -->
+    <header class="main-header">
+      <a href="../index.html">
+        <img src="#Voltar" alt="Voltar" /> Voltar para o início
+      </a>
       <img src="#Logo_Header" alt="Logo" />
-      <a href="#Ajuda">Ajuda</a>
-      <img src="#Perfil_Usuario" alt="Perfil Usuário" />
-    </header>
-    <img src="Logo_branco" alt="Logo Branco" />
-    <p>Anfitriôes constroem<br />novas possibilidades.</p>
-    <hr />
-    <img src="#Processo_seguro" alt="Processo seguro" />
-    <h3>Processo seguro</h3>
-    <p>Seus dados são protegidos.</p>
-    <img src="#Mais_renda" alt="Mais renda" />
-    <h3>Mais renda</h3>
-    <p>Seu espaço pode gera<br />novas oportunidades.</p>
-    <img src="#Voce_no_controle" alt="Você no controle" />
-    <h3>Você no controle</h3>
-    <p>Defina regras, preços<br />e disponibilidade.</p>
-    <hr />
-    <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
-    <!-- form do cadastro do anfitrião, agora passo 4 (Análise) -->
-    <form>
-      <h4>CADASTRO DE ANFITRIÃO</h4>
-      <h2><span>Em breve a sua conta Anfitrião-Parkly estará ativa!</span></h2>
-      <p>Recebemos suas informações e elas serão devidamente analisadas.</p>
-      <!-- Linha do tempo do cadastro, agora passo 4 -->
-      <div>
-        <img
-          src="#icon_documento_verificado"
-          alt="Icone Documento Veríficado"
-        />
-        <h5>Cadastro enviado!</h5>
-        <p>Recebemos suas informações e elas serão devidamente analisadas.</p>
-
-        <!-- status do perfil -->
-        <div>
-          <h4>STATUS DO PERFIL</h4>
-          <img src="#icon_analise" alt="Icone Analise" />
-          <h6>Em análise</h6>
-          <p>
-            Seu perfil está sendo analisado. Quando a análise for concluída,
-            você poderá<br />continuar o processo de disponibilização do seu
-            espaço.
-          </p>
-        </div>
-        <h4>Resumo do seu cadastro</h4>
-        <img src="#icon_user" alt="Ícone do Usuário" />
-        <span>Perfil cadastrado</span>
-        <p>Concluído</p>
-        <img src="#icon_verificado" alt="Ícone Verificado" />
-        <img src="#icon_espaco" alt="Ícone do Espaço" />
-        <span>Espaço informado</span>
-        <p>Concluído</p>
-        <img src="#icon_verificado" alt="Ícone Verificado" />
-        <img src="#icon_documento" alt="Ícone de Documento" />
-        <span>Documentos enviados</span>
-        <p>Concluído</p>
-        <img src="#icon_verificado" alt="Ícone Verificado" />
-        <img src="#icon_analise" alt="Ícone de Análise" />
-        <span>Análise</span>
-        <p>Em andamento</p>
-        <img src="#icon_verificado" alt="Ícone Verificado" />
+      <div class="header-user">
+        <a href="#Ajuda">Ajuda</a>
+        <img src="#Perfil_Usuario" alt="Perfil Usuário" />
       </div>
-      <button href="../index.html">
-        <img src="#icon_espaço2" alt="Voltar para o início" />Voltar para o
-        início
-      </button>
-      <button>
-        <img src="#icon_lista" alt="Ícone de Lista" />Ver detalhes do cadastro
-      </button>
-    </form>
-    <footer>
-      <p>BasicParkl 2026. Todos os direitos reservados.</p>
-      <a href="#Termos_de_Uso">Termos de Uso</a>
-      <a href="#Política_de_Privacidade">Política de Privacidade</a>
-      <a href="#Contato">Contato</a>
+    </header>
+
+    <!-- Layout Container -->
+    <div class="container dashboard-container">
+      <!-- Sidebar Esquerda -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <img src="Logo_branco" alt="Logo Branco" />
+          <p>Anfitriões constroem<br />novas possibilidades.</p>
+        </div>
+
+        <div class="sidebar-features">
+          <div class="sidebar-item">
+            <img src="#Processo_seguro" alt="Processo seguro" />
+            <div>
+              <h3>Processo seguro</h3>
+              <p>Seus dados são protegidos.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="#Mais_renda" alt="Mais renda" />
+            <div>
+              <h3>Mais renda</h3>
+              <p>Seu espaço pode gerar<br />novas oportunidades.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="#Voce_no_controle" alt="Você no controle" />
+            <div>
+              <h3>Você no controle</h3>
+              <p>Defina regras, preços<br />e disponibilidade.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">
+          <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
+        </div>
+      </aside>
+
+      <!-- Conteúdo Principal -->
+      <main class="dashboard-main">
+        <div class="main-content-card">
+          <!-- Cabeçalho & Stepper -->
+          <div class="form-header">
+            <span class="form-header-title">CADASTRO DE ANFITRIÃO</span>
+            <div class="form-top-bar">
+              <div class="form-title-area">
+                <h2><span class="text-primary">Em breve a sua conta Anfitrião-Parkly estará ativa!</span></h2>
+                <p class="form-subtitle">Recebemos suas informações e elas serão devidamente analisadas.</p>
+              </div>
+
+              <!-- Stepper -->
+              <div class="stepper-wrapper">
+                <span class="stepper-label">Etapa 4 de 4 — Análise</span>
+                <div class="stepper">
+                  <div class="step-item completed">
+                    <div class="step-number">✓</div>
+                    <span>Dados pessoais</span>
+                  </div>
+                  <div class="step-item completed">
+                    <div class="step-number">✓</div>
+                    <span>Espaço</span>
+                  </div>
+                  <div class="step-item completed">
+                    <div class="step-number">✓</div>
+                    <span>Documentos</span>
+                  </div>
+                  <div class="step-item pending">
+                    <div class="step-number">⏱</div>
+                    <span>Análise</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Central: Cadastro Enviado -->
+          <div class="success-hero">
+            <div class="success-icon-box">
+              <img src="#icon_documento_verificado" alt="Verificado" />
+            </div>
+            <h1>Cadastro enviado!</h1>
+            <p>Recebemos suas informações e elas serão devidamente analisadas.</p>
+          </div>
+
+          <!-- Card: Status do Perfil -->
+          <div class="status-card">
+            <div class="status-header-tag">STATUS DO PERFIL</div>
+            <div class="status-body">
+              <div class="status-icon">
+                <img src="#icon_analise" alt="Em Análise" />
+              </div>
+              <div class="status-info">
+                <h6>Em análise</h6>
+                <p>Seu perfil está sendo analisado. Quando a análise for concluída, você poderá continuar o processo de disponibilização do seu espaço.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resumo do Cadastro -->
+          <div class="summary-section mt-4">
+            <h4>Resumo do seu cadastro</h4>
+            <div class="summary-grid">
+              <!-- Item 1 -->
+              <div class="summary-card">
+                <div class="summary-card-content">
+                  <div class="summary-card-icon">
+                    <img src="#icon_user" alt="Usuário" />
+                  </div>
+                  <div class="summary-details">
+                    <span>Perfil cadastrado</span>
+                    <p>Concluído</p>
+                  </div>
+                </div>
+                <img src="#icon_verificado" alt="OK" class="summary-status-icon" />
+              </div>
+
+              <!-- Item 2 -->
+              <div class="summary-card">
+                <div class="summary-card-content">
+                  <div class="summary-card-icon">
+                    <img src="#icon_espaco" alt="Espaço" />
+                  </div>
+                  <div class="summary-details">
+                    <span>Espaço informado</span>
+                    <p>Concluído</p>
+                  </div>
+                </div>
+                <img src="#icon_verificado" alt="OK" class="summary-status-icon" />
+              </div>
+
+              <!-- Item 3 -->
+              <div class="summary-card">
+                <div class="summary-card-content">
+                  <div class="summary-card-icon">
+                    <img src="#icon_documento" alt="Documentos" />
+                  </div>
+                  <div class="summary-details">
+                    <span>Documentos enviados</span>
+                    <p>Concluído</p>
+                  </div>
+                </div>
+                <img src="#icon_verificado" alt="OK" class="summary-status-icon" />
+              </div>
+
+              <!-- Item 4 -->
+              <div class="summary-card">
+                <div class="summary-card-content">
+                  <div class="summary-card-icon">
+                    <img src="#icon_analise" alt="Análise" />
+                  </div>
+                  <div class="summary-details">
+                    <span>Análise</span>
+                    <p>Em andamento</p>
+                  </div>
+                </div>
+                <img src="#icon_clock" alt="Pendente" class="summary-status-icon" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Botões de Ação -->
+          <div class="actions-row mt-4">
+            <a href="../index.html" class="btn btn-primary">
+              <img src="#icon_espaço2" alt="" /> Voltar para o início
+            </a>
+            <button type="button" class="btn btn-secondary">
+              <img src="#icon_lista" alt="" /> Ver detalhes do cadastro
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer Geral -->
+    <footer class="main-footer">
+      <p>BasicParkly © 2026. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#Termos_de_Uso">Termos de Uso</a>
+        <a href="#Política_de_Privacidade">Política de Privacidade</a>
+        <a href="#Contato">Contato</a>
+      </div>
     </footer>
   </body>
 </html>

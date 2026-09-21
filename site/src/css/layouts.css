@@ -1,0 +1,111 @@
+/* ==========================================================================
+   LAYOUT 1: SPLIT SCREEN (Login e Cadastro)
+   ========================================================================== */
+.layout-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Imagem de fundo e overlay no lado esquerdo */
+.layout-split::before {
+  content: "";
+  position: absolute;
+  top: 64px; /* Abaixo do header */
+  bottom: 54px; /* Acima do footer */
+  left: 0;
+  width: 50%;
+  background: linear-gradient(135deg, rgba(10, 20, 38, 0.88), rgba(5, 12, 25, 0.92)),
+              url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1200') center/cover no-repeat;
+  z-index: 1;
+}
+
+.main-header, .main-footer {
+  grid-column: 1 / -1;
+}
+
+.split-hero {
+  grid-column: 1;
+  grid-row: 2;
+  z-index: 2;
+  color: #ffffff;
+  padding: 80px 8% 40px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.split-form-area {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   LAYOUT 2: DASHBOARD (Área do Anfitrião)
+   ========================================================================== */
+.layout-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  display: flex;
+  flex: 1;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Grids Internos de Formulário */
+.form-grid, .form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.middle-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.25rem;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE GERAL DOS LAYOUTS
+   ========================================================================== */
+@media (max-width: 900px) {
+  /* Layout Split Mobile */
+  .layout-split {
+    grid-template-columns: 1fr;
+  }
+  .layout-split::before, .split-hero {
+    display: none;
+  }
+  .split-form-area {
+    grid-column: 1;
+  }
+  
+  /* Layout Dashboard Mobile */
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .form-grid, .form-grid-2col, .middle-row-grid {
+    grid-template-columns: 1fr;
+  }
+}
