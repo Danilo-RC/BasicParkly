@@ -67,8 +67,8 @@
         <form>
           <div class="form-header">
             <span class="form-header-title">CADASTRO DE ANFITRIÃO</span>
-            <div class="form-title-area">
-              <div>
+            <div class="form-top-bar">
+              <div class="form-title-area">
                 <h2>
                   Olá, <span class="text-primary">Nome do Anfitrião</span>!
                 </h2>
@@ -76,6 +76,26 @@
                   Conte um pouco sobre você e sobre o espaço que deseja
                   disponibilizar no BasicParkly.
                 </p>
+              </div>
+
+              <!-- Stepper / Passos do Cadastro -->
+              <div class="stepper">
+                <div class="step-item active">
+                  <div class="step-number">1</div>
+                  <span>Dados pessoais</span>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">2</div>
+                  <span>Espaço</span>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">3</div>
+                  <span>Documentos</span>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">4</div>
+                  <span>Análise</span>
+                </div>
               </div>
             </div>
           </div>
@@ -182,13 +202,14 @@
             <div class="btn-group-right">
               <button
                 type="button"
-                class="btn-cancel"
+                class="btn-action btn-cancel"
                 onclick="location.href = '../index.html'"
               >
                 Cancelar
               </button>
+              <!-- futuramente type="submit" -->
               <button
-                type="submit"
+                type="button"
                 class="btn-primary"
                 onclick="location.href = 'authAnfitriao2.html'"
               >

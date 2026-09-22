@@ -195,7 +195,7 @@
   margin-bottom: 6px;
 }
 .form-subtitle {
-  text-align: center;
+  text-align: left;
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 24px;
@@ -417,6 +417,14 @@
   align-items: center;
   gap: 1.5rem;
 }
+
+.stepper-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin-left: 11.5rem;
+}
+
 .step-item {
   display: flex;
   flex-direction: column;
