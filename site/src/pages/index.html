@@ -3,31 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="/BasicParkly/site/src/css/global.css" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/layouts.css" />
+    <link rel="stylesheet" href="../css/components.css" />
   </head>
   <body>
     <header>
-      <img src="#Logo_Header" alt="Logo" /> 
-      <a>Início</a>
-      <a>Explorar</a>
-      <a>Garagens</a>
-      <a>Carregadores</a>
-      <a>Como funciona</a>
-      <a>Anuncie sua garagem</a>
-      <button>Entrar</button>
-      <button>Cadastrar</button>
+      <nav>
+        <img src="#Logo_Header" alt="Logo" />
+        <a href="#início">Início</a>
+        <a href="#explorar">Explorar</a>
+        <a href="#garagens">Garagens</a>
+        <a href="#carregadores">Carregadores</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#anuncie-sua-garagem"><span>Anuncie sua garagem</span></a>
+        <button>
+          <img src="#Icone_modo_escuro" alt="Ícone de modo escuro" />
+        </button>
+        <button><img src="#Icone_salvar" alt="Ícone salvar" /></button>
+        <a href="auth/auth.html"><strong>Entrar</strong></a>
+        <button href="auth/cadastro.html">Cadastrar</button>
+      </nav>
     </header>
-    <span>MARKETPLACE DE GARAGENS PREMIUM</span>
-    <h1>
-      Encontre garagens<br />seguras<br /><span>perto do seu destino.</span>
-    </h1>
-    <p>
-      Economize, estacione com segurança e descubra milhares de vagas
-      residenciais disponíveis em todo o Brasil.
-    </p>
-    <button>Encontrar Garagem</button>
-    <button>Como funciona</button>
-    <!-- restante do protótipo atual está desatualizado com a v1 -->
+    <!-- barra de busca: (ONDE?(Cidade ou bairro)/DATA(dd/mm/aaaa)/ENTRADA(--:--)/SAÍDA(--:--)/PESQUISAR)-->
+
+    <!-- filtro por categoria -->
+    <div>
+      <button>
+        <img src="#icon_todos" alt="Ícone Todos" />
+        Todos
+      </button>
+      <button>
+        <img src="#icon_residencial" alt="Ícone Garagens Residenciais" />
+        Garagens Residenciais
+      </button>
+      <button>
+        <img src="#icon_condominio" alt="Ícone Condomínios" />
+        Condomínios
+      </button>
+      <button>
+        <img src="#icon_coberta" alt="Ícone Cobertas" />
+        Cobertas
+      </button>
+      <button>
+        <img src="#icon_descoberta" alt="Ícone Descobertas" />
+        Descobertas
+      </button>
+      <button>
+        <img src="#icon_eletrico" alt="Ícone Carregamento Elétrico" />
+        Carregamento Elétrico
+      </button>
+      <button>
+        <img src="#icon_moto" alt="Ícone Motos" />
+        Moto
+      </button>
+      <button>
+        <img src="#icon_mensalista" alt="Ícone Mensalistas" />
+        Mensalistas
+      </button>
+      <button>
+        <img src="#icon_evento" alt="Ícone Eventos" />
+        Eventos
+      </button>
+    </div>
+
+    <!-- filtros (esquerda) -->
+    <div>
+      <img src="#Icone_filtro" alt="Ícone Filtros" />
+      <h2>Filtros</h2>
+      <p>Preço máximo/hora</p>
+      <span>R$ 50</span>
+      <!-- slider (R$ 5 - R$ 100) -->
+      <p>R$ 5</p>
+      <p>R$ 100</p>
+      <hr />
+      <button><img src="icon_coberta" alt="Ícone Coberta" />Coberta</button>
+      <button>
+        <img src="icon_escudo" alt="Ícone Portão Automático" />Portão Automático
+      </button>
+      <button>
+        <img src="icon_camera" alt="Ícone Câmeras de Segurança" />Câmeras de
+        Segurança
+      </button>
+      <button>
+        <img src="icon_relogio" alt="Ícone Acesso 24 horas" />Acesso 24 horas
+      </button>
+      <button>
+        <img src="icon_eletrico" alt="Ícone Carregador Elétrico" />Carregador
+        Elétrico
+      </button>
+      <button>
+        <img src="icon_caminhao" alt="Ícone Aceita Caminhonete" />Aceita
+        Caminhonete
+      </button>
+      <button><img src="icon_suv" alt="Ícone Aceita SUV" />Aceita SUV</button>
+      <button>
+        <img src="icon_moto" alt="Ícone Aceita Moto" />Aceita Moto
+      </button>
+    </div>
+    <div>
+      <h3><span>12</span> Vagas Disponíveis</h3>
+      <!-- cards das vagas -->
+      <div>
+        <img src="#vaga1" alt="Vaga 1" />
+
+        <img src="#icon_favorito" alt="Ícone Favorito" />
+        <div>
+          <h4>Garagem Vila Madalena</h4>
+          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.9</span>
+          <p>
+            <img src="#icon_localizacao" alt="Ícone Localização" />0.3km - São
+            Paulo, SP
+          </p>
+          <p><span>R$8</span>/hora<br />R$ 45/diária</p>
+          <p>2 vagas<br />128 avaliações</p>
+          <img src="#icon_azul" alt="Ícone Azul" />
+          <span>Anfitrião Verificado</span>
+        </div>
+      </div>
+
+      <div>
+        <img src="#vaga2" alt="Vaga 2" />
+        <img src="#icon_carregador" alt="Ícone Carregador" />
+        <img src="#icon_favorito" alt="Ícone Favorito" />
+        <div>
+          <h4>Espaço Itaim Bibi</h4>
+          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.8</span>
+          <p>
+            <img src="#icon_localizacao" alt="Ícone Localização" />0.6km - São
+            Paulo, SP
+          </p>
+          <p><span>R$12</span>/hora<br />R$ 65/diária</p>
+          <p>1 vagas<br />94 avaliações</p>
+          <img src="#icon_carregador" alt="Ícone Carregador" />
+          <span>Carregador Elétrico</span>
+        </div>
+      </div>
+
+      <div>
+        <img src="#vaga3" alt="Vaga 3" />
+        <img src="#icon_favorito" alt="Ícone Favorito" />
+        <div>
+          <h4>Vaga Leblon Premium</h4>
+          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>5.0</span>
+          <p>
+            <img src="#icon_localizacao" alt="Ícone Localização" />0.4km - Rio
+            de Janeiro, RJ
+          </p>
+          <p><span>R$15</span>/hora<br />R$ 80/diária</p>
+          <p>1 vagas<br />67 avaliações</p>
+          <img src="#icon_azul" alt="Ícone Azul" />
+          <span> Anfitrião Verificado </span>
+        </div>
+      </div>
+
+      <div>
+        <img src="#vaga4" alt="Vaga 4" />
+        <img src="#icon_favorito" alt="Ícone Favorito" />
+        <div>
+          <h4>Garagem Pinheiros</h4>
+          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.7</span>
+          <p>
+            <img src="#icon_localizacao" alt="Ícone Localização" />1.1km - São
+            Paulo, SP
+          </p>
+          <p><span>R$7</span>/hora<br />R$ 38/diária</p>
+          <p>3 vagas<br />212 avaliações</p>
+          <img src="#icon_azul" alt="Ícone Azul" />
+          <span>Coberta</span>
+        </div>
+      </div>
+
+      <div>
+        <img src="#vaga5" alt="Vaga 5" />
+        <img src="#icon_favorito" alt="Ícone Favorito" />
+        <div>
+          <h4>Vaga moema Garden</h4>
+          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.9</span>
+          <p>
+            <img src="#icon_localizacao" alt="Ícone Localização" />0.8km - São
+            Paulo, SP
+          </p>
+          <p><span>R$9</span>/hora<br />R$ 50/diária</p>
+          <p>2 vagas<br />153 avaliações</p>
+          <img src="#icon_azul" alt="Ícone Azul" />
+          <span>Anfitrião Verificado</span>
+        </div>
+      </div>
+
+      <div>
+        <img src="#vaga6" alt="Vaga 6" />
+        <img src="#icon_favorito" alt="Ícone Favorito" />
+        <div>
+          <h4>Condomínio Brooklin</h4>
+          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.8</span>
+          <p>
+            <img src="#icon_localizacao" alt="Ícone Localização" />1.4km - São
+            Paulo, SP
+          </p>
+          <p><span>R$10</span>/hora<br />R$ 55/diária</p>
+          <p>4 vagas<br />89 avaliações</p>
+          <img src="#icon_azul" alt="Ícone Azul" />
+          <span>Anfitrião Verificado</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer padronizado -->
+    <footer class="main-footer">
+      <p>BasicParkly 2026. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#Termos_de_Uso">Termos de Uso</a>
+        <a href="#Política_de_Privacidade">Política de Privacidade</a>
+        <a href="#Contato">Contato</a>
+      </div>
+    </footer>
   </body>
 </html>

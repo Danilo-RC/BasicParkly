@@ -17,12 +17,15 @@
   bottom: 54px; /* Acima do footer */
   left: 0;
   width: 50%;
-  background: linear-gradient(135deg, rgba(10, 20, 38, 0.88), rgba(5, 12, 25, 0.92)),
-              url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1200') center/cover no-repeat;
+  background:
+    linear-gradient(135deg, rgba(10, 20, 38, 0.88), rgba(5, 12, 25, 0.92)),
+    url("https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1200")
+      center/cover no-repeat;
   z-index: 1;
 }
 
-.main-header, .main-footer {
+.main-header,
+.main-footer {
   grid-column: 1 / -1;
 }
 
@@ -74,7 +77,8 @@
 }
 
 /* Grids Internos de Formulário */
-.form-grid, .form-grid-2col {
+.form-grid,
+.form-grid-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
@@ -94,18 +98,21 @@
   .layout-split {
     grid-template-columns: 1fr;
   }
-  .layout-split::before, .split-hero {
+  .layout-split::before,
+  .split-hero {
     display: none;
   }
   .split-form-area {
     grid-column: 1;
   }
-  
+
   /* Layout Dashboard Mobile */
   .dashboard-container {
     flex-direction: column;
   }
-  .form-grid, .form-grid-2col, .middle-row-grid {
+  .form-grid,
+  .form-grid-2col,
+  .middle-row-grid {
     grid-template-columns: 1fr;
   }
 }
