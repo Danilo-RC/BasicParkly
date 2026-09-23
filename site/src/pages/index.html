@@ -3,216 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title>Landing Page - BasicParkly</title>
+
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/layouts.css" />
     <link rel="stylesheet" href="../css/components.css" />
   </head>
+
   <body>
-    <header>
-      <nav>
+    <header class="main-header">
+      <nav class="header-nav">
         <img src="#Logo_Header" alt="Logo" />
-        <a href="#início">Início</a>
-        <a href="#explorar">Explorar</a>
-        <a href="#garagens">Garagens</a>
-        <a href="#carregadores">Carregadores</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#anuncie-sua-garagem"><span>Anuncie sua garagem</span></a>
-        <button>
-          <img src="#Icone_modo_escuro" alt="Ícone de modo escuro" />
-        </button>
-        <button><img src="#Icone_salvar" alt="Ícone salvar" /></button>
-        <a href="auth/auth.html"><strong>Entrar</strong></a>
-        <button href="auth/cadastro.html">Cadastrar</button>
+
+        <div class="header-nav-links">
+          <a href="#início">Início</a>
+          <a href="#explorar">Explorar</a>
+          <a href="#garagens">Garagens</a>
+          <a href="#carregadores">Carregadores</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#anuncie" class="link-highlight">Anuncie sua garagem</a>
+        </div>
+
+        <div class="header-actions">
+          <button class="icon-btn">
+            <img src="#Icone_modo_escuro" alt="Ícone de modo escuro" />
+          </button>
+          <button class="icon-btn">
+            <img src="#Icone_salvar" alt="Ícone salvar" />
+          </button>
+          <a
+            href="auth/auth.html"
+            style="color: var(--text-main); font-weight: 600"
+            >Entrar</a
+          >
+          <button
+            class="btn-primary"
+            onclick="location.href = 'auth/cadastro.html'"
+          >
+            Cadastrar
+          </button>
+        </div>
       </nav>
     </header>
-    <!-- barra de busca: (ONDE?(Cidade ou bairro)/DATA(dd/mm/aaaa)/ENTRADA(--:--)/SAÍDA(--:--)/PESQUISAR)-->
 
-    <!-- filtro por categoria -->
-    <div>
-      <button>
-        <img src="#icon_todos" alt="Ícone Todos" />
-        Todos
-      </button>
-      <button>
-        <img src="#icon_residencial" alt="Ícone Garagens Residenciais" />
-        Garagens Residenciais
-      </button>
-      <button>
-        <img src="#icon_condominio" alt="Ícone Condomínios" />
-        Condomínios
-      </button>
-      <button>
-        <img src="#icon_coberta" alt="Ícone Cobertas" />
-        Cobertas
-      </button>
-      <button>
-        <img src="#icon_descoberta" alt="Ícone Descobertas" />
-        Descobertas
-      </button>
-      <button>
-        <img src="#icon_eletrico" alt="Ícone Carregamento Elétrico" />
-        Carregamento Elétrico
-      </button>
-      <button>
-        <img src="#icon_moto" alt="Ícone Motos" />
-        Moto
-      </button>
-      <button>
-        <img src="#icon_mensalista" alt="Ícone Mensalistas" />
-        Mensalistas
-      </button>
-      <button>
-        <img src="#icon_evento" alt="Ícone Eventos" />
-        Eventos
-      </button>
-    </div>
-
-    <!-- filtros (esquerda) -->
-    <div>
-      <img src="#Icone_filtro" alt="Ícone Filtros" />
-      <h2>Filtros</h2>
-      <p>Preço máximo/hora</p>
-      <span>R$ 50</span>
-      <!-- slider (R$ 5 - R$ 100) -->
-      <p>R$ 5</p>
-      <p>R$ 100</p>
-      <hr />
-      <button><img src="icon_coberta" alt="Ícone Coberta" />Coberta</button>
-      <button>
-        <img src="icon_escudo" alt="Ícone Portão Automático" />Portão Automático
-      </button>
-      <button>
-        <img src="icon_camera" alt="Ícone Câmeras de Segurança" />Câmeras de
-        Segurança
-      </button>
-      <button>
-        <img src="icon_relogio" alt="Ícone Acesso 24 horas" />Acesso 24 horas
-      </button>
-      <button>
-        <img src="icon_eletrico" alt="Ícone Carregador Elétrico" />Carregador
-        Elétrico
-      </button>
-      <button>
-        <img src="icon_caminhao" alt="Ícone Aceita Caminhonete" />Aceita
-        Caminhonete
-      </button>
-      <button><img src="icon_suv" alt="Ícone Aceita SUV" />Aceita SUV</button>
-      <button>
-        <img src="icon_moto" alt="Ícone Aceita Moto" />Aceita Moto
-      </button>
-    </div>
-    <div>
-      <h3><span>12</span> Vagas Disponíveis</h3>
-      <!-- cards das vagas -->
-      <div>
-        <img src="#vaga1" alt="Vaga 1" />
-
-        <img src="#icon_favorito" alt="Ícone Favorito" />
-        <div>
-          <h4>Garagem Vila Madalena</h4>
-          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.9</span>
-          <p>
-            <img src="#icon_localizacao" alt="Ícone Localização" />0.3km - São
-            Paulo, SP
-          </p>
-          <p><span>R$8</span>/hora<br />R$ 45/diária</p>
-          <p>2 vagas<br />128 avaliações</p>
-          <img src="#icon_azul" alt="Ícone Azul" />
-          <span>Anfitrião Verificado</span>
+    <div class="search-section">
+      <div class="search-bar">
+        <div class="search-field">
+          <span class="search-label"
+            ><img src="#icon_localizacao_blue" alt="" /> Onde?</span
+          >
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Cidade ou bairro"
+          />
         </div>
-      </div>
 
-      <div>
-        <img src="#vaga2" alt="Vaga 2" />
-        <img src="#icon_carregador" alt="Ícone Carregador" />
-        <img src="#icon_favorito" alt="Ícone Favorito" />
-        <div>
-          <h4>Espaço Itaim Bibi</h4>
-          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.8</span>
-          <p>
-            <img src="#icon_localizacao" alt="Ícone Localização" />0.6km - São
-            Paulo, SP
-          </p>
-          <p><span>R$12</span>/hora<br />R$ 65/diária</p>
-          <p>1 vagas<br />94 avaliações</p>
-          <img src="#icon_carregador" alt="Ícone Carregador" />
-          <span>Carregador Elétrico</span>
+        <div class="search-field">
+          <span class="search-label"
+            ><img src="#icon_calendario" alt="" /> Data</span
+          >
+          <input type="date" class="search-input" />
         </div>
-      </div>
 
-      <div>
-        <img src="#vaga3" alt="Vaga 3" />
-        <img src="#icon_favorito" alt="Ícone Favorito" />
-        <div>
-          <h4>Vaga Leblon Premium</h4>
-          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>5.0</span>
-          <p>
-            <img src="#icon_localizacao" alt="Ícone Localização" />0.4km - Rio
-            de Janeiro, RJ
-          </p>
-          <p><span>R$15</span>/hora<br />R$ 80/diária</p>
-          <p>1 vagas<br />67 avaliações</p>
-          <img src="#icon_azul" alt="Ícone Azul" />
-          <span> Anfitrião Verificado </span>
+        <div class="search-field">
+          <span class="search-label"
+            ><img src="#icon_relogio" alt="" /> Entrada</span
+          >
+          <input type="time" class="search-input" />
         </div>
-      </div>
 
-      <div>
-        <img src="#vaga4" alt="Vaga 4" />
-        <img src="#icon_favorito" alt="Ícone Favorito" />
-        <div>
-          <h4>Garagem Pinheiros</h4>
-          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.7</span>
-          <p>
-            <img src="#icon_localizacao" alt="Ícone Localização" />1.1km - São
-            Paulo, SP
-          </p>
-          <p><span>R$7</span>/hora<br />R$ 38/diária</p>
-          <p>3 vagas<br />212 avaliações</p>
-          <img src="#icon_azul" alt="Ícone Azul" />
-          <span>Coberta</span>
+        <div class="search-field">
+          <span class="search-label"
+            ><img src="#icon_relogio" alt="" /> Saída</span
+          >
+          <input type="time" class="search-input" />
         </div>
-      </div>
 
-      <div>
-        <img src="#vaga5" alt="Vaga 5" />
-        <img src="#icon_favorito" alt="Ícone Favorito" />
-        <div>
-          <h4>Vaga moema Garden</h4>
-          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.9</span>
-          <p>
-            <img src="#icon_localizacao" alt="Ícone Localização" />0.8km - São
-            Paulo, SP
-          </p>
-          <p><span>R$9</span>/hora<br />R$ 50/diária</p>
-          <p>2 vagas<br />153 avaliações</p>
-          <img src="#icon_azul" alt="Ícone Azul" />
-          <span>Anfitrião Verificado</span>
-        </div>
-      </div>
-
-      <div>
-        <img src="#vaga6" alt="Vaga 6" />
-        <img src="#icon_favorito" alt="Ícone Favorito" />
-        <div>
-          <h4>Condomínio Brooklin</h4>
-          <img src="#icon_avaliacao" alt="Ícone Avaliação" /><span>4.8</span>
-          <p>
-            <img src="#icon_localizacao" alt="Ícone Localização" />1.4km - São
-            Paulo, SP
-          </p>
-          <p><span>R$10</span>/hora<br />R$ 55/diária</p>
-          <p>4 vagas<br />89 avaliações</p>
-          <img src="#icon_azul" alt="Ícone Azul" />
-          <span>Anfitrião Verificado</span>
-        </div>
+        <button
+          class="btn-primary"
+          style="padding: 0 2rem; border-radius: 100px"
+        >
+          <img src="#icon_lupa" alt="" /> Pesquisar
+        </button>
       </div>
     </div>
 
-    <!-- Footer padronizado -->
+    <div class="category-scroll">
+      <button class="btn-category active">
+        <img src="#icon_todos_white" alt="" /> Todos
+      </button>
+      <button class="btn-category">
+        <img src="#icon_residencial" alt="" /> Garagens Residenciais
+      </button>
+      <button class="btn-category">
+        <img src="#icon_condominio" alt="" /> Condomínios
+      </button>
+      <button class="btn-category">
+        <img src="#icon_coberta" alt="" /> Cobertas
+      </button>
+      <button class="btn-category">
+        <img src="#icon_descoberta" alt="" /> Descobertas
+      </button>
+      <button class="btn-category">
+        <img src="#icon_eletrico" alt="" /> Carregamento Elétrico
+      </button>
+      <button class="btn-category"><img src="#icon_moto" alt="" /> Moto</button>
+      <button class="btn-category">
+        <img src="#icon_mensalista" alt="" /> Mensalistas
+      </button>
+      <button class="btn-category">
+        <img src="#icon_evento" alt="" /> Eventos
+      </button>
+    </div>
+
+    <div class="landing-container">
+      <aside class="filter-sidebar">
+        <div class="filter-header">
+          <img src="#Icone_filtro" alt="Ícone Filtros" /> Filtros
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-title">Preço máximo/hora <span>R$ 50</span></div>
+          <input
+            type="range"
+            class="price-slider"
+            min="5"
+            max="100"
+            value="50"
+          />
+          <div class="price-labels">
+            <span>R$ 5</span>
+            <span>R$ 100</span>
+          </div>
+        </div>
+
+        <hr class="filter-divider" />
+
+        <div class="filter-btn-list">
+          <button class="btn-filter">
+            <img src="#icon_coberta_cinza" alt="" /> Coberta
+          </button>
+          <button class="btn-filter">
+            <img src="#icon_escudo" alt="" /> Portão Automático
+          </button>
+          <button class="btn-filter">
+            <img src="#icon_camera" alt="" /> Câmeras de Segurança
+          </button>
+          <button class="btn-filter">
+            <img src="#icon_relogio_cinza" alt="" /> Acesso 24 horas
+          </button>
+          <button class="btn-filter">
+            <img src="#icon_eletrico_cinza" alt="" /> Carregador Elétrico
+          </button>
+          <button class="btn-filter">
+            <img src="#icon_caminhao" alt="" /> Aceita Caminhonete
+          </button>
+          <button class="btn-filter">
+            <img src="#icon_suv" alt="" /> Aceita SUV
+          </button>
+          <button class="btn-filter">
+            <img src="#icon_moto_cinza" alt="" /> Aceita Moto
+          </button>
+        </div>
+      </aside>
+
+      <main class="listings-area">
+        <h3 class="listings-header">12 vagas disponíveis</h3>
+
+        <div class="listings-grid">
+          <!-- Card 1 -->
+          <div class="listing-card">
+            <div class="listing-img-container">
+              <img
+                src="#vaga1"
+                alt="Garagem Vila Madalena"
+                class="listing-img"
+              />
+              <button class="btn-favorite">
+                <img src="#icon_favorito" alt="" />
+              </button>
+            </div>
+            <div class="listing-content">
+              <div class="listing-title-row">
+                <h4 class="listing-title">Garagem Vila Madalena</h4>
+                <div class="listing-rating">
+                  <img src="#icon_avaliacao" alt="" /> 4.9
+                </div>
+              </div>
+              <div class="listing-loc">
+                <img src="#icon_localizacao_cinza" alt="" /> 0.3 km - São Paulo,
+                SP
+              </div>
+              <div class="listing-details-row">
+                <div class="listing-price">
+                  <strong>R$ 8</strong>/hora<br />R$ 45/diária
+                </div>
+                <div class="listing-stats">2 vagas<br />128 avaliações</div>
+              </div>
+              <div class="listing-tag">
+                <img src="#icon_azul" alt="" /> Anfitrião Verificado
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="listing-card">
+            <div class="listing-img-container">
+              <img src="#vaga2" alt="Espaço Itaim Bibi" class="listing-img" />
+              <div class="badge-ev"><img src="#icon_raio" alt="" /> EV</div>
+              <button class="btn-favorite">
+                <img src="#icon_favorito" alt="" />
+              </button>
+            </div>
+            <div class="listing-content">
+              <div class="listing-title-row">
+                <h4 class="listing-title">Espaço Itaim Bibi</h4>
+                <div class="listing-rating">
+                  <img src="#icon_avaliacao" alt="" /> 4.8
+                </div>
+              </div>
+              <div class="listing-loc">
+                <img src="#icon_localizacao_cinza" alt="" /> 0.6 km - São Paulo,
+                SP
+              </div>
+              <div class="listing-details-row">
+                <div class="listing-price">
+                  <strong>R$ 12</strong>/hora<br />R$ 65/diária
+                </div>
+                <div class="listing-stats">1 vaga<br />94 avaliações</div>
+              </div>
+              <div class="listing-tag tag-eco">
+                <img src="#icon_carregador_verde" alt="" /> Carregador Elétrico
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="listing-card">
+            <div class="listing-img-container">
+              <img src="#vaga3" alt="Vaga Leblon Premium" class="listing-img" />
+              <button class="btn-favorite">
+                <img src="#icon_favorito" alt="" />
+              </button>
+            </div>
+            <div class="listing-content">
+              <div class="listing-title-row">
+                <h4 class="listing-title">Vaga Leblon Premium</h4>
+                <div class="listing-rating">
+                  <img src="#icon_avaliacao" alt="" /> 5.0
+                </div>
+              </div>
+              <div class="listing-loc">
+                <img src="#icon_localizacao_cinza" alt="" /> 0.4 km - Rio de
+                Janeiro, RJ
+              </div>
+              <div class="listing-details-row">
+                <div class="listing-price">
+                  <strong>R$ 15</strong>/hora<br />R$ 80/diária
+                </div>
+                <div class="listing-stats">1 vaga<br />67 avaliações</div>
+              </div>
+              <div class="listing-tag">
+                <img src="#icon_azul" alt="" /> Anfitrião Verificado
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="listing-card">
+            <div class="listing-img-container">
+              <img src="#vaga4" alt="Garagem Pinheiros" class="listing-img" />
+              <button class="btn-favorite">
+                <img src="#icon_favorito" alt="" />
+              </button>
+            </div>
+            <div class="listing-content">
+              <div class="listing-title-row">
+                <h4 class="listing-title">Garagem Pinheiros</h4>
+                <div class="listing-rating">
+                  <img src="#icon_avaliacao" alt="" /> 4.7
+                </div>
+              </div>
+              <div class="listing-loc">
+                <img src="#icon_localizacao_cinza" alt="" /> 1.1 km - São Paulo,
+                SP
+              </div>
+              <div class="listing-details-row">
+                <div class="listing-price">
+                  <strong>R$ 7</strong>/hora<br />R$ 38/diária
+                </div>
+                <div class="listing-stats">3 vagas<br />212 avaliações</div>
+              </div>
+              <div class="listing-tag">
+                <img src="#icon_azul" alt="" /> Coberta
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="listing-card">
+            <div class="listing-img-container">
+              <img src="#vaga5" alt="Vaga Moema Garden" class="listing-img" />
+              <div class="badge-ev"><img src="#icon_raio" alt="" /> EV</div>
+              <button class="btn-favorite">
+                <img src="#icon_favorito" alt="" />
+              </button>
+            </div>
+            <div class="listing-content">
+              <div class="listing-title-row">
+                <h4 class="listing-title">Vaga Moema Garden</h4>
+                <div class="listing-rating">
+                  <img src="#icon_avaliacao" alt="" /> 4.9
+                </div>
+              </div>
+              <div class="listing-loc">
+                <img src="#icon_localizacao_cinza" alt="" /> 0.8 km - São Paulo,
+                SP
+              </div>
+              <div class="listing-details-row">
+                <div class="listing-price">
+                  <strong>R$ 9</strong>/hora<br />R$ 50/diária
+                </div>
+                <div class="listing-stats">2 vagas<br />153 avaliações</div>
+              </div>
+              <div class="listing-tag">
+                <img src="#icon_azul" alt="" /> Anfitrião Verificado
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="listing-card">
+            <div class="listing-img-container">
+              <img src="#vaga6" alt="Condomínio Brooklin" class="listing-img" />
+              <div class="badge-ev"><img src="#icon_raio" alt="" /> EV</div>
+              <button class="btn-favorite">
+                <img src="#icon_favorito" alt="" />
+              </button>
+            </div>
+            <div class="listing-content">
+              <div class="listing-title-row">
+                <h4 class="listing-title">Condomínio Brooklin</h4>
+                <div class="listing-rating">
+                  <img src="#icon_avaliacao" alt="" /> 4.8
+                </div>
+              </div>
+              <div class="listing-loc">
+                <img src="#icon_localizacao_cinza" alt="" /> 1.4 km - São Paulo,
+                SP
+              </div>
+              <div class="listing-details-row">
+                <div class="listing-price">
+                  <strong>R$ 10</strong>/hora<br />R$ 55/diária
+                </div>
+                <div class="listing-stats">4 vagas<br />89 avaliações</div>
+              </div>
+              <div class="listing-tag">
+                <img src="#icon_azul" alt="" /> Anfitrião Verificado
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
     <footer class="main-footer">
-      <p>BasicParkly 2026. Todos os direitos reservados.</p>
+      <p>BasicParkly © 2026. Todos os direitos reservados.</p>
       <div class="footer-links">
         <a href="#Termos_de_Uso">Termos de Uso</a>
         <a href="#Política_de_Privacidade">Política de Privacidade</a>

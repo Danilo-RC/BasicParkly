@@ -13,14 +13,15 @@
 .layout-split::before {
   content: "";
   position: absolute;
-  top: 64px; /* Abaixo do header */
-  bottom: 54px; /* Acima do footer */
+  top: 64px;
+  /* Abaixo do header */
+  bottom: 54px;
+  /* Acima do footer */
   left: 0;
   width: 50%;
   background:
     linear-gradient(135deg, rgba(10, 20, 38, 0.88), rgba(5, 12, 25, 0.92)),
-    url("https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1200")
-      center/cover no-repeat;
+    url("https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1200") center/cover no-repeat;
   z-index: 1;
 }
 
@@ -94,14 +95,17 @@
    RESPONSIVIDADE GERAL DOS LAYOUTS
    ========================================================================== */
 @media (max-width: 900px) {
+
   /* Layout Split Mobile */
   .layout-split {
     grid-template-columns: 1fr;
   }
+
   .layout-split::before,
   .split-hero {
     display: none;
   }
+
   .split-form-area {
     grid-column: 1;
   }
@@ -110,9 +114,76 @@
   .dashboard-container {
     flex-direction: column;
   }
+
   .form-grid,
   .form-grid-2col,
   .middle-row-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   LAYOUT 3: LANDING PAGE (Hero Search + Sidebar + Grid)
+   ========================================================================== */
+.search-section {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-main);
+}
+
+.category-scroll {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0 2rem 1.5rem 2rem;
+  scrollbar-width: none;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.landing-container {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem 2rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.filter-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.listings-area {
+  flex: 1;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Responsividade Específica da Landing Page */
+@media (max-width: 1100px) {
+  .listings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .landing-container {
+    flex-direction: column;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listings-grid {
     grid-template-columns: 1fr;
   }
 }
