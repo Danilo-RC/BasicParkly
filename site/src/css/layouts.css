@@ -21,7 +21,8 @@
   width: 50%;
   background:
     linear-gradient(135deg, rgba(10, 20, 38, 0.88), rgba(5, 12, 25, 0.92)),
-    url("https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1200") center/cover no-repeat;
+    url("https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1200")
+      center/cover no-repeat;
   z-index: 1;
 }
 
@@ -75,6 +76,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  padding: 1.25rem 1.5rem;
 }
 
 /* Grids Internos de Formulário */
@@ -95,7 +100,6 @@
    RESPONSIVIDADE GERAL DOS LAYOUTS
    ========================================================================== */
 @media (max-width: 900px) {
-
   /* Layout Split Mobile */
   .layout-split {
     grid-template-columns: 1fr;
