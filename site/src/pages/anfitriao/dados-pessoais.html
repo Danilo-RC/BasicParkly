@@ -1,37 +1,52 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Cadastro Anfitrião</title>
 
-    <link rel="stylesheet" href="../../css/global.css" />
-    <link rel="stylesheet" href="../../css/layouts.css" />
-    <link rel="stylesheet" href="../../css/components.css" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/layouts.css" rel="stylesheet" />
+    <link href="../../css/components.css" rel="stylesheet" />
   </head>
   <body class="layout-dashboard">
     <header class="main-header">
       <a href="../index.html">
-        <img src="#Voltar" alt="Voltar" /> Voltar para o início
+        <span aria-hidden="true" class="icon asset-placeholder"
+          ><!-- <img src="#Voltar" alt=""> --></span
+        >
+        Voltar para o início
       </a>
-      <img src="#Logo_Header" alt="Logo" />
+      <span aria-label="BasicParkly" class="brand"
+        ><span aria-hidden="true" class="brand-mark"
+          ><!-- <img src="#Logo_Header" alt=""> --></span
+        ><span class="brand-name">Basic<span>Parkly</span></span></span
+      >
       <div class="header-user">
         <a href="#Ajuda">Ajuda</a>
-        <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+        <span aria-hidden="true" class="icon asset-placeholder"
+          ><!-- <img src="#Perfil_Usuario" alt=""> --></span
+        >
       </div>
     </header>
 
-    <div class="container dashboard-container">
+    <div class="dashboard-container">
       <!-- Sidebar Esquerda -->
       <aside class="sidebar">
         <div class="sidebar-brand">
-          <img src="Logo_branco" alt="Logo Branco" />
+          <span aria-label="BasicParkly" class="brand"
+            ><span aria-hidden="true" class="brand-mark"
+              ><!-- <img src="Logo_branco" alt=""> --></span
+            ><span class="brand-name">Basic<span>Parkly</span></span></span
+          >
           <p>Anfitriões constroem<br />novas possibilidades.</p>
         </div>
 
         <div class="sidebar-features">
           <div class="sidebar-item">
-            <img src="#Processo_seguro" alt="Processo seguro" />
+            <span aria-hidden="true" class="icon asset-placeholder"
+              ><!-- <img src="#Processo_seguro" alt=""> --></span
+            >
             <div>
               <h3>Processo seguro</h3>
               <p>Seus dados são protegidos.</p>
@@ -39,7 +54,9 @@
           </div>
 
           <div class="sidebar-item">
-            <img src="#Mais_renda" alt="Mais renda" />
+            <span aria-hidden="true" class="icon asset-placeholder"
+              ><!-- <img src="#Mais_renda" alt=""> --></span
+            >
             <div>
               <h3>Mais renda</h3>
               <p>Seu espaço pode gerar<br />novas oportunidades.</p>
@@ -47,7 +64,9 @@
           </div>
 
           <div class="sidebar-item">
-            <img src="#Voce_no_controle" alt="Você no controle" />
+            <span aria-hidden="true" class="icon asset-placeholder"
+              ><!-- <img src="#Voce_no_controle" alt=""> --></span
+            >
             <div>
               <h3>Você no controle</h3>
               <p>Defina regras, preços<br />e disponibilidade.</p>
@@ -101,7 +120,9 @@
           <!-- Card 1: Dados pessoais -->
           <div class="card">
             <div class="card-header">
-              <img src="#icon_avatar" alt="Icone Avatar" />
+              <span aria-hidden="true" class="icon asset-placeholder"
+                ><!-- <img src="#icon_avatar" alt=""> --></span
+              >
               <h5>Dados pessoais</h5>
             </div>
             <p class="card-description">
@@ -113,12 +134,16 @@
               <div class="field-group">
                 <label for="cpf">CPF <span class="text-danger">*</span></label>
                 <div class="input-wrapper">
-                  <img src="#icon_cpf" alt="" class="input-icon" />
+                  <span
+                    aria-hidden="true"
+                    class="icon input-icon asset-placeholder"
+                    ><!-- <img src="#icon_cpf" alt=""> --></span
+                  >
                   <input
-                    type="text"
                     id="cpf"
                     name="cpf"
                     placeholder="Digite seu CPF"
+                    type="text"
                   />
                 </div>
                 <span class="helper-text">Exemplo: 123.456.789-00</span>
@@ -129,8 +154,12 @@
                   Data de nascimento <span class="text-danger">*</span>
                 </label>
                 <div class="input-wrapper">
-                  <img src="#icon_calendar" alt="" class="input-icon" />
-                  <input type="date" id="nascimento" name="nascimento" />
+                  <span
+                    aria-hidden="true"
+                    class="icon input-icon asset-placeholder"
+                    ><!-- <img src="#icon_calendar" alt=""> --></span
+                  >
+                  <input id="nascimento" name="nascimento" type="date" />
                 </div>
                 <span class="helper-text">Exemplo: 28/04/2006</span>
               </div>
@@ -140,7 +169,9 @@
           <!-- Card 2: Informações do espaço -->
           <div class="card">
             <div class="card-header">
-              <img src="#icon_espaço" alt="Icone Espaço" />
+              <span aria-hidden="true" class="icon asset-placeholder"
+                ><!-- <img src="#icon_espaço" alt=""> --></span
+              >
               <h5>Informações do espaço</h5>
             </div>
             <p class="card-description">
@@ -151,43 +182,45 @@
               <label>Tipo de espaço <span class="text-danger">*</span></label>
               <div class="options-grid">
                 <label class="option-card">
-                  <input type="checkbox" name="tipo_espaco" value="garagem" />
-                  <img src="#icon_garagem" alt="Ícone de garagem" />
+                  <input name="tipo_espaco" type="checkbox" value="garagem" />
+                  <span aria-hidden="true" class="icon asset-placeholder"
+                    ><!-- <img src="#icon_garagem" alt=""> --></span
+                  >
                   <strong>Garagem</strong>
                   <p>Garagem coberta em residência ou imóvel.</p>
                 </label>
 
                 <label class="option-card">
                   <input
-                    type="checkbox"
                     name="tipo_espaco"
+                    type="checkbox"
                     value="vagas_residenciais"
                   />
-                  <img
-                    src="#icon_vagas_residenciais"
-                    alt="Ícone de vagas residenciais"
-                  />
+                  <span aria-hidden="true" class="icon asset-placeholder"
+                    ><!-- <img src="#icon_vagas_residenciais" alt=""> --></span
+                  >
                   <strong>Vagas residenciais</strong>
                   <p>Vagas em frente ou dentro de residência.</p>
                 </label>
 
                 <label class="option-card">
                   <input
-                    type="checkbox"
                     name="tipo_espaco"
+                    type="checkbox"
                     value="estacionamento_particular"
                   />
-                  <img
-                    src="#icon_estacionamento_particular"
-                    alt="Ícone de estacionamento"
-                  />
+                  <span aria-hidden="true" class="icon asset-placeholder"
+                    ><!-- <img src="#icon_estacionamento_particular" alt=""> --></span
+                  >
                   <strong>Estacionamento particular</strong>
                   <p>Estacionamento em imóvel comercial ou privado.</p>
                 </label>
 
                 <label class="option-card">
-                  <input type="checkbox" name="tipo_espaco" value="outro" />
-                  <img src="#icon_outro" alt="Ícone de outro espaço" />
+                  <input name="tipo_espaco" type="checkbox" value="outro" />
+                  <span aria-hidden="true" class="icon asset-placeholder"
+                    ><!-- <img src="#icon_outro" alt=""> --></span
+                  >
                   <strong>Outro</strong>
                   <p>Outro tipo de espaço. (Especifique depois)</p>
                 </label>
@@ -198,21 +231,16 @@
           <!-- Botões -->
           <div class="form-actions-bar mt-4 justify-end">
             <div class="btn-group-right">
-              <button
-                type="button"
-                class="btn-action btn-cancel"
-                onclick="location.href = '../index.html'"
-              >
+              <a class="btn-action btn-cancel" href="../index.html">
                 Cancelar
-              </button>
+              </a>
               <!-- futuramente type="submit" -->
-              <button
-                type="button"
-                class="btn-primary"
-                onclick="location.href = 'authAnfitriao2.html'"
-              >
-                Próximo <img src="#icon_proximo" alt="Ícone Próximo" />
-              </button>
+              <a class="btn-primary" href="espaco.html">
+                Próximo
+                <span aria-hidden="true" class="icon asset-placeholder"
+                  ><!-- <img src="#icon_proximo" alt=""> --></span
+                >
+              </a>
             </div>
           </div>
         </form>

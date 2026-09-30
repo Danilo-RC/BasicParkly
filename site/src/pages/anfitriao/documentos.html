@@ -1,35 +1,50 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Cadastro Anfitrião - Passo 3</title>
-    <link rel="stylesheet" href="../../css/global.css" />
-    <link rel="stylesheet" href="../../css/layouts.css" />
-    <link rel="stylesheet" href="../../css/components.css" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/layouts.css" rel="stylesheet" />
+    <link href="../../css/components.css" rel="stylesheet" />
   </head>
   <body class="layout-dashboard">
     <header class="main-header">
       <a href="../index.html">
-        <img src="#Voltar" alt="Voltar" /> Voltar para o início
+        <span aria-hidden="true" class="icon asset-placeholder"
+          ><!-- <img src="#Voltar" alt=""> --></span
+        >
+        Voltar para o início
       </a>
-      <img src="#Logo_Header" alt="Logo" />
+      <span aria-label="BasicParkly" class="brand"
+        ><span aria-hidden="true" class="brand-mark"
+          ><!-- <img src="#Logo_Header" alt=""> --></span
+        ><span class="brand-name">Basic<span>Parkly</span></span></span
+      >
       <div class="header-user">
         <a href="#Ajuda">Ajuda</a>
-        <img src="#Perfil_Usuario" alt="Perfil Usuário" />
+        <span aria-hidden="true" class="icon asset-placeholder"
+          ><!-- <img src="#Perfil_Usuario" alt=""> --></span
+        >
       </div>
     </header>
 
-    <div class="container dashboard-container">
+    <div class="dashboard-container">
       <aside class="sidebar">
         <div class="sidebar-brand">
-          <img src="Logo_branco" alt="Logo Branco" />
+          <span aria-label="BasicParkly" class="brand"
+            ><span aria-hidden="true" class="brand-mark"
+              ><!-- <img src="Logo_branco" alt=""> --></span
+            ><span class="brand-name">Basic<span>Parkly</span></span></span
+          >
           <p>Anfitriões constroem<br />novas possibilidades.</p>
         </div>
 
         <div class="sidebar-features">
           <div class="sidebar-item">
-            <img src="#Processo_seguro" alt="Processo seguro" />
+            <span aria-hidden="true" class="icon asset-placeholder"
+              ><!-- <img src="#Processo_seguro" alt=""> --></span
+            >
             <div>
               <h3>Processo seguro</h3>
               <p>Seus dados são protegidos.</p>
@@ -37,7 +52,9 @@
           </div>
 
           <div class="sidebar-item">
-            <img src="#Mais_renda" alt="Mais renda" />
+            <span aria-hidden="true" class="icon asset-placeholder"
+              ><!-- <img src="#Mais_renda" alt=""> --></span
+            >
             <div>
               <h3>Mais renda</h3>
               <p>Seu espaço pode gerar<br />novas oportunidades.</p>
@@ -45,7 +62,9 @@
           </div>
 
           <div class="sidebar-item">
-            <img src="#Voce_no_controle" alt="Você no controle" />
+            <span aria-hidden="true" class="icon asset-placeholder"
+              ><!-- <img src="#Voce_no_controle" alt=""> --></span
+            >
             <div>
               <h3>Você no controle</h3>
               <p>Defina regras, preços<br />e disponibilidade.</p>
@@ -98,7 +117,9 @@
           <div class="card">
             <div class="card-header">
               <div class="card-icon">
-                <img src="#icon_documentos_necessarios" alt="Documentos" />
+                <span aria-hidden="true" class="icon asset-placeholder"
+                  ><!-- <img src="#icon_documentos_necessarios" alt=""> --></span
+                >
               </div>
               <h5>Documentos necessários</h5>
             </div>
@@ -111,7 +132,9 @@
                 <div>
                   <div class="doc-head">
                     <div class="doc-head-icon">
-                      <img src="#icon_documento_identificacao" alt="" />
+                      <span aria-hidden="true" class="icon asset-placeholder"
+                        ><!-- <img src="#icon_documento_identificacao" alt=""> --></span
+                      >
                     </div>
                     <h6>Documento de identificação</h6>
                   </div>
@@ -122,8 +145,11 @@
 
                 <div>
                   <label class="upload-btn-area">
-                    <input type="file" style="display: none" />
-                    <img src="#icon_upload" alt="" /> Adicionar documento
+                    <input accept=".pdf,.jpg,.jpeg,.png" type="file" />
+                    <span aria-hidden="true" class="icon asset-placeholder"
+                      ><!-- <img src="#icon_upload" alt=""> --></span
+                    >
+                    Adicionar documento
                   </label>
                   <p class="doc-info">
                     Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10
@@ -136,7 +162,9 @@
                 <div>
                   <div class="doc-head">
                     <div class="doc-head-icon">
-                      <img src="#icon_casa" alt="" />
+                      <span aria-hidden="true" class="icon asset-placeholder"
+                        ><!-- <img src="#icon_casa" alt=""> --></span
+                      >
                     </div>
                     <h6>Comprovante de endereço</h6>
                   </div>
@@ -147,8 +175,11 @@
 
                 <div>
                   <label class="upload-btn-area">
-                    <input type="file" style="display: none" />
-                    <img src="#icon_upload" alt="" /> Adicionar documento
+                    <input accept=".pdf,.jpg,.jpeg,.png" type="file" />
+                    <span aria-hidden="true" class="icon asset-placeholder"
+                      ><!-- <img src="#icon_upload" alt=""> --></span
+                    >
+                    Adicionar documento
                   </label>
                   <p class="doc-info">
                     Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10
@@ -161,7 +192,9 @@
                 <div>
                   <div class="doc-head">
                     <div class="doc-head-icon">
-                      <img src="#icon_documento_comprovacao" alt="" />
+                      <span aria-hidden="true" class="icon asset-placeholder"
+                        ><!-- <img src="#icon_documento_comprovacao" alt=""> --></span
+                      >
                     </div>
                     <h6>
                       Comprovação/autorização para disponibilização do espaço
@@ -175,8 +208,11 @@
 
                 <div>
                   <label class="upload-btn-area">
-                    <input type="file" style="display: none" />
-                    <img src="#icon_upload" alt="" /> Adicionar documento
+                    <input accept=".pdf,.jpg,.jpeg,.png" type="file" />
+                    <span aria-hidden="true" class="icon asset-placeholder"
+                      ><!-- <img src="#icon_upload" alt=""> --></span
+                    >
+                    Adicionar documento
                   </label>
                   <p class="doc-info">
                     Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10
@@ -190,7 +226,9 @@
           <div class="card">
             <div class="card-header">
               <div class="card-icon">
-                <img src="#icon_documento" alt="Confirmações" />
+                <span aria-hidden="true" class="icon asset-placeholder"
+                  ><!-- <img src="#icon_documento" alt=""> --></span
+                >
               </div>
               <h5>Confirmações</h5>
             </div>
@@ -201,32 +239,33 @@
             <div class="checkbox-list">
               <label class="checkbox-item">
                 <input
-                  type="checkbox"
                   name="confirmacoes"
+                  type="checkbox"
                   value="info_verdade"
                 />
                 Declaro que as informações fornecidas são verdadeiras.
               </label>
-              <br />
+
               <label class="checkbox-item">
                 <input
-                  type="checkbox"
                   name="confirmacoes"
+                  type="checkbox"
                   value="autorizacao"
                 />
                 Declaro que possuo autorização para disponibilizar o espaço
                 informado.
               </label>
-              <br />
+
               <label class="checkbox-item">
-                <input type="checkbox" name="confirmacoes" value="termos_uso" />
+                <input name="confirmacoes" type="checkbox" value="termos_uso" />
                 <span>
-                  Li e aceito os <a>Termos de Uso</a> e a
-                  <a>Política de Privacidade</a>.
+                  Li e aceito os <a href="#Termos_de_Uso">Termos de Uso</a> e a
+                  <a href="#Política_de_Privacidade">Política de Privacidade</a
+                  >.
                 </span>
               </label>
             </div>
-            <br />
+
             <div class="alert-box">
               <div class="alert-icon">i</div>
               <div class="alert-content">
@@ -240,17 +279,11 @@
           </div>
 
           <div class="form-actions-bar mt-4">
-            <a href="authAnfitriao2.html" class="btn-action btn-back">
-              ← Voltar
-            </a>
+            <a class="btn-action btn-back" href="espaco.html">← Voltar</a>
 
-            <button
-              type="button"
-              class="btn-action btn-primary btn-right"
-              onclick="location.href = 'authAnfitriao4.html'"
-            >
+            <a class="btn-action btn-primary" href="analise.html">
               Enviar para análise →
-            </button>
+            </a>
           </div>
         </form>
       </main>
