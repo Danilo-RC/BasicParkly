@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Cadastro Anfitrião - Passo 2</title>
-    <link href="../../css/global.css" rel="stylesheet" />
-    <link href="../../css/layouts.css" rel="stylesheet" />
-    <link href="../../css/components.css" rel="stylesheet" />
+    <link href="./../../css/global.css" rel="stylesheet" />
+    <link href="./../../css/layouts.css" rel="stylesheet" />
+    <link href="./../../css/components.css" rel="stylesheet" />
   </head>
   <body class="layout-dashboard">
     <header class="main-header">
-      <a href="../index.html">
+      <a href="./../../../index.html">
         <span aria-hidden="true" class="icon asset-placeholder"
           ><!-- <img src="#Voltar" alt=""> --></span
         >
@@ -23,9 +23,13 @@
       >
       <div class="header-user">
         <a href="#Ajuda">Ajuda</a>
-        <span aria-hidden="true" class="icon asset-placeholder"
-          ><!-- <img src="#Perfil_Usuario" alt=""> --></span
-        >
+        <div class="profile-summary" aria-label="Perfil de Gustavo">
+          <span aria-hidden="true" class="profile-avatar asset-placeholder"
+            ><!-- <img src="#Perfil_Usuario" alt=""> --></span
+          >
+          <span class="profile-name">Nome do Anfitrião</span>
+          <span aria-hidden="true" class="profile-chevron"></span>
+        </div>
       </div>
     </header>
 
@@ -393,12 +397,14 @@
           </div>
 
           <div class="btn-group-right">
-            <a class="btn-action btn-back" href="dados-pessoais.html"
+            <a class="btn-action btn-back" href="./dados-pessoais.html"
               >← Anterior</a
             >
 
-            <a class="btn-action btn-cancel" href="../index.html"> Cancelar </a>
-            <a class="btn-action btn-primary" href="documentos.html"
+            <a class="btn-action btn-cancel" href="./../../../index.html">
+              Cancelar
+            </a>
+            <a class="btn-action btn-primary" href="./documentos.html"
               >Próximo →</a
             >
           </div>

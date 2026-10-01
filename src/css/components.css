@@ -1,4 +1,8 @@
-/* Componentes usados pelas páginas HTML. */
+/* ==========================================================================
+   1. CARDS E COMPONENTES BASE
+   ========================================================================== */
+
+/* Card Principal e Estrutura Contêiner */
 .card,
 .main-content-card {
   min-width: 0;
@@ -8,12 +12,15 @@
   border-radius: var(--radius-md);
   box-shadow: 0 4px 16px rgb(32 58 97 / 3%);
 }
+
+/* Cabeçalho dos Cards */
 .card-header {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 4px;
 }
+
 .card-header > .icon,
 .card-icon {
   display: grid;
@@ -26,23 +33,31 @@
   border-radius: 50%;
   font-size: 1.3rem;
 }
+
 .card-header h5 {
   margin: 0;
   color: var(--navy-900);
   font-size: 1rem;
 }
+
 .card-description {
   margin: 0 0 16px;
   color: var(--muted);
   font-size: 0.84rem;
 }
 
+/* ==========================================================================
+   2. SELEÇÃO DE OPÇÕES E RECURSOS (GRIDS DE CARDS)
+   ========================================================================== */
+
+/* Grid de Opções (Seleção Única / Radio) */
 .options-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin-top: 5px;
 }
+
 .option-card {
   position: relative;
   display: flex;
@@ -59,11 +74,13 @@
     box-shadow 0.18s ease,
     background 0.18s ease;
 }
+
 .option-card:hover,
 .option-card:has(input:checked) {
   border-color: var(--blue-500);
   box-shadow: 0 0 0 2px rgb(22 119 248 / 9%);
 }
+
 .option-card input {
   position: absolute;
   top: 14px;
@@ -71,17 +88,20 @@
   width: 17px;
   height: 17px;
 }
+
 .option-card > .icon {
   width: 28px;
   height: 28px;
   margin-bottom: 12px;
 }
+
 .option-card strong {
   padding-right: 20px;
   color: var(--navy-900);
   font-size: 0.9rem;
   line-height: 1.3;
 }
+
 .option-card p {
   margin: 7px 0 0;
   color: var(--muted);
@@ -89,31 +109,13 @@
   line-height: 1.4;
 }
 
-.access-buttons-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-}
-.btn-option {
-  justify-content: flex-start;
-  min-width: 0;
-  min-height: 40px;
-  padding: 0 10px;
-  color: var(--ink);
-  background: #fff;
-  border-color: var(--border);
-  font-size: 0.8rem;
-  font-weight: 550;
-}
-.btn-option .icon {
-  width: 18px;
-  height: 18px;
-}
+/* Grid de Recursos/Features (Seleção Compacta) */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
 }
+
 .feature-card {
   display: flex;
   min-height: 54px;
@@ -125,41 +127,99 @@
   background: #fff;
   cursor: pointer;
 }
+
 .feature-card:has(input:checked) {
   border-color: var(--blue-500);
   background: var(--blue-50);
 }
+
 .feature-card input {
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
 }
+
 .feature-card > .icon {
   width: 20px;
   height: 20px;
 }
+
 .feature-card strong {
   font-size: 0.74rem;
   line-height: 1.3;
 }
+
+/* ==========================================================================
+   3. BOTÕES E AÇÕES DE FORMULÁRIO
+   ========================================================================== */
+
+/* Grid de Botões de Acesso Rápido */
+.access-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.btn-option {
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 10px;
+  color: var(--ink);
+  background: #fff;
+  border-color: var(--border);
+  font-size: 0.8rem;
+  font-weight: 550;
+}
+
+.btn-option .icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Agrupamento e Barras de Ação */
 .form-actions-bar,
 .btn-group-right {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 12px;
+  width: 100%;
+}
+
+.btn-group-right {
+  justify-content: flex-end;
+  margin: 0 0 0 auto;
+}
+
+.btn-group-right > .btn-back {
+  margin-right: auto;
 }
 .form-actions-bar {
   justify-content: space-between;
 }
-.btn-group-right {
-  justify-content: flex-end;
+
+.actions-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
+.actions-row .btn {
+  min-width: 220px;
+}
+
+/* ==========================================================================
+   4. DOCUMENTOS, UPLOAD E ALERTAS
+   ========================================================================== */
+
+/* Caixa de Documentos */
 .docs-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
+
 .doc-box {
   display: flex;
   min-width: 0;
@@ -171,11 +231,13 @@
   border-radius: var(--radius-sm);
   background: #fff;
 }
+
 .doc-head {
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .doc-head-icon {
   display: grid;
   width: 44px;
@@ -187,18 +249,22 @@
   background: var(--blue-100);
   font-size: 1.25rem;
 }
+
 .doc-head h6 {
   margin: 0;
   color: var(--navy-900);
   font-size: 0.9rem;
   line-height: 1.35;
 }
+
 .doc-desc {
   margin: 5px 0 0 56px;
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.4;
 }
+
+/* Área de Upload de Arquivos */
 .upload-btn-area {
   display: flex;
   min-height: 62px;
@@ -214,10 +280,12 @@
   font-weight: 650;
   cursor: pointer;
 }
+
 .upload-btn-area:hover {
   border-color: var(--blue-500);
   background: var(--blue-50);
 }
+
 .upload-btn-area input {
   position: absolute;
   width: 1px;
@@ -227,18 +295,22 @@
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
 .doc-info {
   margin: 0;
   color: var(--muted);
   font-size: 0.73rem;
   line-height: 1.45;
 }
+
+/* Listas de Checkbox e Termos */
 .checkbox-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin: 12px 0 16px;
 }
+
 .checkbox-item {
   display: flex;
   align-items: flex-start;
@@ -246,14 +318,18 @@
   color: #4c5d78;
   font-size: 0.84rem;
 }
+
 .checkbox-item input {
   flex: 0 0 auto;
   margin-top: 3px;
 }
+
 .checkbox-item a {
   color: var(--blue-700);
   text-decoration: underline;
 }
+
+/* Mensagens de Alerta */
 .alert-box {
   display: flex;
   align-items: center;
@@ -264,9 +340,11 @@
   border-radius: var(--radius-sm);
   font-size: 0.82rem;
 }
+
 .alert-box p {
   margin: 0;
 }
+
 .alert-icon {
   display: grid;
   width: 28px;
@@ -278,6 +356,7 @@
   background: var(--blue-600);
   font-weight: 750;
 }
+
 .alert-icon > img {
   display: block;
   width: 18px;
@@ -285,9 +364,16 @@
   object-fit: contain;
 }
 
+/* ==========================================================================
+   5. STATUS, STEPPER E RESUMO DE DADOS
+   ========================================================================== */
+
+/* Estrutura do Passos (Stepper) */
 .stepper-wrapper {
   flex: 0 0 auto;
 }
+
+/* Hero e Telas de Sucesso */
 .success-hero {
   display: flex;
   flex-direction: column;
@@ -295,6 +381,7 @@
   padding: 16px 0 22px;
   text-align: center;
 }
+
 .success-icon-box {
   display: grid;
   width: 116px;
@@ -306,38 +393,46 @@
   background: var(--blue-100);
   font-size: 3rem;
 }
+
 .success-icon-box > .icon {
   width: 56px;
   height: 56px;
 }
+
 .success-hero h1 {
   margin: 0 0 4px;
   color: var(--navy-900);
   font-size: clamp(1.65rem, 2.3vw, 2.2rem);
   letter-spacing: -0.035em;
 }
+
 .success-hero p {
   margin: 0;
   color: var(--muted);
 }
+
+/* Cards de Status (Avisos/Pendências) */
 .status-card {
   padding: 16px 20px;
   border: 1px solid #f7df9c;
   border-radius: var(--radius-sm);
   background: #fffaf0;
 }
+
 .status-header-tag {
   color: #7688a2;
   font-size: 0.75rem;
   font-weight: 750;
   letter-spacing: 0.08em;
 }
+
 .status-body {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-top: 8px;
 }
+
 .status-icon {
   display: grid;
   width: 44px;
@@ -349,31 +444,38 @@
   background: #fff1cb;
   font-size: 1.35rem;
 }
+
 .status-icon > .icon {
   width: 24px;
   height: 24px;
 }
+
 .status-info h6 {
   margin: 0 0 3px;
   color: #d99000;
   font-size: 1.35rem;
 }
+
 .status-info p {
   max-width: 650px;
   margin: 0;
   color: #687993;
   font-size: 0.85rem;
 }
+
+/* Seções e Cards de Resumo */
 .summary-section > h4 {
   margin: 0 0 9px;
   color: var(--navy-900);
   font-size: 0.9rem;
 }
+
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
 }
+
 .summary-card {
   display: flex;
   min-width: 0;
@@ -385,12 +487,14 @@
   border-radius: var(--radius-sm);
   background: #fff;
 }
+
 .summary-card-content {
   display: flex;
   min-width: 0;
   align-items: center;
   gap: 9px;
 }
+
 .summary-card-icon {
   display: grid;
   width: 38px;
@@ -402,33 +506,34 @@
   background: var(--blue-100);
   font-size: 1.25rem;
 }
+
 .summary-details span {
   display: block;
   color: #52637e;
   font-size: 0.75rem;
   line-height: 1.2;
 }
+
 .summary-details p {
   margin: 4px 0 0;
   color: #8190a8;
   font-size: 0.73rem;
 }
+
 .summary-status-icon {
   color: var(--green);
   font-size: 1.2rem;
 }
+
 .summary-card:last-child .summary-status-icon {
   color: var(--amber);
 }
-.actions-row {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-.actions-row .btn {
-  min-width: 220px;
-}
 
+/* ==========================================================================
+   6. BUSCA, NAVEGAÇÃO E FILTROS
+   ========================================================================== */
+
+/* Barra de Pesquisa Principal */
 .search-bar {
   display: flex;
   align-items: center;
@@ -440,6 +545,7 @@
   background: #fff;
   box-shadow: var(--shadow-card);
 }
+
 .search-field {
   display: flex;
   min-width: 0;
@@ -449,9 +555,11 @@
   padding: 5px 13px;
   border-right: 1px solid var(--border);
 }
+
 .search-field:last-of-type {
   border-right: 0;
 }
+
 .search-label {
   display: flex;
   align-items: center;
@@ -461,6 +569,7 @@
   font-weight: 750;
   text-transform: uppercase;
 }
+
 .search-input {
   width: 100%;
   min-width: 0;
@@ -470,10 +579,13 @@
   background: transparent;
   font-size: 0.86rem;
 }
+
 .search-bar > .btn-primary {
   min-width: 148px;
   border-radius: 13px;
 }
+
+/* Carrossel / Rolagem de Categorias */
 .category-scroll .btn-category {
   min-height: 42px;
   flex: 0 0 auto;
@@ -485,20 +597,25 @@
   font-weight: 560;
   white-space: nowrap;
 }
+
 .category-scroll .btn-category.active {
   color: #fff;
   border-color: var(--blue-600);
   background: var(--blue-600);
 }
+
 .category-scroll .btn-category.active .icon {
   color: #fff;
 }
+
+/* Sidebar de Filtros Lateral */
 .filter-sidebar {
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: #fff;
 }
+
 .filter-header {
   display: flex;
   align-items: center;
@@ -507,9 +624,11 @@
   color: var(--navy-900);
   font-weight: 700;
 }
+
 .filter-section {
   margin-bottom: 14px;
 }
+
 .filter-title {
   display: flex;
   justify-content: space-between;
@@ -518,29 +637,35 @@
   font-size: 0.8rem;
   font-weight: 620;
 }
+
 .filter-title span {
   color: var(--blue-700);
 }
+
 .price-slider {
   width: 100%;
   margin: 5px 0 0;
 }
+
 .price-labels {
   display: flex;
   justify-content: space-between;
   color: var(--muted);
   font-size: 0.72rem;
 }
+
 .filter-divider {
   margin: 15px 0;
   border: 0;
   border-top: 1px solid var(--border);
 }
+
 .filter-btn-list {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
+
 .btn-filter {
   display: flex;
   align-items: center;
@@ -553,15 +678,22 @@
   text-align: left;
   cursor: pointer;
 }
+
 .btn-filter:hover {
   color: var(--blue-700);
 }
+
+/* ==========================================================================
+   7. LISTAGEM DE ITENS E ANÚNCIOS (LISTING CARDS)
+   ========================================================================== */
+
 .listings-header {
   margin: 0 0 15px;
   color: #3d4d68;
   font-size: 0.93rem;
   font-weight: 560;
 }
+
 .listing-card {
   position: relative;
   display: flex;
@@ -575,22 +707,26 @@
     box-shadow 0.2s ease,
     transform 0.2s ease;
 }
+
 .listing-card:hover {
   box-shadow: var(--shadow-card);
   transform: translateY(-2px);
 }
+
 .listing-img {
   position: relative;
   height: 168px;
   overflow: hidden;
   background-color: #e9eef5;
 }
+
 .asset-photo-slot > img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .btn-favorite {
   position: absolute;
   top: 10px;
@@ -606,6 +742,7 @@
   box-shadow: 0 2px 8px rgb(15 32 56 / 14%);
   cursor: pointer;
 }
+
 .badge-ev {
   position: absolute;
   top: 10px;
@@ -617,12 +754,14 @@
   font-size: 0.7rem;
   font-weight: 750;
 }
+
 .listing-content {
   display: flex;
   flex: 1;
   flex-direction: column;
   padding: 12px 14px;
 }
+
 .listing-title-row {
   display: flex;
   align-items: flex-start;
@@ -630,18 +769,21 @@
   gap: 8px;
   margin-bottom: 2px;
 }
+
 .listing-title {
   margin: 0;
   color: var(--navy-900);
   font-size: 0.92rem;
   font-weight: 650;
 }
+
 .listing-rating {
   flex: 0 0 auto;
   color: #e5a500;
   font-size: 0.8rem;
   font-weight: 700;
 }
+
 .listing-loc {
   display: flex;
   align-items: center;
@@ -650,6 +792,7 @@
   color: var(--muted);
   font-size: 0.74rem;
 }
+
 .listing-details-row {
   display: flex;
   justify-content: space-between;
@@ -659,13 +802,16 @@
   font-size: 0.75rem;
   line-height: 1.45;
 }
+
 .listing-price strong {
   color: var(--ink);
   font-size: 1rem;
 }
+
 .listing-stats {
   text-align: right;
 }
+
 .listing-tag {
   display: inline-flex;
   align-items: center;
@@ -678,81 +824,107 @@
   font-size: 0.68rem;
   font-weight: 650;
 }
+
 .listing-tag.tag-eco {
   color: #0b8b5f;
   background: #e3f7ed;
 }
 
+/* ==========================================================================
+   8. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Notebooks e Tablets Grandes (Até 1024px) */
 @media (max-width: 1024px) {
   .options-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .features-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
   .summary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .docs-grid {
     grid-template-columns: 1fr;
   }
 }
+
+/* Tablets e Celulares Grandes (Até 760px) */
 @media (max-width: 760px) {
   .stepper {
     display: flex;
   }
+
   .features-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .search-bar {
     align-items: stretch;
     flex-direction: column;
     padding: 12px;
     border-radius: var(--radius-md);
   }
+
   .search-field {
     min-height: 48px;
     padding: 5px 4px;
     border-right: 0;
     border-bottom: 1px solid var(--border);
   }
+
   .search-bar > .btn-primary {
     width: 100%;
   }
+
   .filter-btn-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .listing-img {
     height: 190px;
   }
+
   .actions-row {
     flex-direction: column;
   }
+
   .actions-row .btn {
     width: 100%;
   }
 }
+
+/* Celulares (Até 560px) */
 @media (max-width: 560px) {
   .options-grid {
     grid-template-columns: 1fr;
   }
+
   .option-card {
     min-height: 128px;
   }
+
   .form-actions-bar {
     align-items: stretch;
     gap: 8px;
   }
+
   .form-actions-bar > *,
   .btn-group-right > * {
     min-width: 0;
     flex: 1;
     padding-inline: 8px;
   }
+
   .summary-grid {
     grid-template-columns: 1fr;
   }
+
   .feature-card {
     min-height: 48px;
   }
