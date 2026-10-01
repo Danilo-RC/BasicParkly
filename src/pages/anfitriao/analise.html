@@ -3,147 +3,242 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Cadastro Anfitrião - Análise</title>
-
-    <link href="./../../css/global.css" rel="stylesheet" />
-    <link href="./../../css/layouts.css" rel="stylesheet" />
-    <link href="./../../css/components.css" rel="stylesheet" />
+    <title>Cadastro de anfitrião — Análise | BasicParkly</title>
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/layouts.css" rel="stylesheet" />
+    <link href="../../css/components.css" rel="stylesheet" />
   </head>
-  <body class="layout-dashboard">
-    <header class="main-header">
+  <body class="host-layout">
+    <header class="site-header">
       <a href="./../../../index.html">
-        <span aria-hidden="true" class="icon asset-placeholder"
-          ><!-- <img src="#Voltar" alt=""> --></span
-        >
+        <!-- <img src="#icone_seta_esquerda" alt=""> -->
+        <span aria-hidden="true" class="icon asset-slot">
+          <!-- <img src="#Voltar" alt=""> -->
+        </span>
         Voltar para o início
       </a>
-      <span aria-label="BasicParkly" class="brand"
-        ><span aria-hidden="true" class="brand-mark"
-          ><!-- <img src="#Logo_Header" alt=""> --></span
-        ><span class="brand-name">Basic<span>Parkly</span></span></span
-      >
-      <div class="header-user">
-        <a href="#Ajuda">Ajuda</a>
-        <div class="profile-summary" aria-label="Perfil de Gustavo">
-          <span aria-hidden="true" class="profile-avatar asset-placeholder"
-            ><!-- <img src="#Perfil_Usuario" alt=""> --></span
-          >
-          <span class="profile-name">Nome do Anfitrião</span>
-          <span aria-hidden="true" class="profile-chevron"></span>
+      <a aria-label="BasicParkly" class="brand" href="../../../index.html">
+        <span aria-hidden="true" class="brand__mark">
+          <!-- <img src="#Logo_Header" alt=""> -->
+        </span>
+        <span class="brand__name">
+          Basic
+          <span> Parkly </span>
+        </span>
+      </a>
+      <div class="site-header__user">
+        <a href="#Ajuda"> Ajuda </a>
+        <div aria-label="Perfil" class="site-header__profile">
+          <span aria-hidden="true" class="site-header__avatar asset-slot">
+            <!-- <img src="#Perfil_Usuario" alt=""> -->
+          </span>
+          <span class="site-header__profile-name"> #Nome</span>
+          <span aria-hidden="true" class="site-header__chevron">
+            <!-- <img src="#icone_seta_perfil" alt=""> -->
+          </span>
         </div>
       </div>
     </header>
-
-    <div class="dashboard-container">
-      <aside class="sidebar">
-        <div class="sidebar-brand">
-          <span aria-label="BasicParkly" class="brand"
-            ><span aria-hidden="true" class="brand-mark"
-              ><!-- <img src="Logo_branco" alt=""> --></span
-            ><span class="brand-name">Basic<span>Parkly</span></span></span
-          >
-          <p>Anfitriões constroem<br />novas possibilidades.</p>
+    <div class="host-dashboard">
+      <aside class="host-sidebar">
+        <div aria-hidden="true" class="host-sidebar__media">
+          <!-- <img src="#imagem_painel_anfitriao" alt=""> -->
         </div>
-
-        <div class="sidebar-features">
-          <div class="sidebar-item">
-            <span aria-hidden="true" class="icon asset-placeholder"
-              ><!-- <img src="#Processo_seguro" alt=""> --></span
-            >
+        <div class="host-sidebar__brand">
+          <a aria-label="BasicParkly" class="brand" href="../../../index.html">
+            <span aria-hidden="true" class="brand__mark">
+              <!-- <img src="Logo_branco" alt=""> -->
+            </span>
+            <span class="brand__name">
+              Basic
+              <span> Parkly </span>
+            </span>
+          </a>
+          <p>
+            Anfitriões constroem
+            <br />
+            novas possibilidades.
+          </p>
+        </div>
+        <div class="host-sidebar__features">
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Processo_seguro" alt=""> -->
+            </span>
             <div>
               <h3>Processo seguro</h3>
               <p>Seus dados são protegidos.</p>
             </div>
           </div>
-
-          <div class="sidebar-item">
-            <span aria-hidden="true" class="icon asset-placeholder"
-              ><!-- <img src="#Mais_renda" alt=""> --></span
-            >
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Mais_renda" alt=""> -->
+            </span>
             <div>
               <h3>Mais renda</h3>
-              <p>Seu espaço pode gerar<br />novas oportunidades.</p>
+              <p>
+                Seu espaço pode gerar
+                <br />
+                novas oportunidades.
+              </p>
             </div>
           </div>
-
-          <div class="sidebar-item">
-            <span aria-hidden="true" class="icon asset-placeholder"
-              ><!-- <img src="#Voce_no_controle" alt=""> --></span
-            >
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Voce_no_controle" alt=""> -->
+            </span>
             <div>
               <h3>Você no controle</h3>
-              <p>Defina regras, preços<br />e disponibilidade.</p>
+              <p>
+                Defina regras, preços
+                <br />
+                e disponibilidade.
+              </p>
             </div>
           </div>
         </div>
-
-        <div class="sidebar-footer">
-          <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
+        <div class="host-sidebar__footer">
+          <p>
+            Espaços conectam pessoas.
+            <br />
+            E pessoas movem o mundo.
+          </p>
         </div>
       </aside>
-
-      <main class="dashboard-main">
-        <div class="main-content-card">
-          <div class="form-header">
-            <span class="form-header-title">CADASTRO DE ANFITRIÃO</span>
-            <div class="form-top-bar">
-              <div class="form-title-area">
+      <main class="host-main">
+        <div class="host-main__content">
+          <div class="host-form__header">
+            <span class="host-form__eyebrow"> CADASTRO DE ANFITRIãO </span>
+            <div class="host-form__topbar">
+              <div class="host-form__intro">
                 <h2>
-                  <span class="text-primary">
+                  <span class="u-text-brand">
                     Em breve a sua conta Anfitrião-Parkly estará ativa!
                   </span>
                 </h2>
-                <p class="form-subtitle">
+                <p class="form__subtitle">
                   Recebemos suas informações e elas serão devidamente
                   analisadas.
                 </p>
               </div>
-
-              <div class="stepper-wrapper">
-                <span class="stepper-label">Etapa 4 de 4 — Análise</span>
-                <div class="stepper">
-                  <div class="step-item completed">
-                    <div class="step-number">✓</div>
-                    <span>Dados pessoais</span>
-                  </div>
-                  <div class="step-item completed">
-                    <div class="step-number">✓</div>
-                    <span>Espaço</span>
-                  </div>
-                  <div class="step-item completed">
-                    <div class="step-number">✓</div>
-                    <span>Documentos</span>
-                  </div>
-                  <div class="step-item pending">
-                    <div class="step-number">⏱</div>
-                    <span>Análise</span>
-                  </div>
-                </div>
+              <div class="host-stepper-wrapper">
+                <span class="host-stepper__label">
+                  Etapa 4 de 4 — Análise
+                </span>
+                <ol
+                  aria-label="Etapas do cadastro de anfitrião"
+                  class="host-stepper"
+                >
+                  <li class="host-stepper__step host-stepper__step--completed">
+                    <div aria-hidden="true" class="host-stepper__number">
+                      <!-- <img src="#icone_concluido" alt=""> -->
+                    </div>
+                    <span> Dados pessoais </span>
+                  </li>
+                  <li class="host-stepper__step host-stepper__step--completed">
+                    <div aria-hidden="true" class="host-stepper__number">
+                      <!-- <img src="#icone_concluido" alt=""> -->
+                    </div>
+                    <span> Espaço </span>
+                  </li>
+                  <li class="host-stepper__step host-stepper__step--completed">
+                    <div aria-hidden="true" class="host-stepper__number">
+                      <!-- <img src="#icone_concluido" alt=""> -->
+                    </div>
+                    <span> Documentos </span>
+                  </li>
+                  <li class="host-stepper__step host-stepper__step--pending">
+                    <div aria-hidden="true" class="host-stepper__number">
+                      <!-- <img src="#icon_clock" alt=""> -->
+                      <svg
+                        aria-hidden="true"
+                        class="icon__svg"
+                        fill="none"
+                        focusable="false"
+                        height="24"
+                        viewBox="0 0 192 192"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g transform="translate(16 16)">
+                          <circle
+                            cx="80"
+                            cy="80"
+                            fill="none"
+                            r="74"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.8"
+                          ></circle>
+                          <path
+                            d="M80 30v50l40 32"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.8"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <span> Análise </span>
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
-
-          <div class="success-hero">
-            <div class="success-icon-box">
-              <span aria-hidden="true" class="icon asset-placeholder"
-                ><!-- <img src="#icon_documento_verificado" alt=""> --></span
-              >
+          <div class="submission-result">
+            <div class="submission-result__icon">
+              <span aria-hidden="true" class="icon asset-slot">
+                <!-- <img src="#icon_documento_verificado" alt=""> -->
+              </span>
             </div>
             <h1>Cadastro enviado!</h1>
             <p>
               Recebemos suas informações e elas serão devidamente analisadas.
             </p>
           </div>
-
-          <div class="status-card">
-            <div class="status-header-tag">STATUS DO PERFIL</div>
-            <div class="status-body">
-              <div class="status-icon">
-                <span aria-hidden="true" class="icon asset-placeholder"
-                  ><!-- <img src="#icon_analise" alt=""> --></span
-                >
+          <div class="review-status">
+            <div class="review-status__eyebrow">STATUS DO PERFIL</div>
+            <div class="review-status__body">
+              <div class="review-status__icon">
+                <span aria-hidden="true" class="icon asset-slot">
+                  <!-- <img src="#icon_analise" alt=""> -->
+                  <svg
+                    aria-hidden="true"
+                    class="icon__svg"
+                    fill="none"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 192 192"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g transform="translate(16 16)">
+                      <circle
+                        cx="80"
+                        cy="80"
+                        fill="none"
+                        r="74"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.8"
+                      ></circle>
+                      <path
+                        d="M80 30v50l40 32"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.8"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
               </div>
-              <div class="status-info">
+              <div class="review-status__copy">
                 <h6>Em análise</h6>
                 <p>
                   Seu perfil está sendo analisado. Quando a análise for
@@ -153,112 +248,159 @@
               </div>
             </div>
           </div>
-
-          <div class="summary-section mt-4">
+          <div class="registration-summary u-space-top-large">
             <h4>Resumo do seu cadastro</h4>
-            <div class="summary-grid">
+            <div class="registration-summary__grid">
               <div class="summary-card">
-                <div class="summary-card-content">
-                  <div class="summary-card-icon">
-                    <span aria-hidden="true" class="icon asset-placeholder"
-                      ><!-- <img src="#icon_user" alt=""> --></span
-                    >
+                <div class="summary-card__main">
+                  <div class="summary-card__icon">
+                    <span aria-hidden="true" class="icon asset-slot">
+                      <!-- <img src="#icon_user" alt=""> -->
+                    </span>
                   </div>
-                  <div class="summary-details">
-                    <span>Perfil cadastrado</span>
+                  <div class="summary-card__copy">
+                    <span> Perfil cadastrado </span>
                     <p>Concluído</p>
                   </div>
                 </div>
                 <span
                   aria-hidden="true"
-                  class="icon summary-status-icon asset-placeholder"
-                  ><!-- <img src="#icon_verificado" alt=""> --></span
+                  class="icon summary-card__state asset-slot summary-card__state--complete"
                 >
+                  <!-- <img src="#icon_verificado" alt=""> -->
+                </span>
               </div>
-
               <div class="summary-card">
-                <div class="summary-card-content">
-                  <div class="summary-card-icon">
-                    <span aria-hidden="true" class="icon asset-placeholder"
-                      ><!-- <img src="#icon_espaco" alt=""> --></span
-                    >
+                <div class="summary-card__main">
+                  <div class="summary-card__icon">
+                    <span aria-hidden="true" class="icon asset-slot">
+                      <!-- <img src="#icon_espaco" alt=""> -->
+                      <svg
+                        aria-hidden="true"
+                        class="icon__svg"
+                        fill="none"
+                        focusable="false"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M12.6139 1.21065C12.2528 0.929784 11.7472 0.929784 11.3861 1.21065L2.38606 8.21065C2.14247 8.4001 2 8.69141 2 9V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9C22 8.69141 21.8575 8.4001 21.6139 8.21065L12.6139 1.21065ZM16 20H20V9.48908L12 3.26686L4 9.48908V20H8V12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12V20ZM10 20V13H14V20H10Z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
                   </div>
-                  <div class="summary-details">
-                    <span>Espaço informado</span>
+                  <div class="summary-card__copy">
+                    <span> Espaço informado </span>
                     <p>Concluído</p>
                   </div>
                 </div>
                 <span
                   aria-hidden="true"
-                  class="icon summary-status-icon asset-placeholder"
-                  ><!-- <img src="#icon_verificado" alt=""> --></span
+                  class="icon summary-card__state asset-slot summary-card__state--complete"
                 >
+                  <!-- <img src="#icon_verificado" alt=""> -->
+                </span>
               </div>
-
               <div class="summary-card">
-                <div class="summary-card-content">
-                  <div class="summary-card-icon">
-                    <span aria-hidden="true" class="icon asset-placeholder"
-                      ><!-- <img src="#icon_documento" alt=""> --></span
-                    >
+                <div class="summary-card__main">
+                  <div class="summary-card__icon">
+                    <span aria-hidden="true" class="icon asset-slot">
+                      <!-- <img src="#icon_documento" alt=""> -->
+                    </span>
                   </div>
-                  <div class="summary-details">
-                    <span>Documentos enviados</span>
+                  <div class="summary-card__copy">
+                    <span> Documentos enviados </span>
                     <p>Concluído</p>
                   </div>
                 </div>
                 <span
                   aria-hidden="true"
-                  class="icon summary-status-icon asset-placeholder"
-                  ><!-- <img src="#icon_verificado" alt=""> --></span
+                  class="icon summary-card__state asset-slot summary-card__state--complete"
                 >
+                  <!-- <img src="#icon_verificado" alt=""> -->
+                </span>
               </div>
-
               <div class="summary-card">
-                <div class="summary-card-content">
-                  <div class="summary-card-icon">
-                    <span aria-hidden="true" class="icon asset-placeholder"
-                      ><!-- <img src="#icon_analise" alt=""> --></span
-                    >
+                <div class="summary-card__main">
+                  <div class="summary-card__icon">
+                    <span aria-hidden="true" class="icon asset-slot">
+                      <!-- <img src="#icon_analise" alt=""> -->
+                    </span>
                   </div>
-                  <div class="summary-details">
-                    <span>Análise</span>
+                  <div class="summary-card__copy">
+                    <span> Análise </span>
                     <p>Em andamento</p>
                   </div>
                 </div>
                 <span
                   aria-hidden="true"
-                  class="icon summary-status-icon asset-placeholder"
-                  ><!-- <img src="#icon_clock" alt=""> --></span
+                  class="icon summary-card__state asset-slot summary-card__state--pending"
                 >
+                  <!-- <img src="#icon_clock" alt=""> -->
+                  <svg
+                    aria-hidden="true"
+                    class="icon__svg"
+                    fill="none"
+                    focusable="false"
+                    height="24"
+                    viewBox="0 0 192 192"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g transform="translate(16 16)">
+                      <circle
+                        cx="80"
+                        cy="80"
+                        fill="none"
+                        r="74"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.8"
+                      ></circle>
+                      <path
+                        d="M80 30v50l40 32"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.8"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
               </div>
             </div>
           </div>
-
-          <div class="actions-row mt-4">
-            <a class="btn btn-primary" href="./../../../index.html">
-              <span aria-hidden="true" class="icon asset-placeholder"
-                ><!-- <img src="#icon_espaço2" alt=""> --></span
-              >
+          <div class="submission-result__actions u-space-top-large">
+            <a class="button button--primary" href="./../../../index.html">
+              <!-- <img src="#icone_seta_esquerda" alt=""> -->
+              <span aria-hidden="true" class="icon asset-slot">
+                <!-- <img src="#icon_espaço2" alt=""> -->
+              </span>
               Voltar para o início
             </a>
-            <button class="btn btn-secondary" type="button">
-              <span aria-hidden="true" class="icon asset-placeholder"
-                ><!-- <img src="#icon_lista" alt=""> --></span
-              >
+            <button class="button button--secondary" type="button">
+              <span aria-hidden="true" class="icon asset-slot">
+                <!-- <img src="#icon_lista" alt=""> -->
+              </span>
               Ver detalhes do cadastro
             </button>
           </div>
         </div>
       </main>
     </div>
-
-    <footer class="main-footer">
+    <footer class="site-footer">
       <p>BasicParkly © 2026. Todos os direitos reservados.</p>
-      <div class="footer-links">
-        <a href="#Termos_de_Uso">Termos de Uso</a>
-        <a href="#Política_de_Privacidade">Política de Privacidade</a>
-        <a href="#Contato">Contato</a>
+      <div class="site-footer__links">
+        <a href="#Termos_de_Uso"> Termos de Uso </a>
+        <a href="#Política_de_Privacidade"> Política de Privacidade </a>
+        <a href="#Contato"> Contato </a>
       </div>
     </footer>
   </body>

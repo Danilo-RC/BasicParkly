@@ -1,41 +1,20 @@
-/* ==========================================================================
-   1. LAYOUT SPLIT (AUTENTICAÇÃO / LOGIN / CADASTRO)
-   ========================================================================== */
+/* Composição das páginas: autenticação, cadastro do anfitrião e busca de vagas. */
 
-/* Grid e Estrutura Principal da Tela Dividida */
-.layout-split {
+/* Autenticação: hero fotográfico reservado à esquerda e cartão de formulário à direita. */
+.auth-layout {
   display: grid;
   min-height: 100vh;
-  grid-template: 70px minmax(0, 1fr) 52px / minmax(0, 1.08fr) minmax(
-      480px,
-      0.92fr
-    );
+  grid-template: 70px minmax(0, 1fr) 52px / minmax(0, 1.08fr) minmax(0, 0.92fr);
   background: #edf4ff;
 }
-
-.layout-split::before {
-  position: absolute;
-  z-index: 0;
-  top: 70px;
-  bottom: 52px;
-  left: 0;
-  width: 54%;
-  /* TODO(assets): aplicar a foto local da lateral quando os arquivos forem adicionados. */
-  background: #0b1e39;
-  content: "";
-}
-
-.layout-split .main-header,
-.layout-split .main-footer {
+.auth-layout > .site-header,
+.auth-layout > .site-footer {
   grid-column: 1 / -1;
 }
-
-.layout-split .main-header {
+.auth-layout > .site-header {
   z-index: 2;
 }
-
-/* Painel Lateral Esquerdo (Hero Content) */
-.split-hero {
+.auth-layout__hero {
   position: relative;
   z-index: 1;
   display: flex;
@@ -44,345 +23,320 @@
   justify-content: space-between;
   grid-column: 1;
   grid-row: 2;
-  padding: clamp(32px, 5vw, 74px) clamp(34px, 7vw, 105px) 32px;
+  overflow: hidden;
+  padding: clamp(46px, 5vw, 76px) clamp(34px, 6.8vw, 105px) 32px;
   color: #fff;
+  background: #0b1e39;
 }
-
-.hero-text h1 {
-  max-width: 540px;
+.auth-layout__media,
+.host-sidebar__media {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  background: #0b1e39;
+}
+.auth-layout__media > img,
+.host-sidebar__media > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.auth-layout__media::after,
+.host-sidebar__media::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(4 19 40 / 80%), rgb(4 19 40 / 30%));
+  content: "";
+}
+.auth-layout__hero-copy,
+.auth-layout__features,
+.auth-layout__footer-note {
+  position: relative;
+  z-index: 1;
+}
+.auth-layout__hero-copy h1 {
+  max-width: 560px;
   margin: 0 0 18px;
   font-size: clamp(2.15rem, 3.3vw, 3.45rem);
   line-height: 1.1;
   letter-spacing: -0.045em;
 }
-
-.hero-text h1 strong {
+.auth-layout__hero-copy h1 strong {
   color: #1680ff;
 }
-
-.hero-text p {
-  max-width: 430px;
+.auth-layout__hero-copy p {
+  max-width: 440px;
   margin: 0;
   color: #e2eaf5;
   font-size: 1rem;
 }
-
-/* Recursos / Destaques do Hero */
-.hero-features {
+.auth-layout__features {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin: auto 0 40px;
-  padding-top: 45px;
+  margin: auto 0 34px;
+  padding-top: 40px;
 }
-
-.feature-item {
+.auth-layout__feature {
   min-width: 0;
 }
-
-.feature-item > .icon {
+.auth-layout__feature > .icon {
   display: block;
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   margin-bottom: 7px;
+  color: #1680ff;
 }
-
-.feature-item h2 {
+.auth-layout__feature h2 {
   margin: 0 0 2px;
   color: #fff;
   font-size: 0.96rem;
 }
-
-.feature-item p {
+.auth-layout__feature p {
   margin: 0;
   color: #d2deed;
   font-size: 0.78rem;
   line-height: 1.35;
 }
-
-.hero-footer {
+.auth-layout__footer-note {
   width: fit-content;
   padding-top: 14px;
   border-top: 2px solid #1680ff;
 }
-
-.hero-footer p {
+.auth-layout__footer-note p {
   margin: 0;
   color: #e4ebf5;
   font-size: 0.85rem;
 }
-
-/* Painel Lateral Direito e Formulários de Autenticação */
-.split-form-area {
+.auth-layout__form-area {
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   grid-column: 2;
   grid-row: 2;
-  padding: 30px clamp(24px, 4vw, 60px);
+  justify-content: flex-start;
+  padding: 30px clamp(24px, 3.8vw, 58px) 30px clamp(24px, 2.6vw, 40px);
 }
 
-.auth-form {
-  width: min(100%, 610px);
-  padding: clamp(26px, 3.4vw, 48px);
-  background: #fff;
-  border: 1px solid rgb(255 255 255 / 65%);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 20px 60px rgb(20 49 91 / 14%);
-}
-
-.auth-form .brand {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.auth-form .brand-mark {
-  width: 52px;
-  height: 56px;
-  flex-basis: 52px;
-}
-
-.auth-form .brand-name {
-  font-size: 1.65rem;
-}
-
-.auth-form .field-group {
-  margin-bottom: 14px;
-}
-
-.auth-form .btn-primary {
-  min-height: 48px;
-}
-
-.auth-fields-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 20px;
-}
-
-.auth-form .input-wrapper > .input-icon-right {
-  right: 13px;
-  left: auto;
-  opacity: 0.7;
-}
-
-.auth-form input[type="password"] {
-  padding-right: 42px;
-}
-
-.login-link {
-  color: var(--ink);
-  font-weight: 600;
-}
-
-/* Botões Auxiliares e Sociais */
-.icon-btn {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  color: var(--muted);
-  background: transparent;
-  cursor: pointer;
-}
-
-.icon-btn:hover {
-  color: var(--blue-700);
-  background: var(--blue-50);
-}
-
-.social-provider {
-  width: 22px;
-  height: 22px;
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-/* ==========================================================================
-   2. LAYOUT DASHBOARD E PAINEL LATERAL (SIDEBAR)
-   ========================================================================== */
-
-/* Estrutura Principal do Dashboard */
-.layout-dashboard {
+/* Dashboard anfitrião: cabeçalho comum, painel lateral e card branco de conteúdo. */
+.host-layout {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-
-.layout-dashboard > .main-header {
-  flex: 0 0 70px;
+.host-layout > .site-header {
+  min-height: 66px;
+  flex: 0 0 66px;
 }
-
-.dashboard-container {
+.host-layout > .site-footer {
+  min-height: 44px;
+}
+.host-dashboard {
   display: grid;
-  flex: 1;
-  grid-template-columns: minmax(260px, 22.8%) minmax(0, 1fr);
-  gap: 0;
-  width: 100%;
-  max-width: none;
+  flex: 1 0 auto;
+  grid-template-columns: minmax(290px, 21.2%) minmax(0, 1fr);
   min-height: 0;
-  margin: 0;
-  padding: 0;
   background: #edf4ff;
 }
-
-/* Sidebar / Menu Lateral Esquerdo */
-.sidebar {
+.host-sidebar {
   position: relative;
   display: flex;
+  min-width: 0;
   min-height: 100%;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(30px, 4vw, 52px) clamp(24px, 3vw, 48px);
   overflow: hidden;
+  padding: clamp(34px, 3.3vw, 52px) clamp(24px, 3vw, 48px);
   color: #fff;
-  /* TODO(assets): manter o painel preparado para receber seu fundo local. */
   background: #0b2c5b;
 }
-
-.sidebar .brand {
+.host-sidebar__media::after {
+  background: linear-gradient(
+    180deg,
+    rgb(5 26 54 / 74%),
+    rgb(5 26 54 / 38%) 48%,
+    rgb(3 18 39 / 76%)
+  );
+}
+.host-sidebar__brand,
+.host-sidebar__features,
+.host-sidebar__footer {
+  position: relative;
+  z-index: 1;
+}
+.host-sidebar .brand {
   color: #fff;
 }
-
-.sidebar .brand-name > span {
+.host-sidebar .brand__name {
+  color: #fff;
+}
+.host-sidebar .brand__name > span {
   color: #71b8ff;
 }
-
-.sidebar-brand p {
-  max-width: 230px;
+.host-sidebar__brand p {
+  max-width: 245px;
   margin: 18px 0 0;
   color: #f4f8ff;
   font-size: 1.05rem;
   font-weight: 620;
   line-height: 1.4;
 }
-
-.sidebar-features {
+.host-sidebar__features {
   display: flex;
   flex-direction: column;
   gap: clamp(20px, 4vh, 38px);
   margin: 32px 0;
 }
-
-.sidebar-item {
+.host-sidebar__feature {
   display: flex;
   align-items: flex-start;
   gap: 14px;
 }
-
-.sidebar-item > .icon {
-  width: 26px;
-  height: 26px;
+.host-sidebar__feature > .icon {
+  width: 28px;
+  height: 28px;
+  flex-basis: 28px;
+  color: #18a1ff;
 }
-
-.sidebar-item h3 {
+.host-sidebar__feature h3 {
   margin: 0 0 3px;
   font-size: 0.9rem;
 }
-
-.sidebar-item p {
+.host-sidebar__feature p {
   margin: 0;
   color: #d0dcee;
   font-size: 0.82rem;
   line-height: 1.42;
 }
-
-.sidebar-footer {
-  position: relative;
-  z-index: 1;
+.host-sidebar__footer {
   padding-top: 15px;
   border-top: 2px solid #18a1ff;
   color: #e0e9f7;
   font-size: 0.82rem;
 }
-
-.sidebar-footer p {
+.host-sidebar__footer p {
   margin: 0;
 }
-
-/* ==========================================================================
-   3. ÁREA CONTEÚDO PRINCIPAL (DASHBOARD MAIN & FORMULÁRIOS)
-   ========================================================================== */
-
-.dashboard-main {
+.host-main {
+  position: relative;
   min-width: 0;
-  margin: 20px clamp(18px, 2.8vw, 44px) 18px clamp(16px, 1.1vw, 18px);
-  padding: clamp(22px, 2.8vw, 44px);
+  margin: 16px clamp(18px, 2vw, 30px) 2px clamp(16px, 1.1vw, 18px);
+  padding: 20px clamp(20px, 2.2vw, 34px);
   background: #fff;
   border: 1px solid #e3eaf3;
-  border-radius: 18px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 8px 28px rgb(28 57 105 / 6%);
 }
-
-.dashboard-main form {
+.host-main > form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
-
-/* Cabeçalhos do Formulário */
-.form-header {
+.host-main .content-card {
+  padding: 14px;
+}
+.host-main .content-card__description {
+  margin: 0;
+}
+.host-main .form-field {
+  margin-bottom: 0;
+}
+.host-main .host-field-grid > .form-field,
+.host-main .host-field-grid--two-column > .form-field {
+  margin-bottom: 0;
+}
+.host-main .form-field__control > input,
+.host-main .form-field__control > select {
+  height: 38px;
+}
+.host-main .form-actions.u-space-top-large {
+  margin-top: 0;
+}
+.host-main__content {
+  min-height: 100%;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.host-form__header {
+  position: relative;
   padding: 2px 0 3px;
 }
-
-.form-header-title {
+.host-form__eyebrow {
   color: #71809a;
   font-size: 0.77rem;
   font-weight: 750;
   letter-spacing: 0.09em;
 }
-
-.form-top-bar {
+.host-form__topbar {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 28px;
   margin-top: 10px;
 }
-
-.form-title-area {
-  max-width: 650px;
+.host-form__intro {
+  max-width: 660px;
 }
-
-.form-title-area h2 {
+.host-form__intro h2 {
   margin: 0 0 5px;
-  color: var(--navy-900);
-  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: var(--color-navy);
+  font-size: clamp(1.25rem, 1.7vw, 1.65rem);
   line-height: 1.18;
   letter-spacing: -0.03em;
 }
-
-.form-title-area .form-subtitle {
+.host-form__intro .form__subtitle {
   margin-bottom: 0;
 }
-
-/* Indicador de Passos (Stepper) */
-.stepper {
+.host-stepper-wrapper {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  z-index: 1;
+}
+.host-form__topbar > .host-stepper {
+  position: absolute;
+  top: 9px;
+  right: 0;
+}
+.host-stepper {
   display: flex;
   align-items: flex-start;
-  gap: clamp(10px, 2vw, 28px);
-  flex-shrink: 0;
+  gap: clamp(10px, 1.55vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-.step-item {
+.host-stepper__step {
   position: relative;
   display: flex;
   width: 72px;
+  flex: 0 0 72px;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  color: var(--muted);
+  color: var(--color-muted);
   font-size: 0.72rem;
   line-height: 1.15;
   text-align: center;
 }
-
-.step-number {
+.host-stepper__step:not(:last-child)::after {
+  position: absolute;
+  top: 17px;
+  left: calc(50% + 20px);
+  width: calc(100% - 14px);
+  height: 1px;
+  background: #cbd5e2;
+  content: "";
+}
+.host-stepper__number {
+  position: relative;
+  z-index: 1;
   display: grid;
   width: 36px;
   height: 36px;
@@ -394,261 +348,350 @@
   font-size: 0.95rem;
   font-weight: 700;
 }
-
-.step-item.active .step-number,
-.step-item.completed .step-number {
-  color: #fff;
-  border-color: var(--blue-600);
-  background: var(--blue-600);
-}
-
-.step-item.active {
-  color: var(--blue-700);
+.host-stepper__step--active {
+  color: var(--color-brand-strong);
   font-weight: 700;
 }
-
-.stepper-label {
+.host-stepper__step--active .host-stepper__number,
+.host-stepper__step--completed .host-stepper__number {
+  border-color: var(--color-brand);
+  color: #fff;
+  background: var(--color-brand);
+}
+.host-stepper__step--completed:not(:last-child)::after {
+  background: var(--color-brand);
+}
+.host-stepper__step--pending {
+  color: #c58a00;
+}
+.host-stepper__step--pending .host-stepper__number {
+  border-color: #eda900;
+  color: #eda900;
+  background: #fff7df;
+}
+.host-stepper__step--pending .icon {
+  width: 20px;
+  height: 20px;
+}
+.host-stepper__label {
   display: block;
-  margin: 0 0 8px;
-  color: var(--muted);
+  margin: 0 0 20px;
+  color: var(--color-muted);
   font-size: 0.8rem;
   text-align: right;
 }
-
-/* Grids Internas do Formulário */
-.form-grid,
-.form-grid-2col {
+.host-field-grid,
+.host-field-grid--two-column {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px 28px;
+  gap: 2px 24px;
 }
-
-.middle-row-grid {
+.host-row-grid {
   display: grid;
-  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
   gap: 16px;
 }
-
-.dashboard-main > .main-content-card {
-  min-height: 100%;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
+.host-row-grid--split {
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
 }
 
-/* ==========================================================================
-   4. LAYOUT DE LISTAGEM E PÁGINAS LANDING
-   ========================================================================== */
-
-.search-section {
+/* Landing desktop: busca ampla, filtros laterais e três cartões por linha. */
+.landing-page {
+  background: #fff;
+}
+.landing-page > .site-header {
+  min-height: 78px;
+  padding-inline: clamp(24px, 4.8vw, 70px);
+}
+.landing-page .site-header__nav {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(18px, 3vw, 46px);
+}
+.landing-page .brand__mark {
+  width: 42px;
+  height: 44px;
+  flex-basis: 42px;
+}
+.landing-page .brand__name {
+  font-size: 1.38rem;
+}
+.landing-page .site-header__links {
+  gap: clamp(13px, 1.65vw, 26px);
+}
+.landing-page .site-header__links a {
+  font-size: 0.86rem;
+}
+.landing-page .site-header__actions {
+  gap: 13px;
+}
+.landing-page .site-header__actions .button--primary {
+  min-height: 44px;
+  padding-inline: 22px;
+}
+.landing-main {
+  width: 100%;
+}
+.parking-search-section {
   display: flex;
   justify-content: center;
   padding: 17px 24px 22px;
 }
-
-.category-scroll {
+.category-nav {
   display: flex;
   max-width: 1440px;
+  align-items: center;
+  justify-content: center;
   gap: 9px;
   margin: 0 auto;
   padding: 0 28px 22px;
   overflow-x: auto;
   scrollbar-width: none;
 }
-
-.landing-container {
-  display: flex;
+.category-nav::-webkit-scrollbar {
+  display: none;
+}
+.parking-browser {
+  display: grid;
   max-width: 1440px;
+  grid-template-columns: 238px minmax(0, 1fr);
+  align-items: start;
   gap: 28px;
   margin: 0 auto;
   padding: 0 28px 32px;
 }
-
-.filter-sidebar {
-  width: 238px;
-  flex: 0 0 238px;
-  align-self: flex-start;
-}
-
-.listings-area {
+.parking-results {
   min-width: 0;
-  flex: 1;
 }
-
-.listings-grid {
+.parking-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-/* ==========================================================================
-   5. RESPONSIVIDADE (MEDIA QUERIES)
-   ========================================================================== */
-
-/* Notebooks e Displays Médios (Até 1100px) */
-@media (max-width: 1100px) {
-  .layout-split {
-    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.92fr);
+@media (max-width: 1250px) {
+  .landing-page .site-header__nav {
+    grid-template-columns: auto minmax(0, 1fr);
   }
-
-  .split-hero {
-    padding-inline: 6vw;
-  }
-
-  .dashboard-container {
-    grid-template-columns: 250px minmax(0, 1fr);
-  }
-
-  .stepper {
-    gap: 8px;
-  }
-
-  .step-item {
-    width: 61px;
-  }
-
-  .listings-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .landing-page .site-header__links {
+    order: 3;
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 6px;
   }
 }
-
-/* Tablets e Telas Médias (Até 850px) */
-@media (max-width: 850px) {
-  /* Adaptação da tela de autenticação */
-  .layout-split {
+@media (max-width: 1100px) {
+  .auth-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(430px, 0.92fr);
+  }
+  .auth-layout__form-area {
+    justify-content: center;
+    padding-inline: 24px;
+  }
+  .auth-layout__hero {
+    padding-inline: 6vw;
+  }
+  .host-dashboard {
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+  .host-stepper {
+    gap: 8px;
+  }
+  .host-stepper__step {
+    width: 61px;
+    flex-basis: 61px;
+  }
+  .parking-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .category-nav {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 900px) {
+  .auth-layout {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     background: #edf4ff;
   }
-
-  .layout-split::before,
-  .split-hero {
+  .auth-layout__hero {
     display: none;
   }
-
-  .layout-split .main-header,
-  .layout-split .main-footer {
+  .auth-layout > .site-header,
+  .auth-layout > .site-footer {
     flex: 0 0 auto;
   }
-
-  .split-form-area {
+  .auth-layout__form-area {
     flex: 1;
-    padding: 24px 16px;
+    padding: 28px 18px;
   }
-
-  .auth-form {
-    width: min(100%, 620px);
-  }
-
-  /* Adaptação do Dashboard e Sidebar */
-  .dashboard-container {
+  .host-dashboard {
     display: flex;
     flex-direction: column;
   }
-
-  .sidebar {
+  .host-sidebar {
     min-height: auto;
     padding: 18px 22px;
   }
-
-  .sidebar-brand {
+  .host-sidebar__brand {
     display: flex;
     align-items: center;
     gap: 18px;
   }
-
-  .sidebar-brand p {
+  .host-sidebar__brand p {
     margin: 0;
   }
-
-  .sidebar-features,
-  .sidebar-footer {
+  .host-sidebar__features,
+  .host-sidebar__footer {
     display: none;
   }
-
-  /* Adaptações do Conteúdo e Formulários */
-  .dashboard-main {
+  .host-main {
     margin: 0 14px 18px;
     padding: 20px;
   }
-
-  .form-top-bar {
+  .host-form__topbar {
     flex-direction: column;
   }
-
-  .stepper {
+  .host-stepper-wrapper {
+    position: static;
+    margin-top: 12px;
+  }
+  .host-form__topbar > .host-stepper {
+    position: static;
     width: 100%;
     justify-content: space-between;
   }
-
-  .category-scroll {
-    padding-inline: 16px;
+  .host-stepper__label {
+    margin-bottom: 8px;
+    text-align: left;
   }
-
-  .landing-container {
-    flex-direction: column;
-    padding-inline: 16px;
-  }
-
-  .filter-sidebar {
-    width: 100%;
-    flex-basis: auto;
+  .parking-browser {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-inline: 20px;
   }
 }
-
-/* Celulares e Telas Pequenas (Até 560px) */
-@media (max-width: 560px) {
-  .auth-fields-grid {
+@media (max-width: 760px) {
+  .landing-page > .site-header {
+    padding-inline: 12px;
+  }
+  .landing-page .site-header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 12px;
+  }
+  .landing-page .site-header__nav > .brand {
+    margin-right: auto;
+  }
+  .landing-page .site-header__links {
+    order: 3;
+    width: 100%;
+    flex: 0 0 100%;
+    grid-column: auto;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 4px 0;
+  }
+  .landing-page .site-header__actions {
+    min-width: 0;
+    flex: 0 1 auto;
+    gap: 8px;
+    margin-left: 0;
+  }
+  .parking-search-section {
+    padding: 12px 16px 18px;
+  }
+  .parking-browser {
+    padding-inline: 16px;
+  }
+  .category-nav {
+    justify-content: flex-start;
+    padding-inline: 16px;
+  }
+  .host-sidebar__brand .brand__mark {
+    width: 34px;
+    height: 36px;
+    flex-basis: 34px;
+  }
+}
+@media (max-width: 600px) {
+  .landing-page .brand__mark {
+    width: 32px;
+    height: 34px;
+    flex-basis: 32px;
+  }
+  .landing-page .brand__name {
+    font-size: 1.1rem;
+  }
+  .landing-page .site-header__actions .button--icon {
+    display: none;
+  }
+  .landing-page .site-header__actions .button--primary {
+    min-height: 36px;
+    padding-inline: 12px;
+    font-size: 0.8rem;
+  }
+  .landing-page .site-header__login {
+    font-size: 0.8rem;
+  }
+  .landing-page .site-header__links {
+    gap: 13px;
+  }
+  .auth-form {
+    padding: 25px 19px;
+  }
+  .host-field-grid,
+  .host-field-grid--two-column,
+  .host-row-grid--split {
     grid-template-columns: 1fr;
     gap: 0;
   }
-
-  .form-grid,
-  .form-grid-2col,
-  .middle-row-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
+  .host-main {
+    margin: 0 10px 14px;
+    padding: 15px;
   }
-
-  .dashboard-main {
-    margin: 0 12px 14px;
-    padding: 16px;
+  .host-stepper {
+    gap: 4px;
   }
-
-  .step-item {
+  .host-stepper__step {
     width: 58px;
+    flex-basis: 58px;
     font-size: 0.65rem;
   }
-
-  .step-number {
+  .host-stepper__number {
     width: 31px;
     height: 31px;
   }
-
-  .listings-grid {
+  .host-stepper__step:not(:last-child)::after {
+    top: 15px;
+    left: calc(50% + 17px);
+    width: calc(100% - 10px);
+  }
+  .parking-grid {
     grid-template-columns: 1fr;
   }
-
-  .search-section {
-    padding: 12px 16px 18px;
+  .site-footer {
+    padding-inline: 16px;
   }
-
-  .split-form-area {
-    align-items: flex-start;
+}
+@media (max-width: 420px) {
+  .auth-layout__form-area {
+    padding-inline: 10px;
   }
-
-  .auth-form {
-    padding: 24px 19px;
+  .host-sidebar {
+    padding-inline: 16px;
   }
-
-  .social-login-grid {
-    flex-direction: column;
+  .host-form__eyebrow {
+    font-size: 0.68rem;
   }
-
-  .form-options {
-    align-items: flex-start;
+  .host-stepper__step {
+    width: 52px;
+    flex-basis: 52px;
+  }
+  .host-stepper__step:not(:last-child)::after {
+    left: calc(50% + 15px);
+    width: calc(100% - 7px);
   }
 }

@@ -3,245 +3,292 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Cadastro Anfitrião - Passo 3</title>
-    <link href="./../../css/global.css" rel="stylesheet" />
-    <link href="./../../css/layouts.css" rel="stylesheet" />
-    <link href="./../../css/components.css" rel="stylesheet" />
+    <title>Cadastro de anfitrião — Documentos | BasicParkly</title>
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/layouts.css" rel="stylesheet" />
+    <link href="../../css/components.css" rel="stylesheet" />
   </head>
-  <body class="layout-dashboard">
-    <header class="main-header">
+  <body class="host-layout">
+    <header class="site-header">
       <a href="./../../../index.html">
-        <span aria-hidden="true" class="icon asset-placeholder"
-          ><!-- <img src="#Voltar" alt=""> --></span
-        >
+        <!-- <img src="#icone_seta_esquerda" alt=""> -->
+        <span aria-hidden="true" class="icon asset-slot">
+          <!-- <img src="#Voltar" alt=""> -->
+        </span>
         Voltar para o início
       </a>
-      <span aria-label="BasicParkly" class="brand"
-        ><span aria-hidden="true" class="brand-mark"
-          ><!-- <img src="#Logo_Header" alt=""> --></span
-        ><span class="brand-name">Basic<span>Parkly</span></span></span
-      >
-      <div class="header-user">
-        <a href="#Ajuda">Ajuda</a>
-        <div class="profile-summary" aria-label="Perfil de Gustavo">
-          <span aria-hidden="true" class="profile-avatar asset-placeholder"
-            ><!-- <img src="#Perfil_Usuario" alt=""> --></span
-          >
-          <span class="profile-name">Nome do Anfitrião</span>
-          <span aria-hidden="true" class="profile-chevron"></span>
+      <a aria-label="BasicParkly" class="brand" href="../../../index.html">
+        <span aria-hidden="true" class="brand__mark">
+          <!-- <img src="#Logo_Header" alt=""> -->
+        </span>
+        <span class="brand__name">
+          Basic
+          <span> Parkly </span>
+        </span>
+      </a>
+      <div class="site-header__user">
+        <a href="#Ajuda"> Ajuda </a>
+        <div aria-label="Perfil" class="site-header__profile">
+          <span aria-hidden="true" class="site-header__avatar asset-slot">
+            <!-- <img src="#Perfil_Usuario" alt=""> -->
+          </span>
+          <span class="site-header__profile-name"> #Nome</span>
+          <span aria-hidden="true" class="site-header__chevron">
+            <!-- <img src="#icone_seta_perfil" alt=""> -->
+          </span>
         </div>
       </div>
     </header>
-
-    <div class="dashboard-container">
-      <aside class="sidebar">
-        <div class="sidebar-brand">
-          <span aria-label="BasicParkly" class="brand"
-            ><span aria-hidden="true" class="brand-mark"
-              ><!-- <img src="Logo_branco" alt=""> --></span
-            ><span class="brand-name">Basic<span>Parkly</span></span></span
-          >
-          <p>Anfitriões constroem<br />novas possibilidades.</p>
+    <div class="host-dashboard">
+      <aside class="host-sidebar">
+        <div aria-hidden="true" class="host-sidebar__media">
+          <!-- <img src="#imagem_painel_anfitriao" alt=""> -->
         </div>
-
-        <div class="sidebar-features">
-          <div class="sidebar-item">
-            <span aria-hidden="true" class="icon asset-placeholder"
-              ><!-- <img src="#Processo_seguro" alt=""> --></span
-            >
+        <div class="host-sidebar__brand">
+          <a aria-label="BasicParkly" class="brand" href="../../../index.html">
+            <span aria-hidden="true" class="brand__mark">
+              <!-- <img src="Logo_branco" alt=""> -->
+            </span>
+            <span class="brand__name">
+              Basic
+              <span> Parkly </span>
+            </span>
+          </a>
+          <p>
+            Anfitriões constroem
+            <br />
+            novas possibilidades.
+          </p>
+        </div>
+        <div class="host-sidebar__features">
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Processo_seguro" alt=""> -->
+            </span>
             <div>
               <h3>Processo seguro</h3>
               <p>Seus dados são protegidos.</p>
             </div>
           </div>
-
-          <div class="sidebar-item">
-            <span aria-hidden="true" class="icon asset-placeholder"
-              ><!-- <img src="#Mais_renda" alt=""> --></span
-            >
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Mais_renda" alt=""> -->
+            </span>
             <div>
               <h3>Mais renda</h3>
-              <p>Seu espaço pode gerar<br />novas oportunidades.</p>
+              <p>
+                Seu espaço pode gerar
+                <br />
+                novas oportunidades.
+              </p>
             </div>
           </div>
-
-          <div class="sidebar-item">
-            <span aria-hidden="true" class="icon asset-placeholder"
-              ><!-- <img src="#Voce_no_controle" alt=""> --></span
-            >
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Voce_no_controle" alt=""> -->
+            </span>
             <div>
               <h3>Você no controle</h3>
-              <p>Defina regras, preços<br />e disponibilidade.</p>
+              <p>
+                Defina regras, preços
+                <br />
+                e disponibilidade.
+              </p>
             </div>
           </div>
         </div>
-
-        <div class="sidebar-footer">
-          <p>Espaços conectam pessoas.<br />E pessoas movem o mundo.</p>
+        <div class="host-sidebar__footer">
+          <p>
+            Espaços conectam pessoas.
+            <br />
+            E pessoas movem o mundo.
+          </p>
         </div>
       </aside>
-
-      <main class="dashboard-main">
+      <main class="host-main">
         <form>
-          <div class="form-header">
-            <span class="form-header-title">CADASTRO DE ANFITRIÃO</span>
-            <div class="form-top-bar">
-              <div class="form-title-area">
+          <div class="host-form__header">
+            <span class="host-form__eyebrow"> CADASTRO DE ANFITRIÃO </span>
+            <div class="host-form__topbar">
+              <div class="host-form__intro">
                 <h2>
-                  Vamos verificar algumas informações para<br />torná-lo um
-                  <span class="text-primary">Anfitrião-Parkly</span>!
+                  Vamos verificar algumas informações para
+                  <br />
+                  torná-lo um
+                  <span class="u-text-brand"> Anfitrião-Parkly </span>
+                  !
                 </h2>
-                <p class="form-subtitle">
+                <p class="form__subtitle">
                   Envie os documentos necessários para que seu perfil possa ser
                   analisado.
                 </p>
               </div>
-
-              <div class="stepper">
-                <div class="step-item completed">
-                  <div class="step-number">✓</div>
-                  <span>Dados pessoais</span>
-                </div>
-                <div class="step-item completed">
-                  <div class="step-number">✓</div>
-                  <span>Espaço</span>
-                </div>
-                <div class="step-item active">
-                  <div class="step-number">3</div>
-                  <span>Documentos</span>
-                </div>
-                <div class="step-item">
-                  <div class="step-number">4</div>
-                  <span>Análise</span>
-                </div>
-              </div>
+              <ol
+                aria-label="Etapas do cadastro de anfitrião"
+                class="host-stepper"
+              >
+                <li class="host-stepper__step host-stepper__step--completed">
+                  <div aria-hidden="true" class="host-stepper__number">
+                    <!-- <img src="#icone_concluido" alt=""> -->
+                  </div>
+                  <span> Dados pessoais </span>
+                </li>
+                <li class="host-stepper__step host-stepper__step--completed">
+                  <div aria-hidden="true" class="host-stepper__number">
+                    <!-- <img src="#icone_concluido" alt=""> -->
+                  </div>
+                  <span> Espaço </span>
+                </li>
+                <li
+                  aria-current="step"
+                  class="host-stepper__step host-stepper__step--active"
+                >
+                  <div class="host-stepper__number">3</div>
+                  <span> Documentos </span>
+                </li>
+                <li class="host-stepper__step">
+                  <div class="host-stepper__number">4</div>
+                  <span> Análise </span>
+                </li>
+              </ol>
             </div>
           </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="card-icon">
-                <span aria-hidden="true" class="icon asset-placeholder"
-                  ><!-- <img src="#icon_documentos_necessarios" alt=""> --></span
-                >
+          <div class="content-card">
+            <div class="content-card__header">
+              <div class="content-card__icon">
+                <span aria-hidden="true" class="icon asset-slot">
+                  <!-- <img src="#icon_documentos_necessarios" alt=""> -->
+                </span>
               </div>
               <h5>Documentos necessários</h5>
+              <p class="content-card__description">
+                Envie os documentos solicitados para validarmos seu perfil.
+              </p>
             </div>
-            <p class="card-description">
-              Envie os documentos solicitados para validarmos seu perfil.
-            </p>
-
-            <div class="docs-grid">
-              <div class="doc-box">
+            <div class="document-grid">
+              <div class="document-card">
                 <div>
-                  <div class="doc-head">
-                    <div class="doc-head-icon">
-                      <span aria-hidden="true" class="icon asset-placeholder"
-                        ><!-- <img src="#icon_documento_identificacao" alt=""> --></span
-                      >
+                  <div class="document-card__heading">
+                    <div class="document-card__icon">
+                      <span aria-hidden="true" class="icon asset-slot">
+                        <!-- <img src="#icon_documento_identificacao" alt=""> -->
+                      </span>
                     </div>
                     <h6>Documento de identificação</h6>
                   </div>
-                  <p class="doc-desc">
+                  <p class="document-card__description">
                     CPF ou documento oficial com foto (RG, CNH, etc).
                   </p>
                 </div>
-
                 <div>
-                  <label class="upload-btn-area">
+                  <label class="document-card__upload">
                     <input accept=".pdf,.jpg,.jpeg,.png" type="file" />
-                    <span aria-hidden="true" class="icon asset-placeholder"
-                      ><!-- <img src="#icon_upload" alt=""> --></span
-                    >
+                    <span aria-hidden="true" class="icon asset-slot">
+                      <!-- <img src="#icon_upload" alt=""> -->
+                    </span>
                     Adicionar documento
                   </label>
-                  <p class="doc-info">
-                    Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10
-                    MB.
+                  <p class="document-card__help">
+                    Formatos aceitos: PDF, JPG ou PNG.
+                    <br />
+                    Tamanho máximo: 10 MB.
                   </p>
                 </div>
               </div>
-
-              <div class="doc-box">
+              <div class="document-card">
                 <div>
-                  <div class="doc-head">
-                    <div class="doc-head-icon">
-                      <span aria-hidden="true" class="icon asset-placeholder"
-                        ><!-- <img src="#icon_casa" alt=""> --></span
-                      >
+                  <div class="document-card__heading">
+                    <div class="document-card__icon">
+                      <span aria-hidden="true" class="icon asset-slot">
+                        <!-- <img src="#icon_casa" alt=""> -->
+                        <svg
+                          aria-hidden="true"
+                          class="icon__svg"
+                          fill="none"
+                          focusable="false"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M12.6139 1.21065C12.2528 0.929784 11.7472 0.929784 11.3861 1.21065L2.38606 8.21065C2.14247 8.4001 2 8.69141 2 9V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9C22 8.69141 21.8575 8.4001 21.6139 8.21065L12.6139 1.21065ZM16 20H20V9.48908L12 3.26686L4 9.48908V20H8V12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12V20ZM10 20V13H14V20H10Z"
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </span>
                     </div>
                     <h6>Comprovante de endereço</h6>
                   </div>
-                  <p class="doc-desc">
+                  <p class="document-card__description">
                     Conta de água, luz, internet ou outro documento oficial.
                   </p>
                 </div>
-
                 <div>
-                  <label class="upload-btn-area">
+                  <label class="document-card__upload">
                     <input accept=".pdf,.jpg,.jpeg,.png" type="file" />
-                    <span aria-hidden="true" class="icon asset-placeholder"
-                      ><!-- <img src="#icon_upload" alt=""> --></span
-                    >
+                    <span aria-hidden="true" class="icon asset-slot">
+                      <!-- <img src="#icon_upload" alt=""> -->
+                    </span>
                     Adicionar documento
                   </label>
-                  <p class="doc-info">
-                    Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10
-                    MB.
+                  <p class="document-card__help">
+                    Formatos aceitos: PDF, JPG ou PNG.
+                    <br />
+                    Tamanho máximo: 10 MB.
                   </p>
                 </div>
               </div>
-
-              <div class="doc-box">
+              <div class="document-card">
                 <div>
-                  <div class="doc-head">
-                    <div class="doc-head-icon">
-                      <span aria-hidden="true" class="icon asset-placeholder"
-                        ><!-- <img src="#icon_documento_comprovacao" alt=""> --></span
-                      >
+                  <div class="document-card__heading">
+                    <div class="document-card__icon">
+                      <span aria-hidden="true" class="icon asset-slot">
+                        <!-- <img src="#icon_documento_comprovacao" alt=""> -->
+                      </span>
                     </div>
                     <h6>
                       Comprovação/autorização para disponibilização do espaço
                     </h6>
                   </div>
-                  <p class="doc-desc">
+                  <p class="document-card__description">
                     Documento que comprove sua propriedade ou autorização de uso
                     do espaço.
                   </p>
                 </div>
-
                 <div>
-                  <label class="upload-btn-area">
+                  <label class="document-card__upload">
                     <input accept=".pdf,.jpg,.jpeg,.png" type="file" />
-                    <span aria-hidden="true" class="icon asset-placeholder"
-                      ><!-- <img src="#icon_upload" alt=""> --></span
-                    >
+                    <span aria-hidden="true" class="icon asset-slot">
+                      <!-- <img src="#icon_upload" alt=""> -->
+                    </span>
                     Adicionar documento
                   </label>
-                  <p class="doc-info">
-                    Formatos aceitos: PDF, JPG ou PNG.<br />Tamanho máximo: 10
-                    MB.
+                  <p class="document-card__help">
+                    Formatos aceitos: PDF, JPG ou PNG.
+                    <br />
+                    Tamanho máximo: 10 MB.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="card-icon">
-                <span aria-hidden="true" class="icon asset-placeholder"
-                  ><!-- <img src="#icon_documento" alt=""> --></span
-                >
+          <div class="content-card">
+            <div class="content-card__header">
+              <div class="content-card__icon">
+                <span aria-hidden="true" class="icon asset-slot">
+                  <!-- <img src="#icon_documento" alt=""> -->
+                </span>
               </div>
               <h5>Confirmações</h5>
+              <p class="content-card__description">
+                Leia e confirme as informações abaixo.
+              </p>
             </div>
-            <p class="card-description">
-              Leia e confirme as informações abaixo.
-            </p>
-
-            <div class="checkbox-list">
-              <label class="checkbox-item">
+            <div class="consent-list">
+              <label class="consent-list__item">
                 <input
                   name="confirmacoes"
                   type="checkbox"
@@ -249,8 +296,7 @@
                 />
                 Declaro que as informações fornecidas são verdadeiras.
               </label>
-
-              <label class="checkbox-item">
+              <label class="consent-list__item">
                 <input
                   name="confirmacoes"
                   type="checkbox"
@@ -259,46 +305,61 @@
                 Declaro que possuo autorização para disponibilizar o espaço
                 informado.
               </label>
-
-              <label class="checkbox-item">
+              <label class="consent-list__item">
                 <input name="confirmacoes" type="checkbox" value="termos_uso" />
                 <span>
-                  Li e aceito os <a href="#Termos_de_Uso">Termos de Uso</a> e a
-                  <a href="#Política_de_Privacidade">Política de Privacidade</a
-                  >.
+                  Li e aceito os
+                  <a href="#Termos_de_Uso"> Termos de Uso </a>
+                  e a
+                  <a href="#Política_de_Privacidade">
+                    Política de Privacidade
+                  </a>
+                  .
                 </span>
               </label>
             </div>
-
-            <div class="alert-box">
-              <div class="alert-icon">i</div>
-              <div class="alert-content">
+            <div class="notice">
+              <div class="notice__icon">
+                <!-- <img src="#icon_informacao" alt=""> -->
+              </div>
+              <div class="notice__content">
                 <p>
-                  <strong>Importante</strong> Após o envio, seu perfil ficará em
-                  análise. Você poderá acompanhar o status do cadastro
-                  posteriormente.
+                  <strong> Importante </strong>
+                  Após o envio, seu perfil ficará em análise. Você poderá
+                  acompanhar o status do cadastro posteriormente.
                 </p>
               </div>
             </div>
           </div>
-
-          <div class="form-actions-bar mt-4">
-            <a class="btn-action btn-back" href="./espaco.html">← Voltar</a>
-
-            <a class="btn-action btn-primary" href="./analise.html">
-              Enviar para análise →
+          <div class="form-actions u-space-top-large">
+            <a
+              class="button button--action button--secondary"
+              href="./espaco.html"
+            >
+              <span aria-hidden="true" class="button__icon-slot">
+                <!-- <img src="#icon_seta_direita" alt=""> -->
+              </span>
+              Voltar
+            </a>
+            <a
+              class="button button--action button--primary"
+              href="./analise.html"
+            >
+              Enviar para análise
+              <span aria-hidden="true" class="button__icon-slot">
+                <!-- <img src="#icon_seta_direita" alt=""> -->
+              </span>
             </a>
           </div>
         </form>
       </main>
     </div>
-
-    <footer class="main-footer">
+    <footer class="site-footer">
       <p>BasicParkly © 2026. Todos os direitos reservados.</p>
-      <div class="footer-links">
-        <a href="#Termos_de_Uso">Termos de Uso</a>
-        <a href="#Política_de_Privacidade">Política de Privacidade</a>
-        <a href="#Contato">Contato</a>
+      <div class="site-footer__links">
+        <a href="#Termos_de_Uso"> Termos de Uso </a>
+        <a href="#Política_de_Privacidade"> Política de Privacidade </a>
+        <a href="#Contato"> Contato </a>
       </div>
     </footer>
   </body>

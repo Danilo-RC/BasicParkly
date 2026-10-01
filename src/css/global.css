@@ -1,43 +1,33 @@
-/* ==========================================================================
-   1. TOKENS DE DESIGN, VARIÁVEIS E BASE GLOBAL
-   ========================================================================== */
-
+/* Tokens, reset e elementos compartilhados do BasicParkly. */
 :root {
   color-scheme: light;
-
-  /* Cores Principais / Brand */
-  --blue-700: #0754c7;
-  --blue-600: #0969e8;
-  --blue-500: #1677f8;
-  --blue-100: #eaf3ff;
-  --blue-50: #f3f8ff;
-  --navy-900: #0d1b49;
-
-  /* Neutros e Superfícies */
-  --ink: #14213d;
-  --muted: #66758f;
-  --border: #dce4ef;
-  --surface: #fff;
-  --page: #f5f8fd;
-
-  /* Status */
-  --green: #11966c;
-  --amber: #efa900;
-
-  /* Arredondamento e Sombras */
+  --color-brand: #0969e8;
+  --color-brand-strong: #0754c7;
+  --color-brand-soft: #eaf3ff;
+  --color-brand-wash: #f4f8ff;
+  --color-navy: #0d1b49;
+  --color-ink: #192747;
+  --color-muted: #6b7891;
+  --color-border: #dce4ef;
+  --color-surface: #fff;
+  --color-canvas: #f2f6fd;
+  --color-success: #13956d;
+  --color-warning: #eda900;
+  --color-danger: #d33b4b;
   --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
   --shadow-card: 0 8px 28px rgb(28 57 105 / 7%);
-
-  /* Tipografia */
-  --font:
+  --font-sans:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
+  --header-height: 70px;
+  --footer-height: 52px;
 }
 
-/* Reset Básico */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -45,149 +35,123 @@ html {
   min-width: 320px;
   scroll-behavior: smooth;
 }
-
 body {
   min-height: 100vh;
   margin: 0;
-  color: var(--ink);
-  background: var(--page);
-  font-family: var(--font);
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  font-family: var(--font-sans);
   font-size: 15px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-
-/* Tipografia e Interações Globais */
 button,
-input {
+input,
+select,
+textarea {
   font: inherit;
 }
-
 button,
-a,
 input[type="checkbox"],
 input[type="radio"],
 input[type="range"] {
-  accent-color: var(--blue-600);
+  accent-color: var(--color-brand);
 }
-
-a {
-  color: var(--blue-700);
-  text-underline-offset: 3px;
-}
-
-a:hover {
-  color: var(--blue-600);
-}
-
 button {
   color: inherit;
 }
-
+a {
+  color: var(--color-brand-strong);
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: var(--color-brand);
+}
 :focus-visible {
-  outline: 3px solid rgb(22 119 248 / 40%);
+  outline: 3px solid rgb(22 119 248 / 42%);
   outline-offset: 3px;
 }
+::selection {
+  color: var(--color-navy);
+  background: #cfe3ff;
+}
 
-/* ==========================================================================
-   2. COMPONENTES ESTRUTURAIS (HEADER E FOOTER)
-   ========================================================================== */
-
-/* Cabeçalho Principal (Main Header) */
-.main-header {
+/* Navegação compartilhada: landing, autenticação e cadastro do anfitrião. */
+.site-header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
+  min-height: var(--header-height);
   align-items: center;
   justify-content: space-between;
-  min-height: 70px;
-  padding: 0 clamp(20px, 4.5vw, 72px);
-  background: rgb(255 255 255 / 96%);
+  gap: 20px;
+  padding: 0 clamp(24px, 4.5vw, 72px);
+  background: rgb(255 255 255 / 97%);
   border-bottom: 1px solid #e8edf4;
 }
-
-.main-header > a {
-  color: var(--ink);
+.site-header > a:not(.brand) {
+  color: var(--color-ink);
   font-weight: 550;
   text-decoration: none;
+  white-space: nowrap;
 }
-
-.main-header a,
-.main-footer a {
+.site-header a {
   text-decoration: none;
 }
-
-.main-header a:hover,
-.main-footer a:hover {
-  color: var(--blue-600);
+.site-header a:hover {
+  color: var(--color-brand);
 }
-
-.main-header > .brand {
+.site-header > .brand {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-
-/* Navegação e Links do Cabeçalho */
-.header-links,
-.header-user,
-.header-nav,
-.header-nav-links,
-.header-actions {
+.site-header__nav,
+.site-header__links,
+.site-header__actions,
+.site-header__user,
+.site-header__profile {
   display: flex;
   align-items: center;
 }
-
-.header-links,
-.header-user {
-  gap: clamp(14px, 2.5vw, 38px);
-}
-
-.header-nav {
-  justify-content: space-between;
+.site-header__nav {
   width: 100%;
-  gap: 25px;
+  justify-content: space-between;
+  gap: 28px;
 }
-
-.header-nav-links {
+.site-header__links {
   justify-content: center;
-  gap: clamp(12px, 2vw, 30px);
+  gap: clamp(14px, 2vw, 30px);
 }
-
-.header-nav-links a,
-.header-actions a {
-  color: var(--ink);
+.site-header__actions {
+  gap: 16px;
+}
+.site-header__links a,
+.site-header__actions a {
+  color: var(--color-ink);
   font-size: 0.9rem;
   font-weight: 520;
-  text-decoration: none;
   white-space: nowrap;
 }
-
-.header-actions {
-  gap: 18px;
-}
-
-.link-highlight {
-  color: var(--blue-700) !important;
+.site-header__link--highlight {
+  color: var(--color-brand-strong) !important;
   font-weight: 650 !important;
 }
-
-/* Perfil do Usuário no Cabeçalho */
-.header-user {
-  gap: 20px;
+.site-header__login {
+  color: var(--color-ink);
+  font-weight: 600;
 }
-
-.profile-summary {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--navy-900);
+.site-header__user {
+  gap: clamp(16px, 2.5vw, 38px);
+}
+.site-header__profile {
+  gap: 11px;
+  color: var(--color-navy);
   font-size: 0.9rem;
   font-weight: 560;
   white-space: nowrap;
 }
-
-.profile-avatar {
+.site-header__avatar {
   display: grid;
   width: 42px;
   height: 42px;
@@ -198,125 +162,87 @@ button {
   border-radius: 50%;
   background: #f8fbff;
 }
-
-.profile-avatar.asset-placeholder > img {
-  width: 22px;
-  height: 22px;
+.site-header__chevron {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
 }
-
-.profile-chevron {
-  width: 8px;
-  height: 8px;
-  flex: 0 0 8px;
-  margin: -4px 2px 0 1px;
-  transform: rotate(45deg);
-  border-right: 1.5px solid var(--navy-900);
-  border-bottom: 1.5px solid var(--navy-900);
-}
-
-/* Rodapé Principal (Main Footer) */
-.main-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 52px;
-  gap: 18px;
-  padding: 10px clamp(20px, 4.5vw, 72px);
-  color: var(--muted);
-  background: #fff;
-  border-top: 1px solid #e8edf4;
-  font-size: 0.78rem;
-}
-
-.main-footer p {
-  margin: 0;
-}
-
-.footer-links {
-  display: flex;
-  gap: clamp(14px, 2.4vw, 34px);
-}
-
-.main-footer a {
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-/* ==========================================================================
-   3. ELEMENTOS DE IDENTIDADE E ÍCONES (.BRAND / .ICON)
-   ========================================================================== */
 
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: var(--navy-900);
-  white-space: nowrap;
+  color: var(--color-navy);
   text-decoration: none;
+  white-space: nowrap;
 }
-
-.brand-mark {
+.brand__mark {
   display: block;
-  width: 38px;
-  height: 42px;
-  flex: 0 0 38px;
+  width: 42px;
+  height: 44px;
+  flex: 0 0 42px;
 }
-
-.brand-mark > img {
+.brand__mark > img,
+.site-header__avatar > img,
+.asset-slot > img,
+.media-slot > img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-
-.brand-name {
+.brand__name {
+  color: var(--color-navy);
   font-size: 1.45rem;
-  font-weight: 750;
+  font-weight: 760;
   letter-spacing: -0.065em;
 }
-
-.brand-name > span {
-  color: var(--blue-600);
+.brand__name > span {
+  color: var(--color-brand);
 }
 
+/* SVGs locais em linha e slots para imagens que serão adicionadas manualmente. */
 .icon {
   display: inline-grid;
   width: 20px;
   height: 20px;
   flex: 0 0 20px;
   place-items: center;
-  color: transparent;
-  font-size: 0;
+  color: currentColor;
   line-height: 1;
 }
-
-.asset-placeholder > img {
+.icon__svg {
   display: block;
   width: 100%;
   height: 100%;
+  overflow: visible;
+}
+.icon--social {
+  width: 22px;
+  height: 22px;
+  flex-basis: 22px;
+}
+.asset-slot > img {
   object-fit: contain;
 }
 
-/* ==========================================================================
-   4. BOTÕES E COMPONENTES INTERATIVOS (.BTN-*)
-   ========================================================================== */
-
-.btn-primary,
-.btn-secondary,
-.btn-action,
-.btn-social,
-.btn-option,
-.btn-category {
+/* Botões partilhados pelas páginas. */
+.button {
   display: inline-flex;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
   gap: 9px;
-  min-height: 44px;
   padding: 0 18px;
   border: 1px solid transparent;
   border-radius: var(--radius-sm);
+  color: var(--color-ink);
+  background: transparent;
   font-size: 0.9rem;
   font-weight: 650;
+  line-height: 1.25;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
   transition:
@@ -325,322 +251,186 @@ button {
     box-shadow 0.18s ease,
     transform 0.18s ease;
 }
-
-.btn-primary {
+.button--primary {
   color: #fff;
-  background: var(--blue-600);
+  background: var(--color-brand);
   box-shadow: 0 5px 13px rgb(9 105 232 / 18%);
 }
-
-.btn-primary:hover {
+.button--primary:hover {
   color: #fff;
-  background: var(--blue-700);
+  background: var(--color-brand-strong);
 }
-
-.btn-secondary,
-.btn-cancel {
+.button--secondary,
+.button--quiet {
   color: #35435b;
   background: #eef3fb;
 }
-
-.btn-secondary:hover,
-.btn-cancel:hover {
+.button--secondary:hover,
+.button--quiet:hover {
+  color: var(--color-ink);
   background: #e2eaf6;
 }
-
-.btn-back {
-  color: var(--blue-700);
-  background: var(--blue-100);
-}
-
-.btn-social {
-  color: var(--ink);
+.button--social {
+  color: var(--color-ink);
   background: #fff;
-  border-color: var(--border);
+  border-color: var(--color-border);
   font-size: 0.83rem;
   font-weight: 550;
 }
-
-.btn-social:hover,
-.btn-option:hover,
-.btn-category:hover {
-  border-color: var(--blue-500);
-  background: var(--blue-50);
+.button--social:hover,
+.button--option:hover,
+.button--category:hover {
+  border-color: #6eabff;
+  background: var(--color-brand-wash);
 }
-
-.btn-action {
+.button--action {
   min-width: 134px;
 }
-
-.btn-primary:active,
-.btn-secondary:active {
+.button--icon {
+  width: 36px;
+  min-height: 36px;
+  flex: 0 0 36px;
+  padding: 0;
+  border-radius: 50%;
+  color: var(--color-muted);
+  background: transparent;
+}
+.button--icon:hover {
+  color: var(--color-brand-strong);
+  background: var(--color-brand-wash);
+}
+.button--favorite {
+  width: 36px;
+  min-height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  color: #60718b;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(15 32 56 / 14%);
+}
+.button--favorite:hover {
+  color: #d44e68;
+  background: #fff;
+}
+.button:active {
   transform: translateY(1px);
 }
 
-/* ==========================================================================
-   5. COMPONENTES DE FORMULÁRIOS E INPUTS
-   ========================================================================== */
-
-.field-group {
+/* Rodapé compartilhado. */
+.site-footer {
   display: flex;
-  min-width: 0;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.field-group label {
-  color: var(--ink);
-  font-size: 0.85rem;
-  font-weight: 620;
-}
-
-.input-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.input-wrapper > .icon {
-  position: absolute;
-  left: 14px;
-  z-index: 1;
-  color: #4b5a73;
-}
-
-.input-wrapper input {
-  width: 100%;
-  min-width: 0;
-  height: 46px;
-  padding: 0 14px 0 43px;
-  color: var(--ink);
-  background: #fff;
-  border: 1px solid #cfd8e5;
-  border-radius: var(--radius-sm);
-  outline: none;
-  transition:
-    border-color 0.18s ease,
-    box-shadow 0.18s ease;
-}
-
-.input-wrapper input:focus {
-  border-color: var(--blue-500);
-  box-shadow: 0 0 0 3px rgb(22 119 248 / 12%);
-}
-
-.input-wrapper input::placeholder {
-  color: #8290a5;
-}
-
-.helper-text {
-  color: var(--muted);
-  font-size: 0.76rem;
-}
-
-.form-title {
-  margin: 0 0 5px;
-  color: var(--navy-900);
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.25;
-  letter-spacing: -0.035em;
-}
-
-.form-subtitle {
-  margin: 0 0 22px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.45;
-}
-
-/* Checkboxes, Radios e Opções do Formulário */
-.field-group input[type="checkbox"],
-.checkbox-label input,
-.checkbox-item input {
-  accent-color: var(--blue-600);
-}
-
-.form-options {
-  display: flex;
+  min-height: var(--footer-height);
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin: 7px 0 18px;
-  font-size: 0.84rem;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink);
-  cursor: pointer;
-}
-
-.form-options.terms {
-  margin: 10px 0 15px;
-}
-
-.form-options.terms .checkbox-label {
-  flex-wrap: wrap;
-  font-size: 0.82rem;
-}
-
-/* Divisores e Autenticação Social */
-.divider-text {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 17px 0;
-  color: var(--muted);
+  gap: 18px;
+  padding: 10px clamp(24px, 4.5vw, 72px);
+  color: var(--color-muted);
+  background: #fff;
+  border-top: 1px solid #e8edf4;
   font-size: 0.78rem;
-  text-align: center;
 }
-
-.divider-text::before,
-.divider-text::after {
-  height: 1px;
-  flex: 1;
-  background: var(--border);
-  content: "";
+.site-footer p {
+  margin: 0;
 }
-
-.social-login-grid {
+.site-footer__links {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 12px clamp(14px, 2.4vw, 34px);
+}
+.site-footer a {
+  color: var(--color-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-footer a:hover {
+  color: var(--color-brand);
 }
 
-.social-login-grid > * {
-  flex: 1;
+/* Utilitários pequenos e explícitos. */
+.u-text-brand {
+  color: var(--color-brand) !important;
 }
-
-.auth-footer-text {
-  margin: 18px 0 0;
-  color: var(--muted);
-  text-align: center;
-  font-size: 0.86rem;
+.u-text-danger {
+  color: var(--color-danger);
 }
-
-.auth-footer-text a {
-  font-weight: 650;
-}
-
-/* ==========================================================================
-   6. CLASSES DE UTILIDADE (UTILITIES)
-   ========================================================================== */
-
-.text-primary {
-  color: var(--blue-600);
-}
-
-.text-danger {
-  color: #d33b4b;
-}
-
-.w-100 {
+.u-width-full {
   width: 100%;
 }
-
-.mt-3 {
+.u-space-top-medium {
   margin-top: 16px;
 }
-
-.mt-4 {
+.u-space-top-large {
   margin-top: 22px;
 }
 
-/* ==========================================================================
-   7. RESPONSIVIDADE (MEDIA QUERIES)
-   ========================================================================== */
-
-/* Telas Médias e Notebooks (Até 1100px) */
 @media (max-width: 1100px) {
-  .header-nav {
+  .site-header__nav {
     flex-wrap: wrap;
     gap: 12px;
     padding-block: 12px;
   }
-
-  .header-nav-links {
+  .site-header__nav > .site-header__links {
     order: 3;
     width: 100%;
-    overflow-x: auto;
     justify-content: flex-start;
+    overflow-x: auto;
     padding: 4px 0;
   }
-
-  .header-actions {
+  .site-header__actions {
     margin-left: auto;
     gap: 10px;
   }
 }
-
-/* Tablets (Até 760px) */
 @media (max-width: 760px) {
-  .main-header {
+  .site-header {
     min-height: 64px;
     padding-inline: 18px;
   }
-
-  .main-header > .brand {
+  .site-header > .brand {
     position: static;
     transform: none;
   }
-
-  .main-footer {
+  .site-footer {
     align-items: flex-start;
     flex-direction: column;
     padding: 14px 20px;
   }
-
-  .footer-links {
-    flex-wrap: wrap;
+  .site-footer__links {
     gap: 10px 18px;
   }
-
-  .layout-dashboard > .main-header {
+  .host-layout > .site-header {
     gap: 12px;
     padding-inline: 16px;
   }
-
-  .layout-dashboard > .main-header > .brand {
+  .host-layout > .site-header > .brand {
     display: none;
   }
-
-  .layout-dashboard > .main-header > a {
+  .host-layout > .site-header > a {
     font-size: 0.82rem;
   }
-
-  .layout-dashboard .header-user {
+  .site-header__user {
     gap: 12px;
   }
-
-  .profile-summary {
+  .site-header__profile {
     gap: 8px;
   }
-
-  .profile-avatar {
+  .site-header__avatar {
     width: 36px;
     height: 36px;
     flex-basis: 36px;
   }
 }
-
-/* Dispositivos Móveis / Celulares (Até 480px) */
 @media (max-width: 480px) {
-  .main-header {
+  .site-header {
     padding-inline: 12px;
   }
-
-  .layout-split > .main-header > .brand {
+  .auth-layout > .site-header > .brand {
     display: none;
   }
-
-  .layout-dashboard > .main-header {
+  .host-layout > .site-header {
     padding-inline: 12px;
   }
-
-  .profile-name {
+  .site-header__profile-name {
     display: none;
   }
 }
