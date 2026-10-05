@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cadastro de anfitrião — Dados pessoais | BasicParkly</title>
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/layouts.css" rel="stylesheet" />
+    <link href="../../css/components.css" rel="stylesheet" />
+  </head>
+  <body class="host-layout">
+    <header class="site-header">
+      <a href="./../../../index.html">
+        <!-- <img src="#icone_seta_esquerda" alt=""> -->
+        <span aria-hidden="true" class="icon asset-slot">
+          <!-- <img src="#Voltar" alt=""> -->
+        </span>
+        Voltar para o início
+      </a>
+      <a aria-label="BasicParkly" class="brand" href="../../../index.html">
+        <span aria-hidden="true" class="brand__mark">
+          <!-- <img src="#Logo_Header" alt=""> -->
+        </span>
+        <span class="brand__name">
+          Basic
+          <span> Parkly </span>
+        </span>
+      </a>
+      <div class="site-header__user">
+        <a href="#Ajuda"> Ajuda </a>
+        <div aria-label="Perfil" class="site-header__profile">
+          <span aria-hidden="true" class="site-header__avatar asset-slot">
+            <!-- <img src="#Perfil_Usuario" alt=""> -->
+          </span>
+          <span class="site-header__profile-name"> #Nome</span>
+          <span aria-hidden="true" class="site-header__chevron">
+            <!-- <img src="#icone_seta_perfil" alt=""> -->
+          </span>
+        </div>
+      </div>
+    </header>
+    <div class="host-dashboard">
+      <!-- Sidebar Esquerda -->
+      <aside class="host-sidebar">
+        <div aria-hidden="true" class="host-sidebar__media">
+          <!-- <img src="#imagem_painel_anfitriao" alt=""> -->
+        </div>
+        <div class="host-sidebar__brand">
+          <a aria-label="BasicParkly" class="brand" href="../../../index.html">
+            <span aria-hidden="true" class="brand__mark">
+              <!-- <img src="Logo_branco" alt=""> -->
+            </span>
+            <span class="brand__name">
+              Basic
+              <span> Parkly </span>
+            </span>
+          </a>
+          <p>
+            Anfitriões constroem
+            <br />
+            novas possibilidades.
+          </p>
+        </div>
+        <div class="host-sidebar__features">
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Processo_seguro" alt=""> -->
+            </span>
+            <div>
+              <h3>Processo seguro</h3>
+              <p>Seus dados são protegidos.</p>
+            </div>
+          </div>
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Mais_renda" alt=""> -->
+            </span>
+            <div>
+              <h3>Mais renda</h3>
+              <p>
+                Seu espaço pode gerar
+                <br />
+                novas oportunidades.
+              </p>
+            </div>
+          </div>
+          <div class="host-sidebar__feature">
+            <span aria-hidden="true" class="icon asset-slot">
+              <!-- <img src="#Voce_no_controle" alt=""> -->
+            </span>
+            <div>
+              <h3>Você no controle</h3>
+              <p>
+                Defina regras, preços
+                <br />
+                e disponibilidade.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="host-sidebar__footer">
+          <p>
+            Espaços conectam pessoas.
+            <br />
+            E pessoas movem o mundo.
+          </p>
+        </div>
+      </aside>
+      <!-- Área de Conteúdo/Formulário -->
+      <main class="host-main">
+        <form>
+          <div class="host-form__header">
+            <span class="host-form__eyebrow"> CADASTRO DE ANFITRIÃO </span>
+            <div class="host-form__topbar">
+              <div class="host-form__intro">
+                <h2>
+                  Olá,
+                  <span class="u-text-brand"> #Nome</span>
+                  !
+                </h2>
+                <p class="form__subtitle">
+                  Conte um pouco sobre você e sobre o espaço que deseja
+                  disponibilizar no BasicParkly.
+                </p>
+              </div>
+              <!-- Stepper / Passos do Cadastro -->
+              <ol
+                aria-label="Etapas do cadastro de anfitrião"
+                class="host-stepper"
+              >
+                <li
+                  aria-current="step"
+                  class="host-stepper__step host-stepper__step--active"
+                >
+                  <div class="host-stepper__number">1</div>
+                  <span> Dados pessoais </span>
+                </li>
+                <li class="host-stepper__step">
+                  <div class="host-stepper__number">2</div>
+                  <span> Espaço </span>
+                </li>
+                <li class="host-stepper__step">
+                  <div class="host-stepper__number">3</div>
+                  <span> Documentos </span>
+                </li>
+                <li class="host-stepper__step">
+                  <div class="host-stepper__number">4</div>
+                  <span> Análise </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <!-- Card 1: Dados pessoais -->
+          <div class="content-card">
+            <div class="content-card__header">
+              <span aria-hidden="true" class="icon asset-slot">
+                <!-- <img src="#icon_avatar" alt=""> -->
+              </span>
+              <h5>Dados pessoais</h5>
+              <p class="content-card__description">
+                Essas informações são necessárias para identificar o responsável
+                pelo espaço.
+              </p>
+            </div>
+            <div class="host-field-grid">
+              <div class="form-field">
+                <label for="cpf">
+                  CPF
+                  <span class="u-text-danger"> * </span>
+                </label>
+                <div class="form-field__control">
+                  <span
+                    aria-hidden="true"
+                    class="icon form-field__icon--leading asset-slot"
+                  >
+                    <!-- <img src="#icon_cpf" alt=""> -->
+                  </span>
+                  <input
+                    id="cpf"
+                    name="cpf"
+                    placeholder="Digite seu CPF"
+                    type="text"
+                  />
+                </div>
+                <span class="form-field__help"> Exemplo: 123.456.789-00 </span>
+              </div>
+              <div class="form-field">
+                <label for="nascimento">
+                  Data de nascimento
+                  <span class="u-text-danger"> * </span>
+                </label>
+                <div class="form-field__control">
+                  <span
+                    aria-hidden="true"
+                    class="icon form-field__icon--leading asset-slot"
+                  >
+                    <!-- <img src="#icon_calendar" alt=""> -->
+                    <svg
+                      aria-hidden="true"
+                      class="icon__svg"
+                      fill="none"
+                      focusable="false"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 10H21M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
+                  <input
+                    id="nascimento"
+                    name="nascimento"
+                    placeholder="dd/mm/aaaa"
+                    type="text"
+                  />
+                </div>
+                <span class="form-field__help"> Exemplo: 28/04/2006 </span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2: Informações do espaço -->
+          <div class="content-card">
+            <div class="content-card__header">
+              <span aria-hidden="true" class="icon asset-slot">
+                <!-- <img src="#icon_espaço" alt=""> -->
+                <svg
+                  aria-hidden="true"
+                  class="icon__svg"
+                  fill="none"
+                  focusable="false"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M12.6139 1.21065C12.2528 0.929784 11.7472 0.929784 11.3861 1.21065L2.38606 8.21065C2.14247 8.4001 2 8.69141 2 9V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9C22 8.69141 21.8575 8.4001 21.6139 8.21065L12.6139 1.21065ZM16 20H20V9.48908L12 3.26686L4 9.48908V20H8V12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12V20ZM10 20V13H14V20H10Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <h5>Informações do espaço</h5>
+              <p class="content-card__description">
+                Selecione o tipo de espaço que você deseja disponibilizar.
+              </p>
+            </div>
+            <div class="form-field">
+              <label>
+                Tipo de espaço
+                <span class="u-text-danger"> * </span>
+              </label>
+              <div class="selection-grid selection-grid--options">
+                <label class="selection-card">
+                  <input name="tipo_espaco" type="checkbox" value="garagem" />
+                  <span aria-hidden="true" class="icon asset-slot">
+                    <!-- <img src="#icon_garagem" alt=""> -->
+                    <svg
+                      aria-hidden="true"
+                      class="icon__svg"
+                      fill="none"
+                      focusable="false"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M12.6139 1.21065C12.2528 0.929784 11.7472 0.929784 11.3861 1.21065L2.38606 8.21065C2.14247 8.4001 2 8.69141 2 9V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9C22 8.69141 21.8575 8.4001 21.6139 8.21065L12.6139 1.21065ZM16 20H20V9.48908L12 3.26686L4 9.48908V20H8V12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12V20ZM10 20V13H14V20H10Z"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                  <strong> Garagem </strong>
+                  <p>Garagem coberta em residência ou imóvel.</p>
+                </label>
+                <label class="selection-card">
+                  <input
+                    name="tipo_espaco"
+                    type="checkbox"
+                    value="vagas_residenciais"
+                  />
+                  <span aria-hidden="true" class="icon asset-slot">
+                    <!-- <img src="#icon_vagas_residenciais" alt=""> -->
+                    <svg
+                      aria-hidden="true"
+                      class="icon__svg"
+                      fill="none"
+                      focusable="false"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M12.6139 1.21065C12.2528 0.929784 11.7472 0.929784 11.3861 1.21065L2.38606 8.21065C2.14247 8.4001 2 8.69141 2 9V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9C22 8.69141 21.8575 8.4001 21.6139 8.21065L12.6139 1.21065ZM16 20H20V9.48908L12 3.26686L4 9.48908V20H8V12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12V20ZM10 20V13H14V20H10Z"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                  <strong> Vagas residenciais </strong>
+                  <p>Vagas em frente ou dentro de residência.</p>
+                </label>
+                <label class="selection-card">
+                  <input
+                    name="tipo_espaco"
+                    type="checkbox"
+                    value="estacionamento_particular"
+                  />
+                  <span aria-hidden="true" class="icon asset-slot">
+                    <!-- <img src="#icon_estacionamento_particular" alt=""> -->
+                  </span>
+                  <strong> Estacionamento particular </strong>
+                  <p>Estacionamento em imóvel comercial ou privado.</p>
+                </label>
+                <label class="selection-card">
+                  <input name="tipo_espaco" type="checkbox" value="outro" />
+                  <span aria-hidden="true" class="icon asset-slot">
+                    <!-- <img src="#icon_outro" alt=""> -->
+                  </span>
+                  <strong> Outro </strong>
+                  <p>Outro tipo de espaço. (Especifique depois)</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Botões -->
+          <div class="form-actions u-space-top-large">
+            <div class="form-actions__group">
+              <a
+                class="button button--action button--quiet"
+                href="./../../../index.html"
+              >
+                Cancelar
+              </a>
+              <!-- futuramente type="submit" -->
+              <a class="button button--primary" href="./espaco.html">
+                Próximo
+                <span aria-hidden="true" class="icon asset-slot">
+                  <!-- <img src="#icon_proximo" alt=""> -->
+                </span>
+              </a>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+    <!-- Footer Rodapé -->
+    <footer class="site-footer">
+      <p>BasicParkly © 2026. Todos os direitos reservados.</p>
+      <div class="site-footer__links">
+        <a href="#Termos_de_Uso"> Termos de Uso </a>
+        <a href="#Política_de_Privacidade"> Política de Privacidade </a>
+        <a href="#Contato"> Contato </a>
+      </div>
+    </footer>
+  </body>
+</html>

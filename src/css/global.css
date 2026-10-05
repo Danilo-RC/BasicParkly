@@ -1,0 +1,436 @@
+/* Tokens, reset e elementos compartilhados do BasicParkly. */
+:root {
+  color-scheme: light;
+  --color-brand: #0969e8;
+  --color-brand-strong: #0754c7;
+  --color-brand-soft: #eaf3ff;
+  --color-brand-wash: #f4f8ff;
+  --color-navy: #0d1b49;
+  --color-ink: #192747;
+  --color-muted: #6b7891;
+  --color-border: #dce4ef;
+  --color-surface: #fff;
+  --color-canvas: #f2f6fd;
+  --color-success: #13956d;
+  --color-warning: #eda900;
+  --color-danger: #d33b4b;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --shadow-card: 0 8px 28px rgb(28 57 105 / 7%);
+  --font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --header-height: 70px;
+  --footer-height: 52px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  accent-color: var(--color-brand);
+}
+button {
+  color: inherit;
+}
+a {
+  color: var(--color-brand-strong);
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: var(--color-brand);
+}
+:focus-visible {
+  outline: 3px solid rgb(22 119 248 / 42%);
+  outline-offset: 3px;
+}
+::selection {
+  color: var(--color-navy);
+  background: #cfe3ff;
+}
+
+/* Navegação compartilhada: landing, autenticação e cadastro do anfitrião. */
+.site-header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  min-height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 clamp(24px, 4.5vw, 72px);
+  background: rgb(255 255 255 / 97%);
+  border-bottom: 1px solid #e8edf4;
+}
+.site-header > a:not(.brand) {
+  color: var(--color-ink);
+  font-weight: 550;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-header a {
+  text-decoration: none;
+}
+.site-header a:hover {
+  color: var(--color-brand);
+}
+.site-header > .brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.site-header__nav,
+.site-header__links,
+.site-header__actions,
+.site-header__user,
+.site-header__profile {
+  display: flex;
+  align-items: center;
+}
+.site-header__nav {
+  width: 100%;
+  justify-content: space-between;
+  gap: 28px;
+}
+.site-header__links {
+  justify-content: center;
+  gap: clamp(14px, 2vw, 30px);
+}
+.site-header__actions {
+  gap: 16px;
+}
+.site-header__links a,
+.site-header__actions a {
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  font-weight: 520;
+  white-space: nowrap;
+}
+.site-header__link--highlight {
+  color: var(--color-brand-strong) !important;
+  font-weight: 650 !important;
+}
+.site-header__login {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.site-header__user {
+  gap: clamp(16px, 2.5vw, 38px);
+}
+.site-header__profile {
+  gap: 11px;
+  color: var(--color-navy);
+  font-size: 0.9rem;
+  font-weight: 560;
+  white-space: nowrap;
+}
+.site-header__avatar {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #cfd8e7;
+  border-radius: 50%;
+  background: #f8fbff;
+}
+.site-header__chevron {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-navy);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand__mark {
+  display: block;
+  width: 42px;
+  height: 44px;
+  flex: 0 0 42px;
+}
+.brand__mark > img,
+.site-header__avatar > img,
+.asset-slot > img,
+.media-slot > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.brand__name {
+  color: var(--color-navy);
+  font-size: 1.45rem;
+  font-weight: 760;
+  letter-spacing: -0.065em;
+}
+.brand__name > span {
+  color: var(--color-brand);
+}
+
+/* SVGs locais em linha e slots para imagens que serão adicionadas manualmente. */
+.icon {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  place-items: center;
+  color: currentColor;
+  line-height: 1;
+}
+.icon__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.icon--social {
+  width: 22px;
+  height: 22px;
+  flex-basis: 22px;
+}
+.asset-slot > img {
+  object-fit: contain;
+}
+
+/* Botões partilhados pelas páginas. */
+.button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--color-ink);
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+.button--primary {
+  color: #fff;
+  background: var(--color-brand);
+  box-shadow: 0 5px 13px rgb(9 105 232 / 18%);
+}
+.button--primary:hover {
+  color: #fff;
+  background: var(--color-brand-strong);
+}
+.button--secondary,
+.button--quiet {
+  color: #35435b;
+  background: #eef3fb;
+}
+.button--secondary:hover,
+.button--quiet:hover {
+  color: var(--color-ink);
+  background: #e2eaf6;
+}
+.button--social {
+  color: var(--color-ink);
+  background: #fff;
+  border-color: var(--color-border);
+  font-size: 0.83rem;
+  font-weight: 550;
+}
+.button--social:hover,
+.button--option:hover,
+.button--category:hover {
+  border-color: #6eabff;
+  background: var(--color-brand-wash);
+}
+.button--action {
+  min-width: 134px;
+}
+.button--icon {
+  width: 36px;
+  min-height: 36px;
+  flex: 0 0 36px;
+  padding: 0;
+  border-radius: 50%;
+  color: var(--color-muted);
+  background: transparent;
+}
+.button--icon:hover {
+  color: var(--color-brand-strong);
+  background: var(--color-brand-wash);
+}
+.button--favorite {
+  width: 36px;
+  min-height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  color: #60718b;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(15 32 56 / 14%);
+}
+.button--favorite:hover {
+  color: #d44e68;
+  background: #fff;
+}
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Rodapé compartilhado. */
+.site-footer {
+  display: flex;
+  min-height: var(--footer-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px clamp(24px, 4.5vw, 72px);
+  color: var(--color-muted);
+  background: #fff;
+  border-top: 1px solid #e8edf4;
+  font-size: 0.78rem;
+}
+.site-footer p {
+  margin: 0;
+}
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px clamp(14px, 2.4vw, 34px);
+}
+.site-footer a {
+  color: var(--color-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-footer a:hover {
+  color: var(--color-brand);
+}
+
+/* Utilitários pequenos e explícitos. */
+.u-text-brand {
+  color: var(--color-brand) !important;
+}
+.u-text-danger {
+  color: var(--color-danger);
+}
+.u-width-full {
+  width: 100%;
+}
+.u-space-top-medium {
+  margin-top: 16px;
+}
+.u-space-top-large {
+  margin-top: 22px;
+}
+
+@media (max-width: 1100px) {
+  .site-header__nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-block: 12px;
+  }
+  .site-header__nav > .site-header__links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 4px 0;
+  }
+  .site-header__actions {
+    margin-left: auto;
+    gap: 10px;
+  }
+}
+@media (max-width: 760px) {
+  .site-header {
+    min-height: 64px;
+    padding-inline: 18px;
+  }
+  .site-header > .brand {
+    position: static;
+    transform: none;
+  }
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 20px;
+  }
+  .site-footer__links {
+    gap: 10px 18px;
+  }
+  .host-layout > .site-header {
+    gap: 12px;
+    padding-inline: 16px;
+  }
+  .host-layout > .site-header > .brand {
+    display: none;
+  }
+  .host-layout > .site-header > a {
+    font-size: 0.82rem;
+  }
+  .site-header__user {
+    gap: 12px;
+  }
+  .site-header__profile {
+    gap: 8px;
+  }
+  .site-header__avatar {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .site-header {
+    padding-inline: 12px;
+  }
+  .auth-layout > .site-header > .brand {
+    display: none;
+  }
+  .host-layout > .site-header {
+    padding-inline: 12px;
+  }
+  .site-header__profile-name {
+    display: none;
+  }
+}

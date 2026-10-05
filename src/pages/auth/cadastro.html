@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Criar conta | BasicParkly</title>
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/layouts.css" rel="stylesheet" />
+    <link href="../../css/components.css" rel="stylesheet" />
+  </head>
+  <body class="auth-layout">
+    <header class="site-header">
+      <a href="./../../../index.html"> Início </a>
+      <a aria-label="BasicParkly" class="brand" href="../../../index.html">
+        <span aria-hidden="true" class="brand__mark">
+          <!-- <img src="#Logo_Header" alt=""> -->
+        </span>
+        <span class="brand__name">
+          Basic
+          <span> Parkly </span>
+        </span>
+      </a>
+      <div class="site-header__links">
+        <p>
+          Já tem uma conta?
+          <a class="site-header__link--highlight" href="./login.html">
+            Fazer login
+          </a>
+        </p>
+        <a href="#Ajuda"> Ajuda </a>
+      </div>
+    </header>
+    <aside class="auth-layout__hero">
+      <div aria-hidden="true" class="auth-layout__media">
+        <!-- <img src="#imagem_auth_hero" alt=""> -->
+      </div>
+      <div class="auth-layout__hero-copy">
+        <h1>
+          Mais que
+          <br />
+          <strong> estacionamento, </strong>
+          <br />
+          liberdade para
+          <br />
+          chegar mais longe.
+        </h1>
+        <p>
+          Conectando pessoas a vagas reais, de forma simples,
+          <br />
+          segura e acessível.
+        </p>
+      </div>
+      <div class="auth-layout__features">
+        <div class="auth-layout__feature">
+          <span aria-hidden="true" class="icon asset-slot">
+            <!-- <img src="#Seguro" alt=""> -->
+          </span>
+          <h2>Seguro</h2>
+          <p>Anfitriões verificados</p>
+        </div>
+        <div class="auth-layout__feature">
+          <span aria-hidden="true" class="icon asset-slot">
+            <!-- <img src="#Prático" alt=""> -->
+          </span>
+          <h2>Prático</h2>
+          <p>Vagas perto de você</p>
+        </div>
+        <div class="auth-layout__feature">
+          <span aria-hidden="true" class="icon asset-slot">
+            <!-- <img src="#Moderno" alt=""> -->
+          </span>
+          <h2>Moderno</h2>
+          <p>Com pontos de recarga</p>
+        </div>
+      </div>
+      <div class="auth-layout__footer-note">
+        <p>
+          Mobilidade inteligente
+          <br />
+          para um futuro melhor.
+        </p>
+      </div>
+    </aside>
+    <main class="auth-layout__form-area">
+      <form class="content-card auth-form">
+        <a aria-label="BasicParkly" class="brand" href="../../../index.html">
+          <span aria-hidden="true" class="brand__mark">
+            <!-- <img src="#Logo_Form" alt=""> -->
+          </span>
+          <span class="brand__name">
+            Basic
+            <span> Parkly </span>
+          </span>
+        </a>
+        <h2 class="auth-form__title">Crie sua conta no BasicParkly</h2>
+        <p class="form__subtitle">
+          É rápido e fácil. Comece agora e aproveite todas as possibilidades.
+        </p>
+        <div class="form-field">
+          <label for="nome"> Nome Completo </label>
+          <div class="form-field__control">
+            <span
+              aria-hidden="true"
+              class="icon form-field__icon--leading asset-slot"
+            >
+              <!-- <img src="#Icon_user" alt=""> -->
+            </span>
+            <input
+              autocomplete="name"
+              id="nome"
+              placeholder="Digite seu nome completo"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="auth-form__field-grid">
+          <div class="form-field">
+            <label for="email"> E-mail </label>
+            <div class="form-field__control">
+              <span
+                aria-hidden="true"
+                class="icon form-field__icon--leading asset-slot"
+              >
+                <!-- <img src="#icon_email" alt=""> -->
+              </span>
+              <input
+                autocomplete="email"
+                id="email"
+                placeholder="seuemail@exemplo.com"
+                required=""
+                type="email"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="telefone"> Telefone </label>
+            <div class="form-field__control">
+              <span
+                aria-hidden="true"
+                class="icon form-field__icon--leading asset-slot"
+              >
+                <!-- <img src="#icon_telefone" alt=""> -->
+              </span>
+              <input
+                autocomplete="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(11) 91234-5678"
+                required=""
+                type="tel"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="auth-form__field-grid">
+          <div class="form-field">
+            <label for="senha"> Senha </label>
+            <div class="form-field__control">
+              <span
+                aria-hidden="true"
+                class="icon form-field__icon--leading asset-slot"
+              >
+                <!-- <img src="#icon_senha" alt=""> -->
+              </span>
+              <input
+                autocomplete="new-password"
+                id="senha"
+                placeholder="Crie uma senha"
+                required=""
+                type="password"
+              />
+              <span
+                aria-hidden="true"
+                class="icon form-field__icon--trailing asset-slot"
+              >
+                <!-- <img src="#icon_olho" alt=""> -->
+              </span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="confirmar_senha"> Confirmar Senha </label>
+            <div class="form-field__control">
+              <span
+                aria-hidden="true"
+                class="icon form-field__icon--leading asset-slot"
+              >
+                <!-- <img src="#icon_senha" alt=""> -->
+              </span>
+              <input
+                id="confirmar_senha"
+                placeholder="Confirme sua senha"
+                required=""
+                type="password"
+              />
+              <span
+                aria-hidden="true"
+                class="icon form-field__icon--trailing asset-slot"
+              >
+                <!-- <img src="#icon_olho" alt=""> -->
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="auth-form__options auth-form__options--terms">
+          <label class="checkbox-row">
+            <input type="checkbox" />
+            Li e aceito os
+            <a href="#"> Termos de Uso </a>
+            e a
+            <a href="#"> Política de Privacidade </a>
+            .
+          </label>
+        </div>
+        <input
+          class="button button--primary u-width-full u-space-top-medium"
+          type="submit"
+          value="Criar conta"
+        />
+        <p class="auth-form__divider">ou cadastre-se com</p>
+        <div class="auth-form__social">
+          <button class="button button--social" type="button">
+            <span aria-hidden="true" class="icon icon--social asset-slot">
+              <!-- <img src="#Logo_Google" alt=""> -->
+            </span>
+            Continuar com Google
+          </button>
+          <button class="button button--social" type="button">
+            <span aria-hidden="true" class="icon icon--social asset-slot">
+              <!-- <img src="#Logo_Apple" alt=""> -->
+            </span>
+            Continuar com Apple
+          </button>
+        </div>
+        <p class="auth-form__footer">
+          Já tem uma conta?
+          <a href="./login.html"> Fazer login </a>
+        </p>
+      </form>
+    </main>
+    <footer class="site-footer">
+      <p>BasicParkly &copy; 2026. Todos os direitos reservados.</p>
+      <div class="site-footer__links">
+        <a href="#Termos_de_Uso"> Termos de Uso </a>
+        <a href="#Política_de_Privacidade"> Política de Privacidade </a>
+        <a href="#Contato"> Contato </a>
+      </div>
+    </footer>
+  </body>
+</html>
