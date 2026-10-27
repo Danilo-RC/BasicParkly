@@ -353,7 +353,7 @@
       <div class="category-nav">
         <button
           aria-pressed="true"
-          class="button button--category button--category--active"
+          class="button button--category button--category--all button--category--active"
           type="button"
         >
           <span aria-hidden="true" class="icon asset-slot">
@@ -499,7 +499,7 @@
           <div class="filter-panel__section">
             <div class="filter-panel__title">
               Preço máximo/hora
-              <span> R$ 50 </span>
+              <span id="precohoramostrar">R$ 50</span>
             </div>
             <input
               class="filter-panel__range"
@@ -507,7 +507,10 @@
               min="5"
               type="range"
               value="50"
+              id="precohoraselecao"
             />
+            <script>
+            </script>
             <div class="filter-panel__range-labels">
               <span> R$ 5 </span>
               <span> R$ 100 </span>
@@ -1312,6 +1315,6 @@
         <a href="#Contato"> Contato </a>
       </div>
     </footer>
-    <script href="./src/javascript/filtro.js"/>
+    <script src="./src/javascript/interacoes.js"/>
   </body>
 </html>
