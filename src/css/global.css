@@ -283,6 +283,10 @@ a:hover {
   border-color: #6eabff;
   background: var(--color-brand-wash);
 }
+.button--category:checked {
+  border-color: #6eabff;
+  background: var(--color-brand-wash);
+}
 .button--action {
   min-width: 134px;
 }
